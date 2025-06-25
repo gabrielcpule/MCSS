@@ -1,0 +1,466 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "language_llscript",
+      "label": "LLScript",
+      "type": "Programming Language",
+      "properties": {
+        "purpose": "LLM-native JavaScript replacement",
+        "target_accuracy": "95% first-attempt success rate",
+        "typing_system": "strong, statically-typed with intelligent inference",
+        "memory_model": "reference counting and garbage collection",
+        "security": "built-in by default"
+      }
+    },
+    {
+      "id": "language_javascript",
+      "label": "JavaScript",
+      "type": "Programming Language",
+      "properties": {
+        "current_usage": "most popular programming language",
+        "limitations": "dynamic typing, single-threaded, callback complexity",
+        "payload_size": "558 kilobytes median on mobile",
+        "unused_bytes": "44% of downloaded bytes remain unused"
+      }
+    },
+    {
+      "id": "framework_llmatic_css",
+      "label": "LLMatic CSS Framework",
+      "type": "CSS Framework",
+      "properties": {
+        "purpose": "LLM-optimized CSS framework for frontend development",
+        "target_accuracy": "95% first-attempt success rate",
+        "timeline": "22 weeks across 6 phases",
+        "architecture": "6-layer hierarchical structure",
+        "naming_convention": "[purpose]-[element]-[modifier]"
+      }
+    },
+    {
+      "id": "concept_llm_integration",
+      "label": "LLM Integration",
+      "type": "Concept",
+      "properties": {
+        "approach": "first-class language feature",
+        "benefits": "semantic annotations, intent-driven programming",
+        "challenge": "current 30% success rate with traditional CSS"
+      }
+    },
+    {
+      "id": "phase_1_discovery",
+      "label": "Phase 1: Discovery and Foundation",
+      "type": "Development Phase",
+      "properties": {
+        "duration": "Weeks 1-3",
+        "activities": "LLM baseline assessment, requirements definition, architectural foundation"
+      }
+    },
+    {
+      "id": "phase_2_design_system",
+      "label": "Phase 2: Core Design System", 
+      "type": "Development Phase",
+      "properties": {
+        "duration": "Weeks 4-7",
+        "activities": "design token development, typography system, color systems"
+      }
+    },
+    {
+      "id": "phase_3_components",
+      "label": "Phase 3: Component Library",
+      "type": "Development Phase", 
+      "properties": {
+        "duration": "Weeks 8-13",
+        "activities": "foundation components, layout components, interactive components"
+      }
+    },
+    {
+      "id": "phase_4_llm_integration",
+      "label": "Phase 4: LLM Integration Layer",
+      "type": "Development Phase",
+      "properties": {
+        "duration": "Weeks 14-17", 
+        "activities": "semantic annotation system, LLM hint engine, auto-generation tools"
+      }
+    },
+    {
+      "id": "phase_5_testing",
+      "label": "Phase 5: Testing and Optimization",
+      "type": "Development Phase",
+      "properties": {
+        "duration": "Weeks 18-20",
+        "activities": "LLM performance testing, cross-model validation, optimization"
+      }
+    },
+    {
+      "id": "phase_6_documentation",
+      "label": "Phase 6: Documentation and Launch", 
+      "type": "Development Phase",
+      "properties": {
+        "duration": "Weeks 21-22",
+        "activities": "comprehensive documentation, onboarding materials, community launch"
+      }
+    },
+    {
+      "id": "agent_technical_analysis",
+      "label": "Technical Analysis Specialist",
+      "type": "LLM Agent",
+      "properties": {
+        "specialization": "LLM performance assessment and baseline testing",
+        "responsibilities": "systematic testing methodology, failure pattern identification"
+      }
+    },
+    {
+      "id": "agent_systems_architect",
+      "label": "Systems Architect AI Specialist", 
+      "type": "LLM Agent",
+      "properties": {
+        "specialization": "requirements architecture for LLM-optimized systems",
+        "responsibilities": "semantic naming conventions, component isolation"
+      }
+    },
+    {
+      "id": "agent_senior_architect",
+      "label": "Senior Technical Architect",
+      "type": "LLM Agent", 
+      "properties": {
+        "specialization": "foundational framework architecture",
+        "responsibilities": "6-layer hierarchical structure, design token schema"
+      }
+    },
+    {
+      "id": "agent_design_systems",
+      "label": "Design Systems Specialist",
+      "type": "LLM Agent",
+      "properties": {
+        "specialization": "semantic design tokens and naming systems", 
+        "responsibilities": "color theory, accessibility standards, typography systems"
+      }
+    },
+    {
+      "id": "agent_component_developer",
+      "label": "Component Developer",
+      "type": "LLM Agent",
+      "properties": {
+        "specialization": "component-based architecture patterns",
+        "responsibilities": "accessibility implementation, cross-browser compatibility"
+      }
+    },
+    {
+      "id": "agent_llm_integration",
+      "label": "LLM Integration Specialist",
+      "type": "LLM Agent",
+      "properties": {
+        "specialization": "semantic annotation systems for AI comprehension",
+        "responsibilities": "natural language processing, machine-readable documentation"
+      }
+    },
+    {
+      "id": "agent_ai_testing",
+      "label": "AI Testing Engineer",
+      "type": "LLM Agent", 
+      "properties": {
+        "specialization": "multi-model testing methodologies",
+        "responsibilities": "performance benchmarking, statistical analysis"
+      }
+    },
+    {
+      "id": "agent_documentation",
+      "label": "Technical Documentation Specialist",
+      "type": "LLM Agent",
+      "properties": {
+        "specialization": "comprehensive documentation for multiple audiences",
+        "responsibilities": "API documentation, migration guides, example galleries"
+      }
+    },
+    {
+      "id": "component_design_tokens",
+      "label": "Design Tokens",
+      "type": "Framework Component",
+      "properties": {
+        "naming": "semantic, purpose-based",
+        "includes": "color, spacing, typography, breakpoint tokens",
+        "inheritance": "hierarchical patterns"
+      }
+    },
+    {
+      "id": "component_typography",
+      "label": "Typography System", 
+      "type": "Framework Component",
+      "properties": {
+        "hierarchy": "semantic heading with purpose indicators",
+        "scaling": "responsive implementation",
+        "accessibility": "WCAG 2.1 AA compliance"
+      }
+    },
+    {
+      "id": "component_library",
+      "label": "Component Library",
+      "type": "Framework Component",
+      "properties": {
+        "includes": "buttons, forms, cards, navigation, modals, tables",
+        "documentation": "self-documenting with embedded LLM hints",
+        "design": "compositional for flexible layouts"
+      }
+    },
+    {
+      "id": "system_semantic_annotation",
+      "label": "Semantic Annotation System",
+      "type": "Framework Component", 
+      "properties": {
+        "format": "machine-readable metadata embedded in CSS",
+        "schema": "JSON-LD for component relationships",
+        "purpose": "provides context for autonomous LLM decision-making"
+      }
+    },
+    {
+      "id": "concept_type_system",
+      "label": "Type System",
+      "type": "Language Feature",
+      "properties": {
+        "approach": "strong typing with Option and Result types",
+        "inference": "intelligent type inference for local variables", 
+        "memory_safety": "eliminates null pointer exceptions"
+      }
+    },
+    {
+      "id": "concept_reactive_programming",
+      "label": "Reactive Programming",
+      "type": "Programming Paradigm",
+      "properties": {
+        "implementation": "built-in signals and computed values",
+        "benefits": "automatic dependency tracking and updates",
+        "concurrency": "actor model for CPU-intensive tasks"
+      }
+    },
+    {
+      "id": "metric_95_percent_accuracy",
+      "label": "95% Accuracy Target",
+      "type": "Success Metric",
+      "properties": {
+        "description": "target first-attempt success rate for AI-generated code",
+        "current_baseline": "30% for traditional CSS, 65% for Bootstrap"
+      }
+    },
+    {
+      "id": "concept_web_platform",
+      "label": "Web Platform Integration", 
+      "type": "Integration Strategy",
+      "properties": {
+        "approach": "direct DOM access with declarative APIs",
+        "compatibility": "transpilation to JavaScript/WebAssembly",
+        "standards": "collaboration with browser vendors"
+      }
+    },
+    {
+      "id": "timeline_22_weeks",
+      "label": "22-Week Development Timeline",
+      "type": "Project Timeline",
+      "properties": {
+        "phases": "6 distinct phases",
+        "approach": "incremental development with validation"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "language_llscript",
+      "target": "language_javascript", 
+      "label": "REPLACES",
+      "properties": {}
+    },
+    {
+      "source": "framework_llmatic_css",
+      "target": "concept_llm_integration",
+      "label": "IMPLEMENTS",
+      "properties": {}
+    },
+    {
+      "source": "phase_1_discovery",
+      "target": "phase_2_design_system",
+      "label": "PRECEDES",
+      "properties": {}
+    },
+    {
+      "source": "phase_2_design_system", 
+      "target": "phase_3_components",
+      "label": "ENABLES",
+      "properties": {}
+    },
+    {
+      "source": "phase_3_components",
+      "target": "phase_4_llm_integration", 
+      "label": "PROVIDES_FOUNDATION_FOR",
+      "properties": {}
+    },
+    {
+      "source": "phase_4_llm_integration",
+      "target": "phase_5_testing",
+      "label": "REQUIRES_VALIDATION_BY", 
+      "properties": {}
+    },
+    {
+      "source": "phase_5_testing",
+      "target": "phase_6_documentation",
+      "label": "INFORMS",
+      "properties": {}
+    },
+    {
+      "source": "agent_technical_analysis",
+      "target": "phase_1_discovery",
+      "label": "ASSIGNED_TO",
+      "properties": {}
+    },
+    {
+      "source": "agent_systems_architect",
+      "target": "phase_1_discovery",
+      "label": "CONTRIBUTES_TO", 
+      "properties": {}
+    },
+    {
+      "source": "agent_senior_architect",
+      "target": "phase_1_discovery",
+      "label": "ARCHITECTS",
+      "properties": {}
+    },
+    {
+      "source": "agent_design_systems",
+      "target": "phase_2_design_system",
+      "label": "LEADS",
+      "properties": {}
+    },
+    {
+      "source": "agent_component_developer",
+      "target": "phase_3_components", 
+      "label": "BUILDS",
+      "properties": {}
+    },
+    {
+      "source": "agent_llm_integration",
+      "target": "phase_4_llm_integration",
+      "label": "ARCHITECTS",
+      "properties": {}
+    },
+    {
+      "source": "agent_ai_testing",
+      "target": "phase_5_testing",
+      "label": "VALIDATES",
+      "properties": {}
+    },
+    {
+      "source": "agent_documentation", 
+      "target": "phase_6_documentation",
+      "label": "DOCUMENTS",
+      "properties": {}
+    },
+    {
+      "source": "component_design_tokens",
+      "target": "component_typography",
+      "label": "PROVIDES_FOUNDATION_FOR",
+      "properties": {}
+    },
+    {
+      "source": "component_typography",
+      "target": "component_library",
+      "label": "USED_BY",
+      "properties": {}
+    },
+    {
+      "source": "component_library",
+      "target": "system_semantic_annotation",
+      "label": "ENHANCED_BY", 
+      "properties": {}
+    },
+    {
+      "source": "system_semantic_annotation",
+      "target": "framework_llmatic_css",
+      "label": "ENABLES_AI_COMPREHENSION_OF",
+      "properties": {}
+    },
+    {
+      "source": "language_llscript",
+      "target": "concept_type_system",
+      "label": "IMPLEMENTS",
+      "properties": {}
+    },
+    {
+      "source": "language_llscript",
+      "target": "concept_reactive_programming",
+      "label": "SUPPORTS",
+      "properties": {}
+    },
+    {
+      "source": "framework_llmatic_css",
+      "target": "metric_95_percent_accuracy",
+      "label": "TARGETS",
+      "properties": {}
+    },
+    {
+      "source": "language_llscript",
+      "target": "metric_95_percent_accuracy",
+      "label": "TARGETS", 
+      "properties": {}
+    },
+    {
+      "source": "system_semantic_annotation",
+      "target": "metric_95_percent_accuracy",
+      "label": "ENABLES_ACHIEVEMENT_OF",
+      "properties": {}
+    },
+    {
+      "source": "phase_5_testing",
+      "target": "metric_95_percent_accuracy",
+      "label": "VALIDATES_ACHIEVEMENT_OF",
+      "properties": {}
+    },
+    {
+      "source": "language_llscript",
+      "target": "concept_web_platform",
+      "label": "INTEGRATES_WITH",
+      "properties": {}
+    },
+    {
+      "source": "framework_llmatic_css", 
+      "target": "timeline_22_weeks",
+      "label": "FOLLOWS",
+      "properties": {}
+    },
+    {
+      "source": "phase_1_discovery",
+      "target": "timeline_22_weeks",
+      "label": "PART_OF",
+      "properties": {}
+    },
+    {
+      "source": "phase_2_design_system",
+      "target": "timeline_22_weeks",
+      "label": "PART_OF",
+      "properties": {}
+    },
+    {
+      "source": "phase_3_components",
+      "target": "timeline_22_weeks", 
+      "label": "PART_OF",
+      "properties": {}
+    },
+    {
+      "source": "phase_4_llm_integration",
+      "target": "timeline_22_weeks",
+      "label": "PART_OF",
+      "properties": {}
+    },
+    {
+      "source": "phase_5_testing",
+      "target": "timeline_22_weeks",
+      "label": "PART_OF",
+      "properties": {}
+    },
+    {
+      "source": "phase_6_documentation",
+      "target": "timeline_22_weeks",
+      "label": "PART_OF",
+      "properties": {}
+    }
+  ]
+}
+```
+
