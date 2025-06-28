@@ -1,0 +1,375 @@
+/*!
+ * MCSS (Model Context Style Sheet) Framework v1.0.0
+ * Proof of Concept Implementation
+ * LLM-Optimized CSS Framework
+ */
+
+/* ==========================================================================
+   LAYER 1: GLOBAL CSS & DESIGN TOKENS
+   ========================================================================== */
+
+:root {
+  /* Color Tokens - Semantic naming for LLM understanding */
+  --mcs-color-brand-primary: #005A9C;
+  --mcs-color-brand-secondary: #0066CC;
+  --mcs-color-neutral-100: #f8f9fa;
+  --mcs-color-neutral-200: #e9ecef;
+  --mcs-color-neutral-300: #dee2e6;
+  --mcs-color-neutral-700: #495057;
+  --mcs-color-neutral-900: #212529;
+  --mcs-color-error: #dc3545;
+  --mcs-color-success: #28a745;
+  --mcs-color-warning: #ffc107;
+  --mcs-color-info: #17a2b8;
+  
+  /* Typography Tokens */
+  --mcs-font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --mcs-font-size-xs: 0.75rem;
+  --mcs-font-size-sm: 0.875rem;
+  --mcs-font-size-base: 1rem;
+  --mcs-font-size-lg: 1.125rem;
+  --mcs-font-size-xl: 1.25rem;
+  --mcs-font-size-2xl: 1.5rem;
+  --mcs-line-height-tight: 1.25;
+  --mcs-line-height-base: 1.5;
+  --mcs-line-height-loose: 1.75;
+  
+  /* Spacing Tokens */
+  --mcs-spacing-xs: 0.25rem;
+  --mcs-spacing-sm: 0.5rem;
+  --mcs-spacing-md: 1rem;
+  --mcs-spacing-lg: 1.5rem;
+  --mcs-spacing-xl: 2rem;
+  --mcs-spacing-2xl: 3rem;
+  
+  /* Border Tokens */
+  --mcs-border-radius-sm: 0.25rem;
+  --mcs-border-radius-md: 0.375rem;
+  --mcs-border-radius-lg: 0.5rem;
+  --mcs-border-width-thin: 1px;
+  --mcs-border-width-thick: 2px;
+  
+  /* Shadow Tokens */
+  --mcs-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --mcs-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --mcs-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  /* Transition Tokens */
+  --mcs-transition-fast: 150ms ease-in-out;
+  --mcs-transition-base: 300ms ease-in-out;
+}
+
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--mcs-font-family-base);
+  font-size: var(--mcs-font-size-base);
+  line-height: var(--mcs-line-height-base);
+  color: var(--mcs-color-neutral-900);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   LAYER 2: COMPOSITION LAYER (LAYOUT PRIMITIVES)
+   ========================================================================== */
+
+/* Stack Layout - Vertical rhythm utility */
+.l-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-stack > * + * {
+  margin-top: var(--stack-space, var(--mcs-spacing-md));
+}
+
+.l-stack--tight {
+  --stack-space: var(--mcs-spacing-sm);
+}
+
+.l-stack--loose {
+  --stack-space: var(--mcs-spacing-lg);
+}
+
+/* Grid Layout - Responsive grid system */
+.l-grid {
+  display: grid;
+  gap: var(--grid-gap, var(--mcs-spacing-md));
+  grid-template-columns: repeat(var(--grid-columns, auto-fit), minmax(var(--grid-min-width, 250px), 1fr));
+}
+
+.l-grid--2-col {
+  --grid-columns: 2;
+}
+
+.l-grid--3-col {
+  --grid-columns: 3;
+}
+
+.l-grid--4-col {
+  --grid-columns: 4;
+}
+
+/* Container Layout */
+.l-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--mcs-spacing-md);
+}
+
+/* ==========================================================================
+   LAYER 3: UTILITY LAYER
+   ========================================================================== */
+
+/* Visibility Utilities */
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Spacing Utilities */
+.u-margin-none { margin: 0; }
+.u-margin-sm { margin: var(--mcs-spacing-sm); }
+.u-margin-md { margin: var(--mcs-spacing-md); }
+.u-margin-lg { margin: var(--mcs-spacing-lg); }
+
+.u-padding-none { padding: 0; }
+.u-padding-sm { padding: var(--mcs-spacing-sm); }
+.u-padding-md { padding: var(--mcs-spacing-md); }
+.u-padding-lg { padding: var(--mcs-spacing-lg); }
+
+/* Text Utilities */
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+
+.u-text-bold { font-weight: bold; }
+.u-text-normal { font-weight: normal; }
+
+/* ==========================================================================
+   LAYER 4: BLOCK LAYER (COMPONENTS)
+   ========================================================================== */
+
+/* Button Component */
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mcs-spacing-sm) var(--mcs-spacing-md);
+  border: var(--mcs-border-width-thin) solid transparent;
+  border-radius: var(--mcs-border-radius-md);
+  font-family: inherit;
+  font-size: var(--mcs-font-size-base);
+  font-weight: 500;
+  line-height: var(--mcs-line-height-tight);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--mcs-transition-fast);
+  background-color: var(--mcs-color-brand-primary);
+  color: white;
+}
+
+.c-button:hover {
+  background-color: var(--mcs-color-brand-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--mcs-shadow-md);
+}
+
+.c-button:focus {
+  outline: 2px solid var(--mcs-color-brand-primary);
+  outline-offset: 2px;
+}
+
+.c-button:active {
+  transform: translateY(0);
+}
+
+.c-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button Variants */
+.c-button--secondary {
+  background-color: var(--mcs-color-neutral-200);
+  color: var(--mcs-color-neutral-900);
+  border-color: var(--mcs-color-neutral-300);
+}
+
+.c-button--secondary:hover {
+  background-color: var(--mcs-color-neutral-300);
+}
+
+.c-button--danger {
+  background-color: var(--mcs-color-error);
+}
+
+.c-button--danger:hover {
+  background-color: #c82333;
+}
+
+.c-button--success {
+  background-color: var(--mcs-color-success);
+}
+
+.c-button--success:hover {
+  background-color: #218838;
+}
+
+/* Button Sizes */
+.c-button--small {
+  padding: var(--mcs-spacing-xs) var(--mcs-spacing-sm);
+  font-size: var(--mcs-font-size-sm);
+}
+
+.c-button--large {
+  padding: var(--mcs-spacing-md) var(--mcs-spacing-lg);
+  font-size: var(--mcs-font-size-lg);
+}
+
+/* Card Component */
+.c-card {
+  background-color: white;
+  border-radius: var(--mcs-border-radius-lg);
+  box-shadow: var(--mcs-shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--mcs-transition-base);
+}
+
+.c-card:hover {
+  box-shadow: var(--mcs-shadow-md);
+}
+
+.c-card__header {
+  padding: var(--mcs-spacing-lg);
+  border-bottom: var(--mcs-border-width-thin) solid var(--mcs-color-neutral-200);
+}
+
+.c-card__title {
+  margin: 0;
+  font-size: var(--mcs-font-size-xl);
+  font-weight: 600;
+  color: var(--mcs-color-neutral-900);
+}
+
+.c-card__content {
+  padding: var(--mcs-spacing-lg);
+}
+
+.c-card__footer {
+  padding: var(--mcs-spacing-lg);
+  border-top: var(--mcs-border-width-thin) solid var(--mcs-color-neutral-200);
+  background-color: var(--mcs-color-neutral-100);
+}
+
+/* Form Input Component */
+.c-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mcs-spacing-xs);
+}
+
+.c-form-field__label {
+  font-size: var(--mcs-font-size-sm);
+  font-weight: 500;
+  color: var(--mcs-color-neutral-700);
+}
+
+.c-form-field__input {
+  padding: var(--mcs-spacing-sm) var(--mcs-spacing-md);
+  border: var(--mcs-border-width-thin) solid var(--mcs-color-neutral-300);
+  border-radius: var(--mcs-border-radius-md);
+  font-family: inherit;
+  font-size: var(--mcs-font-size-base);
+  line-height: var(--mcs-line-height-base);
+  transition: border-color var(--mcs-transition-fast);
+}
+
+.c-form-field__input:focus {
+  outline: none;
+  border-color: var(--mcs-color-brand-primary);
+  box-shadow: 0 0 0 3px rgba(0, 90, 156, 0.1);
+}
+
+.c-form-field__help {
+  font-size: var(--mcs-font-size-xs);
+  color: var(--mcs-color-neutral-700);
+}
+
+.c-form-field__error {
+  font-size: var(--mcs-font-size-xs);
+  color: var(--mcs-color-error);
+}
+
+/* Form Field States */
+.c-form-field--error .c-form-field__input {
+  border-color: var(--mcs-color-error);
+}
+
+.c-form-field--error .c-form-field__input:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.c-form-field--success .c-form-field__input {
+  border-color: var(--mcs-color-success);
+}
+
+.c-form-field--success .c-form-field__input:focus {
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+/* ==========================================================================
+   LAYER 5: EXCEPTION LAYER (DATA ATTRIBUTES)
+   ========================================================================== */
+
+[data-mcs-state="loading"] {
+  opacity: 0.7;
+  pointer-events: none;
+  position: relative;
+}
+
+[data-mcs-state="loading"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--mcs-color-neutral-300);
+  border-top-color: var(--mcs-color-brand-primary);
+  border-radius: 50%;
+  animation: mcs-spin 1s linear infinite;
+}
+
+@keyframes mcs-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[data-mcs-state="disabled"] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+[data-mcs-theme="dark"] {
+  --mcs-color-neutral-100: #1f2937;
+  --mcs-color-neutral-200: #374151;
+  --mcs-color-neutral-300: #4b5563;
+  --mcs-color-neutral-700: #d1d5db;
+  --mcs-color-neutral-900: #f9fafb;
+}

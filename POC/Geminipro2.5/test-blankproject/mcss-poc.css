@@ -16,7 +16,7 @@
 :root {
   /* Ontological Namespace Declaration for RDFa */
   /* This prefix is used throughout the HTML to provide semantic context. */
-  /* prefix: mcs http://schema.model-context.org/v1/;
+ /* prefix: mcs http://schema.model-context.org/v1/;
 
   /* --- COLOR TOKENS --- */
   /* Purpose: Semantic color definitions for consistent branding and UI states. */
@@ -25,7 +25,7 @@
   --mcs-color-brand-primary-text: #ffffff;
 
   --mcs-color-neutral-0: #ffffff;
-  --mcs-color-neutral-100: #e6f9e6;
+  --mcs-color-neutral-100: #f8f9fa;
   --mcs-color-neutral-300: #dee2e6;
   --mcs-color-neutral-500: #adb5bd;
   --mcs-color-neutral-700: #495057;

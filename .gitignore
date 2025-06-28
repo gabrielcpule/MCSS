@@ -1,0 +1,50 @@
+# .gitignore for MCSS project
+# Ignore Python cache and environment files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+venv/
+env/
+ENV/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore compiled files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore node modules (if any JS/TS is used)
+node_modules/
+
+# Ignore Excel and CSV temp files
+*.tmp
+~$*
+
+# Ignore backup files
+*.bak
+*.swp
+*.swo
+
+# Ignore markdown temp/backup files
+*.md~
+
+# Ignore other common artifacts
+*.univer.md
+.space/
+

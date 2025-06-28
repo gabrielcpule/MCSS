@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Login</title>
+  <link rel="stylesheet" href="mcss.css">
+</head>
+<body class="l-container l-stack l-stack--loose" style="min-height:100vh;justify-content:center;align-items:center;display:flex;background-color:#28a745;">
+  <!-- Dismissable Notification -->
+  <section id="notification" class="c-card u-margin-md l-container" style="max-width:100vw;margin:0 auto 0 auto;padding:0;position:fixed;top:0;left:0;right:0;z-index:1000;box-shadow:var(--mcs-shadow-md);border-radius:0;min-height:unset;height:72px;display:flex;align-items:center;justify-content:center;" typeof="mcs:Notification" property="mcs:purpose" content="Informational notification at top">
+    <div class="l-stack u-text-center" style="flex-direction:column;align-items:center;justify-content:center;width:100%;" typeof="mcs:NotificationContent" property="mcs:structure" content="image, text, button">
+      <img src="https://placekitten.com/72/48" alt="Notification Image" style="width:72px;height:48px;object-fit:cover;border-radius:var(--mcs-border-radius-md);margin:auto;" typeof="mcs:Image" property="mcs:purpose" content="Visual notification icon">
+      <div class="u-margin-none" style="font-size:var(--mcs-font-size-base);" typeof="mcs:NotificationText" property="mcs:purpose" content="Welcome message">Welcome to Secure Bank! Please login to continue.</div>
+      <button class="c-button c-button--secondary" id="dismissNotification" typeof="mcs:Button" property="mcs:purpose" content="Dismiss notification" data-mcs-interaction-type="click" data-mcs-consequence="notification-dismiss" style="position:absolute;top:12px;right:24px;">Dismiss</button>
+    </div>
+  </section>
+  <main class="l-container" style="width:100vw;display:flex;justify-content:flex-end;align-items:center;min-height:100vh;padding-top:80px;" typeof="mcs:MainContent" property="mcs:structure" content="login-card">
+    <section class="c-card" style="width:100%;max-width:400px;" typeof="mcs:LoginCard" property="mcs:purpose" content="User login form container">
+      <div class="c-card__header u-text-center" typeof="mcs:CardHeader" property="mcs:structure" content="title">
+        <h1 class="c-card__title" typeof="mcs:Title" property="mcs:purpose" content="Login page title">Bank Login</h1>
+      </div>
+      <div class="c-card__content" typeof="mcs:CardContent" property="mcs:structure" content="form">
+        <form id="loginForm" class="l-stack" typeof="mcs:Form" property="mcs:purpose" content="User authentication form" autocomplete="on">
+          <div class="c-form-field" typeof="mcs:FormField" property="mcs:input-type" content="text">
+            <label for="username" class="c-form-field__label" typeof="mcs:Label" property="mcs:purpose" content="Username label">Username</label>
+            <input type="text" id="username" name="username" class="c-form-field__input" required autofocus typeof="mcs:Input" property="mcs:purpose" content="Username input field" aria-describedby="username-help">
+            <span id="username-help" class="c-form-field__help" typeof="mcs:HelpText" property="mcs:purpose" content="Username help text">Enter your bank username</span>
+          </div>
+          <div class="c-form-field" typeof="mcs:FormField" property="mcs:input-type" content="password">
+            <label for="password" class="c-form-field__label" typeof="mcs:Label" property="mcs:purpose" content="Password label">Password</label>
+            <input type="password" id="password" name="password" class="c-form-field__input" required typeof="mcs:PasswordInput" property="mcs:purpose" content="Password input field" aria-describedby="password-help">
+            <span id="password-help" class="c-form-field__help" typeof="mcs:HelpText" property="mcs:purpose" content="Password help text">Enter your password</span>
+          </div>
+          <button type="submit" class="c-button c-button--primary" typeof="mcs:Button" property="mcs:purpose" content="Submit login form" data-mcs-interaction-type="click" data-mcs-consequence="form-submission">Login</button>
+        </form>
+      </div>
+      <div class="c-card__footer u-text-center" typeof="mcs:CardFooter" property="mcs:structure" content="forgot-password-link">
+        <a href="#" class="u-text-sm" typeof="mcs:Link" property="mcs:purpose" content="Forgot password link">Forgot password?</a>
+      </div>
+    </section>
+    <div id="login-message" class="u-text-center u-margin-md" typeof="mcs:Message" property="mcs:purpose" content="Login feedback message"></div>
+  </main>
+  <script>
+    document.getElementById('dismissNotification').onclick = function() {
+      document.getElementById('notification').style.display = 'none';
+    };
+  </script>
+  <script src="login.js"></script>
+</body>
+</html>
