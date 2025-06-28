@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" prefix="mcs: http://schema.model-context.org/v1/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCSS Framework - Proof of Concept</title>
+    <link rel="stylesheet" href="mcss.css">
+    <style>
+        /* Demo-specific styles */
+        .demo-section {
+            margin: var(--mcs-spacing-2xl) 0;
+            padding: var(--mcs-spacing-lg);
+            border: var(--mcs-border-width-thin) solid var(--mcs-color-neutral-200);
+            border-radius: var(--mcs-border-radius-lg);
+        }
+        
+        .demo-section h2 {
+            margin-top: 0;
+            color: var(--mcs-color-brand-primary);
+        }
+    </style>
+</head>
+<body vocab="http://schema.model-context.org/v1/">
+    <div class="l-container">
+        <header class="u-text-center u-padding-lg">
+            <h1>MCSS Framework Demonstration</h1>
+            <p>Model Context Style Sheet - LLM-Optimized CSS Framework</p>
+        </header>
+
+        <main class="l-stack l-stack--loose">
+            <!-- Button Component Demonstration -->
+            <section class="demo-section" 
+                     typeof="mcs:ComponentDemo" 
+                     property="mcs:demonstrates" 
+                     content="Button Component with semantic variants">
+                
+                <h2>Button Components</h2>
+                <p>Semantic button variants with complete RDFa annotations for LLM understanding.</p>
+                
+                <div class="l-stack">
+                    <div>
+                        <h3>Primary Actions</h3>
+                        <div class="l-grid l-grid--4-col">
+                            <button class="c-button" 
+                                    typeof="mcs:Button"
+                                    property="mcs:purpose" 
+                                    content="Primary action trigger for main user flows"
+                                    data-mcs-interaction-type="click"
+                                    data-mcs-consequence="form-submission">
+                                Primary Button
+                            </button>
+                            
+                            <button class="c-button c-button--secondary" 
+                                    typeof="mcs:Button"
+                                    property="mcs:purpose" 
+                                    content="Secondary action for alternative flows"
+                                    data-mcs-interaction-type="click"
+                                    data-mcs-consequence="navigation">
+                                Secondary
+                            </button>
+                            
+                            <button class="c-button c-button--success" 
+                                    typeof="mcs:Button"
+                                    property="mcs:purpose" 
+                                    content="Confirmation action for positive outcomes"
+                                    data-mcs-interaction-type="click"
+                                    data-mcs-consequence="confirmation">
+                                Success
+                            </button>
+                            
+                            <button class="c-button c-button--danger" 
+                                    typeof="mcs:Button"
+                                    property="mcs:purpose" 
+                                    content="Destructive action requiring user confirmation"
+                                    data-mcs-interaction-type="click"
+                                    data-mcs-consequence="data-deletion">
+                                Danger
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Button Sizes</h3>
+                        <div class="l-grid l-grid--3-col">
+                            <button class="c-button c-button--small" 
+                                    typeof="mcs:Button"
+                                    property="mcs:size" 
+                                    content="small">
+                                Small Button
+                            </button>
+                            
+                            <button class="c-button" 
+                                    typeof="mcs:Button"
+                                    property="mcs:size" 
+                                    content="medium">
+                                Medium Button
+                            </button>
+                            
+                            <button class="c-button c-button--large" 
+                                    typeof="mcs:Button"
+                                    property="mcs:size" 
+                                    content="large">
+                                Large Button
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Button States</h3>
+                        <div class="l-grid l-grid--3-col">
+                            <button class="c-button" 
+                                    disabled
+                                    typeof="mcs:Button"
+                                    property="mcs:state" 
+                                    content="disabled">
+                                Disabled Button
+                            </button>
+                            
+                            <button class="c-button" 
+                                    data-mcs-state="loading"
+                                    typeof="mcs:Button"
+                                    property="mcs:state" 
+                                    content="loading">
+                                Loading Button
+                            </button>
+                            
+                            <button class="c-button" 
+                                    typeof="mcs:Button"
+                                    property="mcs:state" 
+                                    content="normal">
+                                Normal Button
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card Component Demonstration -->
+            <section class="demo-section" 
+                     typeof="mcs:ComponentDemo" 
+                     property="mcs:demonstrates" 
+                     content="Card Component with header, content, and footer structure">
+                
+                <h2>Card Components</h2>
+                <p>Flexible card components demonstrating element relationships and semantic structure.</p>
+                
+                <div class="l-grid l-grid--2-col">
+                    <article class="c-card" 
+                             typeof="mcs:Card"
+                             property="mcs:purpose" 
+                             content="Content container with structured information display"
+                             data-mcs-interaction-type="hover"
+                             data-mcs-consequence="visual-feedback">
+                        
+                        <header class="c-card__header" 
+                                typeof="mcs:CardHeader"
+                                property="mcs:purpose" 
+                                content="Card title and metadata container">
+                            <h3 class="c-card__title" 
+                                typeof="mcs:CardTitle"
+                                property="mcs:content-type" 
+                                content="primary-heading">
+                                User Profile Card
+                            </h3>
+                        </header>
+                        
+                        <div class="c-card__content" 
+                             typeof="mcs:CardContent"
+                             property="mcs:purpose" 
+                             content="Main card content area">
+                            <p>This card demonstrates the structured approach to component design in MCSS. Each element has clear semantic meaning and purpose annotations.</p>
+                            <p><strong>Email:</strong> user@example.com</p>
+                            <p><strong>Role:</strong> Administrator</p>
+                        </div>
+                        
+                        <footer class="c-card__footer" 
+                                typeof="mcs:CardFooter"
+                                property="mcs:purpose" 
+                                content="Card actions and secondary information">
+                            <button class="c-button c-button--small" 
+                                    typeof="mcs:Button"
+                                    property="mcs:purpose" 
+                                    content="Edit user profile information">
+                                Edit Profile
+                            </button>
+                        </footer>
+                    </article>
+
+                    <article class="c-card" 
+                             typeof="mcs:Card"
+                             property="mcs:purpose" 
+                             content="Dashboard statistics display card"
+                             data-mcs-interaction-type="click"
+                             data-mcs-consequence="detailed-view">
+                        
+                        <header class="c-card__header">
+                            <h3 class="c-card__title">Statistics Overview</h3>
+                        </header>
+                        
+                        <div class="c-card__content">
+                            <div class="l-grid l-grid--2-col">
+                                <div class="u-text-center">
+                                    <div style="font-size: var(--mcs-font-size-2xl); font-weight: bold; color: var(--mcs-color-brand-primary);">1,247</div>
+                                    <div style="font-size: var(--mcs-font-size-sm); color: var(--mcs-color-neutral-700);">Total Users</div>
+                                </div>
+                                <div class="u-text-center">
+                                    <div style="font-size: var(--mcs-font-size-2xl); font-weight: bold; color: var(--mcs-color-success);">89.2%</div>
+                                    <div style="font-size: var(--mcs-font-size-sm); color: var(--mcs-color-neutral-700);">Success Rate</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <footer class="c-card__footer">
+                            <button class="c-button c-button--secondary c-button--small">
+                                View Details
+                            </button>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Form Component Demonstration -->
+            <section class="demo-section" 
+                     typeof="mcs:ComponentDemo" 
+                     property="mcs:demonstrates" 
+                     content="Form Input Components with validation states">
+                
+                <h2>Form Components</h2>
+                <p>Accessible form inputs with semantic validation states and comprehensive annotations.</p>
+                
+                <form class="l-stack" 
+                      typeof="mcs:Form"
+                      property="mcs:purpose" 
+                      content="User information collection with validation feedback"
+                      data-mcs-interaction-type="input"
+                      data-mcs-consequence="data-validation">
+                    
+                    <div class="l-grid l-grid--2-col">
+                        <div class="c-form-field" 
+                             typeof="mcs:FormField"
+                             property="mcs:input-type" 
+                             content="text"
+                             property="mcs:validation-rule" 
+                             content="required">
+                            <label for="firstName" 
+                                   class="c-form-field__label"
+                                   typeof="mcs:FormLabel"
+                                   property="mcs:describes" 
+                                   content="firstName">
+                                First Name *
+                            </label>
+                            <input type="text" 
+                                   id="firstName" 
+                                   name="firstName"
+                                   class="c-form-field__input"
+                                   required
+                                   typeof="mcs:TextInput"
+                                   property="mcs:purpose" 
+                                   content="User first name input for identification"
+                                   aria-describedby="firstName-help">
+                            <span id="firstName-help" 
+                                  class="c-form-field__help"
+                                  typeof="mcs:HelpText"
+                                  property="mcs:guidance" 
+                                  content="Enter your legal first name">
+                                Enter your legal first name
+                            </span>
+                        </div>
+
+                        <div class="c-form-field" 
+                             typeof="mcs:FormField"
+                             property="mcs:input-type" 
+                             content="text"
+                             property="mcs:validation-rule" 
+                             content="required">
+                            <label for="lastName" class="c-form-field__label">Last Name *</label>
+                            <input type="text" 
+                                   id="lastName" 
+                                   name="lastName"
+                                   class="c-form-field__input"
+                                   required
+                                   typeof="mcs:TextInput"
+                                   property="mcs:purpose" 
+                                   content="User last name input for identification">
+                        </div>
+                    </div>
+
+                    <div class="c-form-field c-form-field--error" 
+                         typeof="mcs:FormField"
+                         property="mcs:validation-state" 
+                         content="error"
+                         data-mcs-state="error">
+                        <label for="email" class="c-form-field__label">Email Address *</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email"
+                               class="c-form-field__input"
+                               value="invalid-email"
+                               required
+                               typeof="mcs:EmailInput"
+                               property="mcs:purpose" 
+                               content="User email address for communication and login"
+                               aria-describedby="email-error">
+                        <span id="email-error" 
+                              class="c-form-field__error"
+                              typeof="mcs:ErrorText"
+                              property="mcs:error-type" 
+                              content="format-validation"
+                              role="alert">
+                            Please enter a valid email address
+                        </span>
+                    </div>
+
+                    <div class="c-form-field c-form-field--success" 
+                         typeof="mcs:FormField"
+                         property="mcs:validation-state" 
+                         content="success"
+                         data-mcs-state="success">
+                        <label for="username" class="c-form-field__label">Username *</label>
+                        <input type="text" 
+                               id="username" 
+                               name="username"
+                               class="c-form-field__input"
+                               value="john_doe_2024"
+                               required
+                               typeof="mcs:TextInput"
+                               property="mcs:purpose" 
+                               content="Unique username for system identification"
+                               aria-describedby="username-help">
+                        <span id="username-help" 
+                              class="c-form-field__help"
+                              typeof="mcs:HelpText">
+                            Username is available and valid
+                        </span>
+                    </div>
+
+                    <div class="l-grid l-grid--2-col">
+                        <button type="submit" 
+                                class="c-button" 
+                                typeof="mcs:SubmitButton"
+                                property="mcs:purpose" 
+                                content="Submit form data for processing"
+                                data-mcs-interaction-type="click"
+                                data-mcs-consequence="form-submission">
+                            Create Account
+                        </button>
+                        
+                        <button type="reset" 
+                                class="c-button c-button--secondary"
+                                typeof="mcs:ResetButton"
+                                property="mcs:purpose" 
+                                content="Clear all form inputs and reset to initial state"
+                                data-mcs-interaction-type="click"
+                                data-mcs-consequence="form-reset">
+                            Reset Form
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Layout Demonstration -->
+            <section class="demo-section" 
+                     typeof="mcs:ComponentDemo" 
+                     property="mcs:demonstrates" 
+                     content="Layout primitives for structural organization">
+                
+                <h2>Layout Primitives</h2>
+                <p>Composable layout utilities for structural organization with semantic clarity.</p>
+                
+                <div class="l-stack">
+                    <div>
+                        <h3>Stack Layout (Vertical Rhythm)</h3>
+                        <div class="l-stack l-stack--tight" 
+                             style="background: var(--mcs-color-neutral-100); padding: var(--mcs-spacing-md); border-radius: var(--mcs-border-radius-md);"
+                             typeof="mcs:StackLayout"
+                             property="mcs:purpose" 
+                             content="Vertical content organization with consistent spacing">
+                            <p>First item in stack</p>
+                            <p>Second item with automatic spacing</p>
+                            <p>Third item maintaining rhythm</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Grid Layout (Responsive Grid)</h3>
+                        <div class="l-grid l-grid--3-col" 
+                             typeof="mcs:GridLayout"
+                             property="mcs:purpose" 
+                             content="Responsive grid system for content organization"
+                             data-mcs-responsive="true">
+                            <div style="background: var(--mcs-color-neutral-100); padding: var(--mcs-spacing-md); border-radius: var(--mcs-border-radius-md); text-align: center;">
+                                Grid Item 1
+                            </div>
+                            <div style="background: var(--mcs-color-neutral-100); padding: var(--mcs-spacing-md); border-radius: var(--mcs-border-radius-md); text-align: center;">
+                                Grid Item 2
+                            </div>
+                            <div style="background: var(--mcs-color-neutral-100); padding: var(--mcs-spacing-md); border-radius: var(--mcs-border-radius-md); text-align: center;">
+                                Grid Item 3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="u-text-center u-padding-lg" style="border-top: var(--mcs-border-width-thin) solid var(--mcs-color-neutral-200); margin-top: var(--mcs-spacing-2xl);">
+            <p>&copy; 2025 MCSS Framework - Model Context Style Sheet</p>
+            <p>Designed for optimal LLM interaction and understanding</p>
+        </footer>
+    </div>
+
+    <script>
+        // Demo JavaScript for interactive states
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate loading state
+            const loadingButton = document.querySelector('[data-mcs-state="loading"]');
+            if (loadingButton) {
+                setTimeout(() => {
+                    loadingButton.removeAttribute('data-mcs-state');
+                    loadingButton.textContent = 'Loaded!';
+                }, 3000);
+            }
+
+            // Form validation demo
+            const emailInput = document.getElementById('email');
+            if (emailInput) {
+                emailInput.addEventListener('input', function() {
+                    const field = this.closest('.c-form-field');
+                    const errorSpan = field.querySelector('.c-form-field__error');
+                    
+                    if (this.validity.valid) {
+                        field.classList.remove('c-form-field--error');
+                        field.classList.add('c-form-field--success');
+                        errorSpan.textContent = 'Email format is valid';
+                        errorSpan.className = 'c-form-field__help';
+                    } else {
+                        field.classList.remove('c-form-field--success');
+                        field.classList.add('c-form-field--error');
+                        errorSpan.textContent = 'Please enter a valid email address';
+                        errorSpan.className = 'c-form-field__error';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

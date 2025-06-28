@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" prefix="mcs: http://schema.model-context.org/v1/">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCSS Proof of Concept Demo</title>
+  <link rel="stylesheet" href="mcss-framework.css" />
+  <style>
+    /* Demo-specific custom styles */
+    body {
+      font-family: var(--mcs-font-family-base);
+      background-color: var(--mcs-color-neutral-050);
+      color: var(--mcs-color-neutral-900);
+    }
+  </style>
+</head>
+<body class="l-container l-stack l-stack--loose" typeof="mcs:DemoPage">
+  <header class="l-stack" typeof="mcs:Component" property="mcs:purpose" content="Primary site header and hero">
+    <h1>MCSS Proof of Concept</h1>
+    <p class="u-text-lg">A functional demonstration of the Model Context Style Sheet framework.</p>
+  </header>
+
+  <!-- Buttons Showcase -->
+  <section class="l-stack" typeof="mcs:Component" property="mcs:purpose" content="Button Component Showcase">
+    <h2>Buttons</h2>
+    <div class="l-flex l-flex--wrap l-flex--gap-sm">
+      <button class="c-button" typeof="mcs:Component" property="mcs:purpose" content="Primary action button" data-mcs-interaction-type="click" data-mcs-consequence="submit">Primary</button>
+      <button class="c-button c-button--secondary" typeof="mcs:Component" property="mcs:purpose" content="Secondary action" data-mcs-interaction-type="click" data-mcs-consequence="cancel">Secondary</button>
+      <button class="c-button c-button--outline" typeof="mcs:Component" property="mcs:purpose" content="Outline variant" data-mcs-interaction-type="click" data-mcs-consequence="download">Outline</button>
+      <button class="c-button c-button--danger" typeof="mcs:Component" property="mcs:purpose" content="Destructive action" data-mcs-interaction-type="click" data-mcs-consequence="delete">Danger</button>
+    </div>
+  </section>
+
+  <!-- Card Showcase with Stack + Grid -->
+  <section class="l-stack" typeof="mcs:Component" property="mcs:purpose" content="Card Component Showcase">
+    <h2>Cards</h2>
+    <div class="l-grid l-grid--responsive">
+      <article class="c-card" typeof="mcs:Component" property="mcs:purpose" content="Informational card">
+        <header class="c-card__header">
+          <h3 class="c-card__title">Card Title</h3>
+          <p class="c-card__subtitle">Subtitle</p>
+        </header>
+        <div class="c-card__content">
+          <p>Card content goes here. It demonstrates the element structure within the card component.</p>
+        </div>
+        <footer class="c-card__footer l-flex l-flex--end">
+          <button class="c-button c-button--small">Action</button>
+        </footer>
+      </article>
+      <article class="c-card" typeof="mcs:Component" property="mcs:purpose" content="Interactive card with selected state" data-mcs-selected="true">
+        <header class="c-card__header">
+          <h3 class="c-card__title">Selected Card</h3>
+          <p class="c-card__subtitle">State demonstration</p>
+        </header>
+        <div class="c-card__content">
+          <p>This card uses data-mcs-selected to indicate an active state.</p>
+        </div>
+        <footer class="c-card__footer l-flex l-flex--between">
+          <button class="c-button c-button--small">Dismiss</button>
+          <button class="c-button c-button--secondary c-button--small">Learn More</button>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <!-- Form Input Showcase -->
+  <section class="l-stack" typeof="mcs:Component" property="mcs:purpose" content="Form Component Showcase">
+    <h2>Form Inputs</h2>
+    <form class="l-stack" data-mcs-interaction-type="submit" data-mcs-consequence="validate">
+      <div class="c-input" typeof="mcs:Component" property="mcs:purpose" content="Text input">
+        <label for="name" class="c-input__label">Name</label>
+        <input id="name" type="text" class="c-input__field" placeholder="Enter your name" required />
+      </div>
+      <div class="c-input c-input--error" typeof="mcs:Component" property="mcs:purpose" content="Email input with error state">
+        <label for="email" class="c-input__label">Email</label>
+        <input id="email" type="email" class="c-input__field" placeholder="name@example.com" />
+        <p class="c-input__error">Invalid email address</p>
+      </div>
+      <button class="c-button" type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer class="l-stack" typeof="mcs:Component" property="mcs:purpose" content="Page footer">
+    <p class="u-text-center">© 2025 MCSS Demo. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" prefix="mcs: http://schema.model-context.org/v1/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCSS Proof of Concept</title>
+    
+    <!-- Link to the MCSS Stylesheet -->
+    <link rel="stylesheet" href="mcss-poc.css">
+
+    <!-- 
+      LLM INSTRUCTIONAL COMMENT:
+      This HTML document uses the Model Context Style Sheet (MCSS).
+      Key Features for LLM Comprehension:
+      1.  `prefix="mcs: ..."`: Declares the semantic namespace for annotations.
+      2.  `typeof="mcs:Component"`: Identifies a self-contained component block.
+      3.  `property="mcs:purpose"`: Describes the function of an element in plain English.
+      4.  `data-mcs-*` attributes: Specify behaviors, states, and consequences of interaction.
+      5.  Class Naming: Follows a strict `layer-name` convention (e.g., `l-grid`, `c-card`, `u-visually-hidden`).
+    -->
+</head>
+<body>
+
+    <header role="banner" class="l-stack" style="--stack-space: var(--mcs-spacing-sm); margin-bottom: var(--mcs-spacing-xl);">
+        <h1 class="c-heading--display" property="mcs:purpose" content="Main title for the MCSS proof of concept page.">MCSS Proof of Concept</h1>
+        <p property="mcs:purpose" content="Introductory paragraph explaining the goal of the MCSS demonstration.">
+            This page demonstrates the core principles of the Model Context Style Sheet (MCSS), a CSS framework optimized for Large Language Model (LLM) comprehension. Notice the semantic class names and detailed `mcs:*` annotations in the markup.
+        </p>
+    </header>
+
+    <main role="main" class="l-stack" style="--stack-space: var(--mcs-spacing-xl);">
+        
+        <!-- Section for Card Components -->
+        <section typeof="mcs:Component" property="mcs:purpose" content="A section demonstrating responsive card components within a grid layout.">
+            <h2 property="mcs:purpose" content="Headline for the card demonstration section.">Demonstration of Card Components</h2>
+            
+            <div class="l-grid" style="--grid-min-item-width: 20rem; --grid-gap: var(--mcs-spacing-lg);">
+
+                <!-- Card 1: Standard Card -->
+                <div class="c-card" typeof="mcs:Component" property="mcs:purpose" content="A card component for displaying grouped content. This card shows a user profile.">
+                    <div class="c-card__header" property="mcs:purpose" content="The title section of the card component.">
+                        User Profile
+                    </div>
+                    <div class="c-card__body l-stack" style="--stack-space: var(--mcs-spacing-md);" property="mcs:purpose" content="The main content area of the card, containing profile details.">
+                        <p><strong>Name:</strong> Alex Doe</p>
+                        <p><strong>Role:</strong> Lead Developer</p>
+                    </div>
+                    <div class="c-card__footer" property="mcs:purpose" content="The action area of the card component, typically containing buttons.">
+                        <a href="#" class="c-button c-button--primary" 
+                           typeof="mcs:Component" 
+                           property="mcs:purpose" 
+                           content="A primary action button to view the user's full profile."
+                           data-mcs-interaction-type="navigation"
+                           data-mcs-consequence="Navigates the user to the detailed profile page for 'Alex Doe'.">
+                           View Profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Call to Action Card -->
+                <div class="c-card" typeof="mcs:Component" property="mcs:purpose" content="A card component designed as a call-to-action for signing up.">
+                    <div class="c-card__header" property="mcs:purpose" content="The title of the call-to-action card.">
+                        Join Our Newsletter
+                    </div>
+                    <div class="c-card__body" property="mcs:purpose" content="The main content area of the card, explaining the benefits of the newsletter.">
+                        <p>Get the latest updates on MCSS development delivered right to your inbox.</p>
+                    </div>
+                    <div class="c-card__footer" property="mcs:purpose" content="The action area of the card, containing a sign-up button.">
+                        <a href="#" class="c-button c-button--secondary" 
+                           typeof="mcs:Component" 
+                           property="mcs:purpose" 
+                           content="A secondary action button to open the sign-up modal or page."
+                           data-mcs-interaction-type="navigation"
+                           data-mcs-consequence="Opens a dialog or navigates to a new page to subscribe to the newsletter.">
+                           Sign Up
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section for Form Components -->
+        <section typeof="mcs:Component" property="mcs:purpose" content="A section demonstrating form controls with built-in validation states and accessibility.">
+            <h2 property="mcs:purpose" content="Headline for the form demonstration section.">Demonstration of Form Input</h2>
+            
+            <form action="#" method="post" class="l-stack" style="--stack-space: var(--mcs-spacing-lg);" onsubmit="event.preventDefault(); validateForm();">
+                
+                <!-- Form Input: Valid State -->
+                <div class="c-form-group" 
+                     typeof="mcs:Component" 
+                     property="mcs:purpose" 
+                     content="A container for a form label, input, and description, demonstrating a valid state."
+                     data-mcs-validation-state="valid"
+                     id="form-group-username">
+                    <label for="username" class="c-form-group__label" property="mcs:purpose" content="The visible label for the username input field.">Username</label>
+                    <input type="text" id="username" name="username" class="c-form-group__input" value="mcss_dev" required 
+                           aria-describedby="username-desc"
+                           aria-invalid="false"
+                           property="mcs:purpose" 
+                           content="A text input field for the user's desired username.">
+                    <p id="username-desc" class="c-form-group__description" property="mcs:purpose" content="A helper text explaining the state of the username field.">Username is available.</p>
+                </div>
+
+                <!-- Form Input: Invalid State -->
+                <div class="c-form-group" 
+                     typeof="mcs:Component" 
+                     property="mcs:purpose" 
+                     content="A container for a form label, input, and description, demonstrating an invalid state."
+                     data-mcs-validation-state="invalid"
+                     id="form-group-email">
+                    <label for="email" class="c-form-group__label" property="mcs:purpose" content="The visible label for the email input field.">Email Address</label>
+                    <input type="email" id="email" name="email" class="c-form-group__input" value="invalid-email" required
+                           aria-describedby="email-desc"
+                           aria-invalid="true"
+                           property="mcs:purpose" 
+                           content="An email input field for the user's contact email.">
+                    <p id="email-desc" class="c-form-group__description" property="mcs:purpose" content="An error message explaining why the email field is invalid.">Please enter a valid email address.</p>
+                </div>
+
+                <!-- Form Input: Neutral State -->
+                 <div class="c-form-group" 
+                     typeof="mcs:Component" 
+                     property="mcs:purpose" 
+                     content="A container for a form label and input, demonstrating a neutral, unvalidated state."
+                     id="form-group-password">
+                    <label for="password" class="c-form-group__label" property="mcs:purpose" content="The visible label for the password input field.">Password</label>
+                    <input type="password" id="password" name="password" class="c-form-group__input" required
+                           aria-describedby="password-desc"
+                           property="mcs:purpose" 
+                           content="A password input field for user authentication.">
+                     <p id="password-desc" class="c-form-group__description" property="mcs:purpose" content="A helper text providing password requirements.">Must be at least 8 characters long.</p>
+                </div>
+                
+                <div class="l-cluster" style="--cluster-gap: var(--mcs-spacing-md);">
+                     <button type="submit" class="c-button c-button--primary"
+                        typeof="mcs:Component"
+                        property="mcs:purpose"
+                        content="A primary button to submit the form data for processing."
+                        data-mcs-interaction-type="form_submission"
+                        data-mcs-consequence="Initiates client-side validation and, if successful, sends the form data to the server.">
+                        Submit Form
+                    </button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+    
+    <script>
+      // Basic script for demonstrating state changes.
+      function validateForm() {
+        // This is a dummy function to illustrate how one might toggle states.
+        const emailInput = document.getElementById('email');
+        const emailGroup = document.getElementById('form-group-email');
+        if (!emailInput.value.includes('@')) {
+          emailGroup.dataset.mcsValidationState = 'invalid';
+          emailInput.setAttribute('aria-invalid', 'true');
+        } else {
+          emailGroup.dataset.mcsValidationState = 'valid';
+          emailInput.setAttribute('aria-invalid', 'false');
+        }
+
+        alert('Demonstration of form submission logic.');
+      }
+    </script>
+</body>
+</html>

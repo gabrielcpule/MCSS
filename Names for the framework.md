@@ -4,7 +4,7 @@ Here some options:
 	- Model Context Css
 - ==MCSS==
 	- same reason as the above, but it seems to have a better sound 
-	- Model Context Style Sheet
+	- *Model Context Style Sheet*
 - LMAO css
-	- Language Model Ass Off 
+	- *Language Model Ass Off* 
 	- dumb name, was more of a joke xD

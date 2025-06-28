@@ -1,0 +1,453 @@
+{
+  "model": {
+    "columns": [
+      {
+        "id": "135875e1-0357-454c-b1df-6da35b85bc3e",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "266px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "Case",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "218px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "Primary_Requirements",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "227px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "Recommended_LLM",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "8ee26745-2ee0-4f1d-82db-5773802af685",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "350px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "Reasoning",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      },
+      {
+        "id": "d382a6db-e7d6-46d4-9491-750682d5906d",
+        "sortDir": "default",
+        "isVisible": true,
+        "width": "382px",
+        "type": "text",
+        "numberPrefix": "",
+        "numberSuffix": "",
+        "numberSeparator": "",
+        "content": "Alternative_Options",
+        "numberFormat": "number",
+        "currencyType": "USD",
+        "dateFormat": "mmddyyyy",
+        "dateFormatSeparator": "-",
+        "hour12": true,
+        "includeTime": false,
+        "shouldWrapOverflow": true,
+        "tags": [],
+        "calculationType": "none",
+        "aspectRatio": "unset",
+        "horizontalPadding": "unset",
+        "verticalPadding": "unset",
+        "frontmatterKey": null,
+        "multiTagSortDir": "default"
+      }
+    ],
+    "rows": [
+      {
+        "id": "9f559f0a-c9e8-41f1-bd5e-39bd63db5edb",
+        "index": 0,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "cb6d451f-e45a-41a3-8d66-1ae74fdbedef",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "Technical Analysis Specialist",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3557f5dd-3909-445c-9c20-7d1f0df9a853",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "Deep technical analysis, systematic testing methodology",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "2cbaa9a2-58ad-453c-9946-015af7677f44",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "Claude 4 Sonnet",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b9f5b87a-51e0-476c-8297-2bbffb0fa331",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "Highest SWE-Bench coding score (72.7%), excellent systematic analysis capabilities",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "2dbd6b92-8a5e-4ccb-a46b-f10b678ff0c2",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "Gemini 2.5 Pro, DeepSeek-R1",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "596558e7-9bc3-41e0-9998-881234ca72bb",
+        "index": 1,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "111cc228-8823-438e-a3b8-f703f3af4f73",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "Systems Architect with AI Specialization",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b0fef241-02b7-4e47-b326-743f72dcb0a2",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "Technical architecture understanding, LLM cognitive patterns",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "abcb7a34-cb5b-43e3-be95-f93ccdffd79e",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "Gemini 2.5 Pro",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "785fcbed-dda9-46ee-84b4-d48f9618f888",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "Best overall performance (84.4%), 1M token context for large architectures",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "16f121cd-220d-4e0f-8950-bf6bebaeed83",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "Claude 4 Sonnet, GPT-o3",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "c0a7892c-5627-413b-8de7-d96f818714b4",
+        "index": 2,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "f277e165-ae76-4987-9a14-0bca8050c3c6",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "Senior Technical Architect",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "5a5df324-6297-4ddc-9cc2-35bedde78a0f",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "Large-scale system design, CSS architecture patterns",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "49c99131-6af1-4329-a7e5-d318f46e09ca",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "GPT-4.1",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "e8150f45-e7c4-4223-ad40-3e06756b5e51",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "High MMLU score (88.5%), excellent cost-effectiveness (8.85), good for complex systems",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "bbc58518-8685-466d-9b31-a9cd5f315634",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "Gemini 2.5 Pro, Claude 4 Sonnet",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "7c8ef763-f7c2-407b-bcb0-c4e296410f18",
+        "index": 3,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "02979b0d-6472-4888-8fc2-496845a7f28c",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "Design Systems Specialist",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "83204b29-b5bf-4886-a878-bbb164a65d65",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "Design systems knowledge, semantic naming for AI",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "c18fc6f9-d232-4816-a12e-a3536aa3f7d6",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "GPT-o3",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "718f7573-07bd-4597-8e1f-ae86372c8e05",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "Strong reasoning (83.3% GPQA), specialized for complex problem-solving",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "fc2c9201-5c45-4d40-8f32-6f26a0bbbaf0",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "Claude 4 Sonnet, Gemini 2.5 Pro",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "d04e49df-f30a-471e-985d-2410fa84f5f0",
+        "index": 4,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "abf9decc-a2f5-44e8-acc3-f68057217cbe",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "Typography and Accessibility Specialist",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7809758e-3748-43b5-96a2-a5195fab5248",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "Typography design, accessibility standards, semantic systems",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "049e90c8-441f-4799-9636-2bfa2a11db2d",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "Claude 3.7 Sonnet",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "07e5e880-7ab4-4172-9e7f-5295982ed71d",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "Strong coding performance (75% HumanEval), excellent for accessible code generation",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "db10fe52-8755-4a20-ba70-89116ccc034a",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "GPT-4.1, Grok-3",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "e56c91c6-4ec0-4aea-9256-eeafc372f8e3",
+        "index": 5,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "b688eca3-3979-4046-bbd3-8d697069e890",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "Senior Frontend Component Developer",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b579ab03-b238-4e87-bf91-ff56cc44339e",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "Component architecture, accessibility, LLM-interpretable code",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "68963b97-f309-4a78-9600-443483d00889",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "Grok-3",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "d9ebc037-2224-4804-a7e0-1b5c58bf30ea",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "Highest MMLU (92.7%) and math scores (93.3%), excellent for component logic",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "1640facc-9272-4c7a-a235-857843659105",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "Claude 4 Sonnet, Gemini 2.5 Pro",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "cc501eff-22ce-42e9-8ae3-58dc7cbc8a6f",
+        "index": 6,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "7848307f-3137-4e14-b467-541f0f31f5f4",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "AI Systems Integration Specialist",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "7fb6ed38-8220-46d3-aef5-639469ce434c",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "LLM behavior, semantic web technologies, knowledge representation",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "a1a6fd2b-4d89-465f-850f-a2c2ad7e1c3f",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "DeepSeek-R1",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "dda3a5fb-3940-465e-a655-89817cb2b1ed",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "Best cost-effectiveness for reasoning tasks (30.1), open-source flexibility",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "6c9e8d10-4e71-4037-beaa-691263e85f86",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "Qwen 3, Llama 4 Maverick",
+            "hasValidFrontmatter": null
+          }
+        ]
+      },
+      {
+        "id": "ef628f13-1af7-4d79-9674-5c79f2554749",
+        "index": 7,
+        "sourceId": null,
+        "creationDateTime": "2025-06-24T19:10:16.241Z",
+        "lastEditedDateTime": "2025-06-24T19:10:16.241Z",
+        "cells": [
+          {
+            "id": "a060a63b-d8f5-4b95-9451-5dbf17e7b405",
+            "columnId": "135875e1-0357-454c-b1df-6da35b85bc3e",
+            "content": "AI Behavior Specialist with Prompt Engineering",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "656b9ab0-71fa-43b1-8899-92edf437a99f",
+            "columnId": "83d373e4-b881-4047-83f7-1f1fda0be1f6",
+            "content": "LLM behavior patterns, AI guidance systems design",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "97fca332-f147-4372-8003-a2e3c03246ea",
+            "columnId": "f83c248c-25e9-4f22-8639-0e57a449cc2b",
+            "content": "Gemini 2.5 Pro",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "b49d9d67-5986-4a61-9136-426b8329e472",
+            "columnId": "8ee26745-2ee0-4f1d-82db-5773802af685",
+            "content": "Top overall performance (84.4%), excellent multimodal capabilities for guidance systems",
+            "hasValidFrontmatter": null
+          },
+          {
+            "id": "3b7a90be-cdbc-4270-a4c5-8dfc78faf0cb",
+            "columnId": "d382a6db-e7d6-46d4-9491-750682d5906d",
+            "content": "GPT-o3, Claude 4 Sonnet",
+            "hasValidFrontmatter": null
+          }
+        ]
+      }
+    ],
+    "filters": [],
+    "sources": [],
+    "settings": {
+      "numFrozenColumns": 1,
+      "showCalculationRow": true
+    },
+    "externalRowOrder": []
+  },
+  "pluginVersion": "8.16.1"
+}
