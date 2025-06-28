@@ -1,0 +1,202 @@
+/*
+ * Bank Login Page using MCSS-POC Framework
+ * Technologies: TypeScript, HTML, MCSS-POC CSS
+ */
+
+<!DOCTYPE html>
+<html lang="en" prefix="mcs: http://schema.model-context.org/v1/">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Login</title>
+  <link rel="stylesheet" href="mcss-poc.css" />
+  <style>
+    /*
+      MCSS-compliant layout: Use l- classes for composition and u- classes for utility.
+      Custom styles are minimized and only used for page-level alignment.
+    */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: var(--mcs-color-neutral-100, #f8f9fa);
+    }
+    .notification-bar {
+      /* Use l-stack for vertical spacing, but notification-bar is a composition container */
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      margin-bottom: var(--mcs-spacing-xl);
+      box-sizing: border-box;
+      border-radius: 0 0 var(--mcs-border-radius-md) var(--mcs-border-radius-md);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      min-height: 64px;
+      padding: var(--mcs-spacing-md) var(--mcs-spacing-lg);
+      background: var(--mcs-color-neutral-0, #fff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 5vh 0 0 auto;
+      padding-right: 5vw;
+      display: flex;
+      flex-direction: column;
+      /* Use l-stack for vertical spacing inside */
+    }
+    .login-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: var(--mcs-spacing-lg);
+    }
+    @media (max-width: 700px) {
+      .login-container {
+        margin: 5vh auto 0 auto;
+        padding-right: 0;
+      }
+      .notification-bar {
+        border-radius: 0;
+        padding: var(--mcs-spacing-md);
+      }
+    }
+  </style>
+</head>
+<body>
+    <section id="notification" class="c-card notification-bar" style="display:none;" 
+      typeof="mcs:Component" 
+      property="mcs:purpose" 
+      content="A dismissable notification for important bank updates." 
+      data-mcs-interaction-type="information" 
+      data-mcs-consequence="Informs the user about scheduled maintenance; can be dismissed."
+    >
+      <div class="l-stack" style="--stack-space: var(--mcs-spacing-xs); align-items: center; text-align: center;"
+        typeof="mcs:Component"
+        property="mcs:purpose"
+        content="Notification content stack."
+      >
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Notification Icon" width="36" height="36" 
+          typeof="mcs:Component"
+          property="mcs:purpose"
+          content="Visual icon for notification context."
+        />
+        <div class="c-form-group__description"
+          typeof="mcs:Component"
+          property="mcs:purpose"
+          content="Notification message text."
+        >Bank maintenance is scheduled for this weekend. Online services may be unavailable.</div>
+        <button class="c-button c-button--secondary" id="dismissNotificationBtn" type="button"
+          typeof="mcs:Component"
+          property="mcs:purpose"
+          content="Dismisses the notification."
+          data-mcs-interaction-type="action"
+          data-mcs-consequence="Hides the notification card."
+        >Dismiss</button>
+      </div>
+    </section>
+    <main class="l-stack login-container" style="--stack-space: var(--mcs-spacing-xl);"
+      typeof="mcs:Component"
+      property="mcs:purpose"
+      content="Main container for login UI."
+    >
+      <div class="login-logo"
+        typeof="mcs:Component"
+        property="mcs:purpose"
+        content="Bank logo for brand recognition."
+      >
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bank_icon.svg/120px-Bank_icon.svg.png" alt="Bank Logo" width="64" height="64"
+          typeof="mcs:Component"
+          property="mcs:purpose"
+          content="Visual logo for the bank."
+        />
+      </div>
+      <section class="c-card"
+        typeof="mcs:Component"
+        property="mcs:purpose"
+        content="Encapsulates the login form."
+      >
+        <header class="c-card__header"
+          typeof="mcs:Component"
+          property="mcs:purpose"
+          content="Login form header."
+        >Bank Login</header>
+        <form id="loginForm" class="c-card__body l-stack" style="--stack-space: var(--mcs-spacing-md);" autocomplete="on"
+          typeof="mcs:Component"
+          property="mcs:purpose"
+          content="User authentication form."
+        >
+          <div class="c-form-group"
+            typeof="mcs:Component"
+            property="mcs:purpose"
+            content="Username input group."
+            id="form-group-username"
+          >
+            <label for="username" class="c-form-group__label"
+              typeof="mcs:Component"
+              property="mcs:purpose"
+              content="Label for username input."
+            >Username</label>
+            <input type="text" id="username" name="username" class="c-form-group__input" required autocomplete="username"
+              typeof="mcs:Component"
+              property="mcs:purpose"
+              content="Input for username."
+              aria-describedby="username-desc"
+              aria-required="true"
+            />
+            <p id="username-desc" class="c-form-group__description"
+              typeof="mcs:Component"
+              property="mcs:purpose"
+              content="Description for username input."
+            >Enter your bank username.</p>
+          </div>
+          <div class="c-form-group"
+            typeof="mcs:Component"
+            property="mcs:purpose"
+            content="Password input group."
+            id="form-group-password"
+          >
+            <label for="password" class="c-form-group__label"
+              typeof="mcs:Component"
+              property="mcs:purpose"
+              content="Label for password input."
+            >Password</label>
+            <input type="password" id="password" name="password" class="c-form-group__input" required autocomplete="current-password"
+              typeof="mcs:Component"
+              property="mcs:purpose"
+              content="Input for password."
+              aria-describedby="password-desc"
+              aria-required="true"
+            />
+            <p id="password-desc" class="c-form-group__description"
+              typeof="mcs:Component"
+              property="mcs:purpose"
+              content="Description for password input."
+            >Enter your password.</p>
+          </div>
+          <button type="submit" class="c-button c-button--primary" id="loginBtn"
+            typeof="mcs:Component"
+            property="mcs:purpose"
+            content="Submits the login form."
+            data-mcs-interaction-type="action"
+            data-mcs-consequence="Attempts user authentication."
+          >Login</button>
+          <div id="loginMessage" class="c-form-group__description"
+            typeof="mcs:Component"
+            property="mcs:purpose"
+            content="Displays login status or error messages."
+            style="min-height:1.5em;"
+          ></div>
+        </form>
+      </section>
+    </main>
+  <script type="module" src="login.ts"></script>
+  <script type="module">
+    // Show notification on page load
+    document.getElementById('notification').style.display = 'block';
+    document.getElementById('dismissNotificationBtn').addEventListener('click', () => {
+      document.getElementById('notification').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
