@@ -1,0 +1,196 @@
+£<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login Demo (MCSS Embedded)</title>
+  <style>
+/* MCSS: Model Context Style Sheet v0.1.0 (Embedded) */
+:root {
+  --mcs-color-brand-primary: #005A9C;
+  --mcs-color-brand-primary-hover: #004a80;
+  --mcs-color-brand-primary-text: #ffffff;
+  --mcs-color-neutral-0: #ffffff;
+  --mcs-color-neutral-100: #e6f9e6;
+  --mcs-color-neutral-300: #dee2e6;
+  --mcs-color-neutral-500: #adb5bd;
+  --mcs-color-neutral-700: #495057;
+  --mcs-color-neutral-900: #212529;
+  --mcs-color-error-100: #f8d7da;
+  --mcs-color-error-500: #dc3545;
+  --mcs-color-error-text: #721c24;
+  --mcs-color-success-100: #d4edda;
+  --mcs-color-success-500: #28a745;
+  --mcs-color-success-text: #155724;
+  --mcs-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mcs-font-size-base: 1rem;
+  --mcs-font-size-small: 0.875rem;
+  --mcs-font-size-large: 1.25rem;
+  --mcs-line-height-base: 1.5;
+  --mcs-font-weight-normal: 400;
+  --mcs-font-weight-bold: 700;
+  --mcs-spacing-xs: 0.25rem;
+  --mcs-spacing-sm: 0.5rem;
+  --mcs-spacing-md: 1rem;
+  --mcs-spacing-lg: 1.5rem;
+  --mcs-spacing-xl: 2rem;
+  --mcs-border-width-base: 1px;
+  --mcs-border-radius-sm: 0.25rem;
+  --mcs-border-radius-md: 0.5rem;
+  --mcs-transition-duration-base: 0.2s;
+}
+body {
+  font-family: var(--mcs-font-family-base);
+  font-size: var(--mcs-font-size-base);
+  line-height: var(--mcs-line-height-base);
+  color: var(--mcs-color-neutral-900);
+  background-color: var(--mcs-color-neutral-100);
+  margin: 0;
+  padding: var(--mcs-spacing-lg);
+}
+.l-stack > * + * { margin-block-start: var(--stack-space, var(--mcs-spacing-md)); }
+.l-grid {
+  display: grid;
+  gap: var(--grid-gap, var(--mcs-spacing-md));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-min-item-width, 16rem)), 1fr));
+}
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.c-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--mcs-spacing-sm) var(--mcs-spacing-md);
+  border: var(--mcs-border-width-base) solid transparent;
+  border-radius: var(--mcs-border-radius-sm);
+  font-family: inherit;
+  font-size: var(--mcs-font-size-base);
+  font-weight: var(--mcs-font-weight-bold);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--mcs-transition-duration-base) ease-in-out, border-color var(--mcs-transition-duration-base) ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.c-button:hover { filter: brightness(1.1); }
+.c-button--primary {
+  background-color: var(--mcs-color-brand-primary);
+  color: var(--mcs-color-brand-primary-text);
+}
+.c-button--primary:hover { background-color: var(--mcs-color-brand-primary-hover); }
+.c-button--secondary {
+  background-color: var(--mcs-color-neutral-0);
+  color: var(--mcs-color-brand-primary);
+  border-color: var(--mcs-color-brand-primary);
+}
+.c-button--secondary:hover { background-color: var(--mcs-color-neutral-100); }
+.c-card {
+  display: block;
+  background-color: var(--mcs-color-neutral-0);
+  border: var(--mcs-border-width-base) solid var(--mcs-color-neutral-300);
+  border-radius: var(--mcs-border-radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.c-card__header, .c-card__body, .c-card__footer { padding: var(--mcs-spacing-md); }
+.c-card__header {
+  border-bottom: var(--mcs-border-width-base) solid var(--mcs-color-neutral-300);
+  font-size: var(--mcs-font-size-large);
+  font-weight: var(--mcs-font-weight-bold);
+}
+.c-card__footer {
+  border-top: var(--mcs-border-width-base) solid var(--mcs-color-neutral-300);
+  background-color: var(--mcs-color-neutral-100);
+}
+.c-form-group { display: flex; flex-direction: column; }
+.c-form-group__label {
+  margin-bottom: var(--mcs-spacing-xs);
+  font-weight: var(--mcs-font-weight-bold);
+  color: var(--mcs-color-neutral-700);
+}
+.c-form-group__input {
+  padding: var(--mcs-spacing-sm);
+  font-size: var(--mcs-font-size-base);
+  border: var(--mcs-border-width-base) solid var(--mcs-color-neutral-500);
+  border-radius: var(--mcs-border-radius-sm);
+  background-color: var(--mcs-color-neutral-0);
+  transition: border-color var(--mcs-transition-duration-base) ease-in-out, box-shadow var(--mcs-transition-duration-base) ease-in-out;
+}
+.c-form-group__input:focus {
+  outline: none;
+  border-color: var(--mcs-color-brand-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--mcs-color-brand-primary) 25%, transparent);
+}
+.c-form-group__description {
+  font-size: var(--mcs-font-size-small);
+  color: var(--mcs-color-neutral-700);
+  margin-top: var(--mcs-spacing-xs);
+}
+[data-mcs-validation-state="invalid"] .c-form-group__label { color: var(--mcs-color-error-500); }
+[data-mcs-validation-state="invalid"] .c-form-group__input {
+  border-color: var(--mcs-color-error-500);
+  background-color: var(--mcs-color-error-100);
+}
+[data-mcs-validation-state="invalid"] .c-form-group__input:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--mcs-color-error-500) 25%, transparent);
+}
+[data-mcs-validation-state="valid"] .c-form-group__label { color: var(--mcs-color-success-500); }
+[data-mcs-validation-state="valid"] .c-form-group__input {
+  border-color: var(--mcs-color-success-500);
+  background-color: var(--mcs-color-success-100);
+}
+[data-mcs-validation-state="valid"] .c-form-group__input:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--mcs-color-success-500) 25%, transparent);
+}
+  </style>
+</head>
+<body typeof="mcs:Component" property="mcs:purpose" content="Login page layout">
+  <div class="l-stack" style="min-height: 840px; background: var(--mcs-color-neutral-0); justify-content: center; align-items: stretch; display: flex; flex-direction: column; height: 100vh;" typeof="mcs:Component" property="mcs:purpose" content="Main vertical stack for login page">
+    <div class="l-grid" style="flex: 1; --grid-gap: 0; --grid-min-item-width: 22rem; grid-template-columns: 1fr 1fr; height: 100%;" typeof="mcs:Component" property="mcs:purpose" content="Two-column grid layout for login and image">
+      <!-- Main login card -->
+      <div style="display: flex; align-items: center; justify-content: center; min-width: 0;" typeof="mcs:Component" property="mcs:purpose" content="Login card container">
+        <div class="c-card" style="max-width: 24rem; width: 100%; margin: auto;" typeof="mcs:Component" property="mcs:purpose" content="Login card">
+          <div class="c-card__header" style="text-align: center;" typeof="mcs:Component" property="mcs:purpose" content="Login card header">
+            <span typeof="mcs:Component" property="mcs:purpose" content="Login form header text">Sign in to your account</span>
+          </div>
+          <div class="c-card__body" typeof="mcs:Component" property="mcs:purpose" content="Login card body">
+            <form class="l-stack" style="--stack-space: var(--mcs-spacing-md);" action="#" method="POST" typeof="mcs:Component" property="mcs:purpose" content="User login form">
+              <div class="c-form-group" id="form-group-email" typeof="mcs:Component" property="mcs:purpose" content="Email input field">
+                <label for="email" class="c-form-group__label" typeof="mcs:Component" property="mcs:purpose" content="Label for email input">Email address</label>
+                <input type="email" id="email" name="email" class="c-form-group__input" autocomplete="email" required aria-required="true" aria-describedby="email-desc" aria-invalid="false" typeof="mcs:Component" property="mcs:purpose" content="Email input element">
+                <p id="email-desc" class="c-form-group__description" typeof="mcs:Component" property="mcs:purpose" content="Description for email input">Enter your email address.</p>
+              </div>
+              <div class="c-form-group" id="form-group-password" typeof="mcs:Component" property="mcs:purpose" content="Password input field">
+                <div style="display: flex; align-items: center; justify-content: space-between;" typeof="mcs:Component" property="mcs:purpose" content="Password label and forgot link container">
+                  <label for="password" class="c-form-group__label" typeof="mcs:Component" property="mcs:purpose" content="Label for password input">Password</label>
+                  <a href="#" class="c-button c-button--secondary" style="font-size: var(--mcs-font-size-small); padding: 0 var(--mcs-spacing-xs); background: none; border: none; color: var(--mcs-color-brand-primary); text-decoration: underline;" typeof="mcs:Component" property="mcs:purpose" content="Forgot password link">Forgot password?</a>
+                </div>
+                <input type="password" id="password" name="password" class="c-form-group__input" autocomplete="current-password" required aria-required="true" aria-describedby="password-desc" aria-invalid="false" typeof="mcs:Component" property="mcs:purpose" content="Password input element">
+                <p id="password-desc" class="c-form-group__description" typeof="mcs:Component" property="mcs:purpose" content="Description for password input">Enter your password.</p>
+              </div>
+              <button type="submit" class="c-button c-button--primary" typeof="mcs:Component" property="mcs:purpose" content="Submit login form button" data-mcs-interaction-type="action" data-mcs-consequence="Attempts to sign in the user.">Sign in</button>
+            </form>
+            <p style="margin-top: var(--mcs-spacing-lg); text-align: center; font-size: var(--mcs-font-size-small); color: var(--mcs-color-neutral-700);" typeof="mcs:Component" property="mcs:purpose" content="Sign up prompt">
+              Not a member?
+              <a href="#" class="c-button c-button--secondary" typeof="mcs:Component" property="mcs:purpose" content="Start free trial navigation button" data-mcs-interaction-type="navigation" data-mcs-consequence="Navigates to sign up for a free trial.">Start a 14 day free trial</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Right-side image container -->
+      <div class="c-card" style="display: flex; align-items: center; justify-content: center; background: var(--mcs-color-neutral-100); box-shadow: none; border: none; min-height: 100vh;" typeof="mcs:Component" property="mcs:purpose" content="Decorative image card">
+        <img src="https://via.placeholder.com/400x600?text=Placeholder+Image" alt="Placeholder" class="c-card__body" style="object-fit: contain; max-height: 90vh; max-width: 100%; background: none; box-shadow: none; border: none;" typeof="mcs:Component" property="mcs:purpose" content="Decorative placeholder image for login page" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

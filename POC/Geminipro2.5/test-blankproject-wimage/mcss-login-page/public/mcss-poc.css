@@ -1,0 +1,140 @@
+/* filepath: c:\Users\T\desenvolvimento\Forks\MCSS\POC\Geminipro2.5\mcss-login-page\public\mcss-poc.css */
+/*
+ * MCSS: Model Context Style Sheet v0.1.0
+ * Proof of Concept
+ * A CSS framework optimized for Large Language Model (LLM) comprehension and generation.
+ *
+ * Project Goal: Achieve a 70% first-attempt success rate for LLM-generated UI components.
+ * This file contains the foundational layers of MCSS.
+ */
+
+/* ========================================================================== 
+   LAYER 1: GLOBAL FOUNDATION (Design Tokens) 
+   - Defines global design system values using CSS Custom Properties. 
+   - These tokens are the single source of truth for styling. 
+   ========================================================================== */
+:root {
+  /* --- COLOR TOKENS --- */
+  --mcs-color-brand-primary: #005A9C;
+  --mcs-color-brand-primary-hover: #004a80;
+  --mcs-color-brand-primary-text: #ffffff;
+
+  --mcs-color-neutral-0: #ffffff;
+  --mcs-color-neutral-100: #e6f9e6;
+  --mcs-color-neutral-300: #dee2e6;
+  --mcs-color-neutral-500: #adb5bd;
+  --mcs-color-neutral-700: #495057;
+  --mcs-color-neutral-900: #212529;
+
+  --mcs-color-error-100: #f8d7da;
+  --mcs-color-error-500: #dc3545;
+  --mcs-color-error-text: #721c24;
+
+  --mcs-color-success-100: #d4edda;
+  --mcs-color-success-500: #28a745;
+  --mcs-color-success-text: #155724;
+
+  /* --- TYPOGRAPHY TOKENS --- */
+  --mcs-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mcs-font-size-base: 1rem; /* 16px default */
+  --mcs-font-size-small: 0.875rem;
+  --mcs-font-size-large: 1.25rem;
+  --mcs-line-height-base: 1.5;
+  --mcs-font-weight-normal: 400;
+  --mcs-font-weight-bold: 700;
+
+  /* --- SPACING TOKENS --- */
+  --mcs-spacing-xs: 0.25rem;
+  --mcs-spacing-sm: 0.5rem;
+  --mcs-spacing-md: 1rem;
+  --mcs-spacing-lg: 1.5rem;
+  --mcs-spacing-xl: 2rem;
+
+  /* --- BORDER & RADIUS TOKENS --- */
+  --mcs-border-width-base: 1px;
+  --mcs-border-radius-sm: 0.25rem;
+  --mcs-border-radius-md: 0.5rem;
+
+  /* --- TRANSITION TOKENS --- */
+  --mcs-transition-duration-base: 0.2s;
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+  font-family: var(--mcs-font-family-base);
+  font-size: var(--mcs-font-size-base);
+  line-height: var(--mcs-line-height-base);
+  color: var(--mcs-color-neutral-900);
+  background-color: var(--mcs-color-neutral-100);
+  margin: 0;
+  padding: var(--mcs-spacing-lg);
+}
+
+/* --- Component: c-form-group --- */
+.c-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--mcs-spacing-lg);
+}
+
+.c-form-group__label {
+  margin-bottom: var(--mcs-spacing-xs);
+  font-weight: var(--mcs-font-weight-bold);
+  color: var(--mcs-color-neutral-700);
+}
+
+.c-form-group__input {
+  padding: var(--mcs-spacing-sm);
+  font-size: var(--mcs-font-size-base);
+  border: var(--mcs-border-width-base) solid var(--mcs-color-neutral-500);
+  border-radius: var(--mcs-border-radius-sm);
+  background-color: var(--mcs-color-neutral-0);
+  transition: border-color var(--mcs-transition-duration-base) ease-in-out,
+              box-shadow var(--mcs-transition-duration-base) ease-in-out;
+}
+
+.c-form-group__input:focus {
+  outline: none;
+  border-color: var(--mcs-color-brand-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--mcs-color-brand-primary) 25%, transparent);
+}
+
+/* --- Component: c-button --- */
+.c-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--mcs-spacing-sm) var(--mcs-spacing-md);
+  border: var(--mcs-border-width-base) solid transparent;
+  border-radius: var(--mcs-border-radius-sm);
+  font-family: inherit;
+  font-size: var(--mcs-font-size-base);
+  font-weight: var(--mcs-font-weight-bold);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--mcs-transition-duration-base) ease-in-out,
+              border-color var(--mcs-transition-duration-base) ease-in-out;
+}
+
+.c-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Modifier: Primary Button */
+.c-button--primary {
+  background-color: var(--mcs-color-brand-primary);
+  color: var(--mcs-color-brand-primary-text);
+}
+.c-button--primary:hover {
+  background-color: var(--mcs-color-brand-primary-hover);
+}
+
+/* Modifier: Secondary/Outline Button */
+.c-button--secondary {
+  background-color: var(--mcs-color-neutral-0);
+  color: var(--mcs-color-brand-primary);
+  border-color: var(--mcs-color-brand-primary);
+}
+.c-button--secondary:hover {
+  background-color: var(--mcs-color-neutral-100);
+}

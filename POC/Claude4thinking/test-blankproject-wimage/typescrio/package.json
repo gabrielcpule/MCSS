@@ -1,0 +1,15 @@
+{
+  "name": "mcss-login-page",
+  "version": "1.0.0",
+  "description": "Login page using TypeScript and MCSS framework",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "vite",
+    "start": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}

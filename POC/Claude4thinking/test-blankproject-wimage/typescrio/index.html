@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Social Networking</title>
+  <link rel="stylesheet" href="mcss.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(120deg, #f8f9fa 60%, #e9ecef 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mcs-font-family-base);
+    }
+    .login-container {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .login-visual {
+      max-width: 420px;
+      margin-left: 2rem;
+    }
+    .login-visual h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--mcs-color-brand-primary);
+    }
+    .login-visual .highlight {
+      background: var(--mcs-color-warning);
+      color: var(--mcs-color-brand-primary);
+      font-weight: 700;
+      padding: 0 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 2rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .login-visual .networking {
+      color: #e74c3c;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .login-visual p {
+      font-size: 1.1rem;
+      color: var(--mcs-color-neutral-900);
+      margin-top: 1.5rem;
+    }
+    .login-card {
+      min-width: 380px;
+      background: #fff;
+      border-radius: 1.25rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      padding: 2.5rem 2.5rem 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .social-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1rem 0 0.5rem 0;
+    }
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: box-shadow 0.2s;
+    }
+    .social-btn:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    }
+    .login-footer {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--mcs-color-neutral-700);
+      margin-top: 0.5rem;
+    }
+    .login-footer a {
+      color: var(--mcs-color-brand-primary);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 0.25rem;
+    }
+    .forgot-link {
+      float: right;
+      font-size: 0.95rem;
+      color: var(--mcs-color-brand-primary);
+      text-decoration: none;
+      margin-top: 0.25rem;
+    }
+    @media (max-width: 900px) {
+      .login-container { flex-direction: column; gap: 2rem; }
+      .login-visual { margin-left: 0; text-align: center; }
+    }
+  </style>
+</head>
+<body typeof="mcs:Page" property="mcs:purpose" content="User authentication page">
+  <div class="login-container l-stack" typeof="mcs:Container" property="mcs:purpose" content="Main login layout">
+    <div class="login-visual" typeof="mcs:VisualSection" property="mcs:purpose" content="Branding and description">
+      <h1 property="mcs:title" content="Sign On">Sign On</h1>
+      <span class="highlight" typeof="mcs:Highlight" property="mcs:purpose" content="Social login emphasis">Social</span>
+      <span class="networking" typeof="mcs:Highlight" property="mcs:purpose" content="Networking emphasis">Networking</span>
+      <p property="mcs:description" content="Reduce the burden of customers of creating new social accounts for different websites">Reduce the burden of customers<br>of creating new social accounts<br>for different websites</p>
+    </div>
+    <form id="login-form" class="login-card c-card" autocomplete="on" typeof="mcs:Form" property="mcs:purpose" content="User login form" data-mcs-interaction-type="submit" data-mcs-consequence="authentication">
+      <div class="c-card__content l-stack">
+        <div class="c-form-field" typeof="mcs:FormField" property="mcs:input-type" content="email">
+          <label for="email" class="c-form-field__label" typeof="mcs:Label" property="mcs:purpose" content="Email address label">Email Address</label>
+          <input type="email" id="email" name="email" class="c-form-field__input" placeholder="username@gmail.com" required typeof="mcs:Input" property="mcs:purpose" content="User email input" aria-describedby="email-help">
+        </div>
+        <div class="c-form-field" typeof="mcs:FormField" property="mcs:input-type" content="password">
+          <label for="password" class="c-form-field__label" typeof="mcs:Label" property="mcs:purpose" content="Password label">Password</label>
+          <div style="position:relative;">
+            <input type="password" id="password" name="password" class="c-form-field__input" required style="padding-right:2.5rem;" typeof="mcs:PasswordInput" property="mcs:purpose" content="User password input" aria-describedby="password-help">
+            <span id="toggle-password" style="position:absolute;right:0.75rem;top:50%;transform:translateY(-50%);cursor:pointer;opacity:0.6;" typeof="mcs:IconButton" property="mcs:purpose" content="Toggle password visibility" data-mcs-interaction-type="click" data-mcs-consequence="toggle-visibility">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="8" ry="5"/><circle cx="12" cy="12" r="2"/></svg>
+            </span>
+          </div>
+        </div>
+        <a href="#" class="forgot-link" typeof="mcs:HelpText" property="mcs:purpose" content="Forgot password link" data-mcs-interaction-type="click" data-mcs-consequence="password-recovery">Forgot password?</a>
+        <button type="submit" class="c-button c-button--large" style="width:100%;margin-top:0.5rem;" typeof="mcs:Button" property="mcs:purpose" content="Login button" data-mcs-interaction-type="click" data-mcs-consequence="form-submission">Login</button>
+        <div class="social-row" typeof="mcs:SocialLoginOptions" property="mcs:purpose" content="Social login buttons">
+          <button type="button" class="social-btn" aria-label="Login with Google" style="color:#ea4335;" typeof="mcs:Button" property="mcs:purpose" content="Google login" data-mcs-interaction-type="click" data-mcs-consequence="social-login-google"><span>G</span></button>
+          <button type="button" class="social-btn" aria-label="Login with LinkedIn" style="color:#0077b5;" typeof="mcs:Button" property="mcs:purpose" content="LinkedIn login" data-mcs-interaction-type="click" data-mcs-consequence="social-login-linkedin"><span>in</span></button>
+          <button type="button" class="social-btn" aria-label="Login with Facebook" style="color:#1877f3;" typeof="mcs:Button" property="mcs:purpose" content="Facebook login" data-mcs-interaction-type="click" data-mcs-consequence="social-login-facebook"><span>f</span></button>
+          <button type="button" class="social-btn" aria-label="Login with GitHub" style="color:#222;" typeof="mcs:Button" property="mcs:purpose" content="GitHub login" data-mcs-interaction-type="click" data-mcs-consequence="social-login-github"><span>&#xf09b;</span></button>
+        </div>
+      </div>
+      <div class="login-footer" typeof="mcs:Footer" property="mcs:purpose" content="Sign up link">
+        Don’t have an account? <a href="#" typeof="mcs:HelpText" property="mcs:purpose" content="Sign up link" data-mcs-interaction-type="click" data-mcs-consequence="sign-up">Sign Up</a>
+      </div>
+    </form>
+  </div>
+  <script type="module" src="/src/login.ts"></script>
+  <script>
+    // Password visibility toggle
+    document.getElementById('toggle-password')?.addEventListener('click', function() {
+      const pwd = document.getElementById('password');
+      if (pwd) {
+        pwd.type = pwd.type === 'password' ? 'text' : 'password';
+      }
+    });
+  </script>
+</body>
+</html>

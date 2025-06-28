@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="mcss-poc.css">
+  <title>Login Demo (MCSS Only)</title>
+</head>
+<body typeof="mcs:Component" property="mcs:purpose" content="Login page layout">
+  <div class="l-stack" style="min-height: 840px; background: var(--mcs-color-neutral-0); justify-content: center; align-items: stretch; display: flex; flex-direction: column; height: 100vh;" typeof="mcs:Component" property="mcs:purpose" content="Main vertical stack for login page">
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; height: 100%;" typeof="mcs:Component" property="mcs:purpose" content="Login card container">
+      <div class="c-card" style="max-width: 24rem; width: 100%; margin: auto;" typeof="mcs:Component" property="mcs:purpose" content="Login card">
+        <div class="c-card__header" style="text-align: center;" typeof="mcs:Component" property="mcs:purpose" content="Login card header">
+          <span typeof="mcs:Component" property="mcs:purpose" content="Login form header text">Sign in to your account</span>
+        </div>
+        <div class="c-card__body" typeof="mcs:Component" property="mcs:purpose" content="Login card body">
+          <form class="l-stack" style="--stack-space: var(--mcs-spacing-md);" action="#" method="POST" typeof="mcs:Component" property="mcs:purpose" content="User login form">
+            <div class="c-form-group" id="form-group-email" typeof="mcs:Component" property="mcs:purpose" content="Email input field">
+              <label for="email" class="c-form-group__label" typeof="mcs:Component" property="mcs:purpose" content="Label for email input">Email address</label>
+              <input type="email" id="email" name="email" class="c-form-group__input" autocomplete="email" required aria-required="true" aria-describedby="email-desc" aria-invalid="false" typeof="mcs:Component" property="mcs:purpose" content="Email input element">
+              <p id="email-desc" class="c-form-group__description" typeof="mcs:Component" property="mcs:purpose" content="Description for email input">Enter your email address.</p>
+            </div>
+            <div class="c-form-group" id="form-group-password" typeof="mcs:Component" property="mcs:purpose" content="Password input field">
+              <div style="display: flex; align-items: center; justify-content: space-between;" typeof="mcs:Component" property="mcs:purpose" content="Password label and forgot link container">
+                <label for="password" class="c-form-group__label" typeof="mcs:Component" property="mcs:purpose" content="Label for password input">Password</label>
+                <a href="#" class="c-button c-button--secondary" style="font-size: var(--mcs-font-size-small); padding: 0 var(--mcs-spacing-xs); background: none; border: none; color: var(--mcs-color-brand-primary); text-decoration: underline;" typeof="mcs:Component" property="mcs:purpose" content="Forgot password link">Forgot password?</a>
+              </div>
+              <input type="password" id="password" name="password" class="c-form-group__input" autocomplete="current-password" required aria-required="true" aria-describedby="password-desc" aria-invalid="false" typeof="mcs:Component" property="mcs:purpose" content="Password input element">
+              <p id="password-desc" class="c-form-group__description" typeof="mcs:Component" property="mcs:purpose" content="Description for password input">Enter your password.</p>
+            </div>
+            <button type="submit" class="c-button c-button--primary" typeof="mcs:Component" property="mcs:purpose" content="Submit login form button" data-mcs-interaction-type="action" data-mcs-consequence="Attempts to sign in the user.">Sign in</button>
+          </form>
+          <p style="margin-top: var(--mcs-spacing-lg); text-align: center; font-size: var(--mcs-font-size-small); color: var(--mcs-color-neutral-700);" typeof="mcs:Component" property="mcs:purpose" content="Sign up prompt">
+            Not a member?
+            <a href="#" class="c-button c-button--secondary" typeof="mcs:Component" property="mcs:purpose" content="Start free trial navigation button" data-mcs-interaction-type="navigation" data-mcs-consequence="Navigates to sign up for a free trial.">Start a 14 day free trial</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -31,6 +31,8 @@ Thumbs.db
 
 # Ignore node modules (if any JS/TS is used)
 node_modules/
+dist/
+build/
 
 # Ignore Excel and CSV temp files
 *.tmp

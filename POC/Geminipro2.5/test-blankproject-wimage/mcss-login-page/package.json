@@ -1,0 +1,19 @@
+{
+  "name": "mcss-login-page",
+  "version": "1.0.0",
+  "description": "A login page built using the MCSS framework.",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "lite-server",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  },
+  "author": "",
+  "license": "ISC"
+}

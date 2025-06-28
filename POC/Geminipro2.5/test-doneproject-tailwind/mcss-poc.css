@@ -1,0 +1,285 @@
+/*
+ * MCSS: Model Context Style Sheet v0.1.0
+ * Proof of Concept
+ * A CSS framework optimized for Large Language Model (LLM) comprehension and generation.
+ *
+ * Project Goal: Achieve a 70% first-attempt success rate for LLM-generated UI components.
+ * This file contains the foundational layers of MCSS.
+ */
+
+/* ==========================================================================
+   LAYER 1: GLOBAL FOUNDATION (Design Tokens)
+   - Defines global design system values using CSS Custom Properties.
+   - These tokens are the single source of truth for styling.
+   - LLM Annotation: "To change a global value like the primary brand color, modify the --mcs-color-brand-primary custom property within the :root selector."
+   ========================================================================== */
+:root {
+  /* Ontological Namespace Declaration for RDFa */
+  /* This prefix is used throughout the HTML to provide semantic context. */
+  /* prefix: mcs http://schema.model-context.org/v1/;
+
+  /* --- COLOR TOKENS --- */
+  /* Purpose: Semantic color definitions for consistent branding and UI states. */
+  --mcs-color-brand-primary: #005A9C;
+  --mcs-color-brand-primary-hover: #004a80;
+  --mcs-color-brand-primary-text: #ffffff;
+
+  --mcs-color-neutral-0: #ffffff;
+  --mcs-color-neutral-100: #e6f9e6;
+  --mcs-color-neutral-300: #dee2e6;
+  --mcs-color-neutral-500: #adb5bd;
+  --mcs-color-neutral-700: #495057;
+  --mcs-color-neutral-900: #212529;
+
+  --mcs-color-error-100: #f8d7da;
+  --mcs-color-error-500: #dc3545;
+  --mcs-color-error-text: #721c24;
+
+  --mcs-color-success-100: #d4edda;
+  --mcs-color-success-500: #28a745;
+  --mcs-color-success-text: #155724;
+
+  /* --- TYPOGRAPHY TOKENS --- */
+  /* Purpose: Defines the typographic scale and rhythm. */
+  --mcs-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mcs-font-size-base: 1rem; /* 16px default */
+  --mcs-font-size-small: 0.875rem;
+  --mcs-font-size-large: 1.25rem;
+  --mcs-line-height-base: 1.5;
+  --mcs-font-weight-normal: 400;
+  --mcs-font-weight-bold: 700;
+
+
+  /* --- SPACING TOKENS --- */
+  /* Purpose: Consistent spacing units for margins, padding, and gaps. */
+  --mcs-spacing-xs: 0.25rem;
+  --mcs-spacing-sm: 0.5rem;
+  --mcs-spacing-md: 1rem;
+  --mcs-spacing-lg: 1.5rem;
+  --mcs-spacing-xl: 2rem;
+
+  /* --- BORDER & RADIUS TOKENS --- */
+  /* Purpose: Standardized borders and corner rounding. */
+  --mcs-border-width-base: 1px;
+  --mcs-border-radius-sm: 0.25rem;
+  --mcs-border-radius-md: 0.5rem;
+
+  /* --- TRANSITION TOKENS --- */
+  /* Purpose: Consistent timing for animations and interactions. */
+  --mcs-transition-duration-base: 0.2s;
+}
+
+/* --- GLOBAL STYLES --- */
+/* Basic reset and body defaults */
+body {
+  font-family: var(--mcs-font-family-base);
+  font-size: var(--mcs-font-size-base);
+  line-height: var(--mcs-line-height-base);
+  color: var(--mcs-color-neutral-900);
+  background-color: var(--mcs-color-neutral-100);
+  margin: 0;
+  padding: var(--mcs-spacing-lg);
+}
+
+
+/* ==========================================================================
+   LAYER 2: COMPOSITION (Layout Primitives)
+   - Prefixed with `l-`.
+   - Manages layout and structure, decoupled from component styling.
+   - LLM Annotation: "Use layout primitives like 'l-stack' or 'l-grid' to structure content. They control spacing and alignment of their direct children."
+   ========================================================================== */
+
+/*
+ * l-stack: For managing vertical rhythm between elements.
+ * It adds a consistent margin to the top of each direct child except the first.
+ * The spacing amount is controlled by the `--stack-space` custom property.
+ */
+.l-stack > * + * {
+  margin-block-start: var(--stack-space, var(--mcs-spacing-md));
+}
+
+/*
+ * l-grid: A responsive grid system.
+ * It creates a grid layout where the number of columns adapts to the available space.
+ * The minimum item width is controlled by the `--grid-min-item-width` custom property.
+ */
+.l-grid {
+  display: grid;
+  gap: var(--grid-gap, var(--mcs-spacing-md));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-min-item-width, 16rem)), 1fr));
+}
+
+
+/* ==========================================================================
+   LAYER 3: UTILITY (Helper Classes)
+   - Prefixed with `u-`.
+   - Single-purpose, immutable helpers that apply a specific visual effect.
+   - LLM Annotation: "Utility classes like 'u-visually-hidden' apply a specific, non-negotiable style rule. Use them for simple, direct style applications."
+   ========================================================================== */
+
+/*
+ * u-visually-hidden: Hides an element visually but keeps it accessible to screen readers.
+ * Essential for accessibility (WCAG).
+ */
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* ==========================================================================
+   LAYER 4: BLOCK (Component Styles)
+   - Prefixed with `c-`.
+   - Encapsulated UI components following BEM (Block__Element--Modifier) syntax.
+   - LLM Annotation: "Components are building blocks like 'c-button' or 'c-card'. They have a base class and optional element ('__') and modifier ('--') classes for variations."
+   ========================================================================== */
+
+/* --- Component: c-button --- */
+.c-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--mcs-spacing-sm) var(--mcs-spacing-md);
+  border: var(--mcs-border-width-base) solid transparent;
+  border-radius: var(--mcs-border-radius-sm);
+  font-family: inherit;
+  font-size: var(--mcs-font-size-base);
+  font-weight: var(--mcs-font-weight-bold);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--mcs-transition-duration-base) ease-in-out,
+              border-color var(--mcs-transition-duration-base) ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.c-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Modifier: Primary Button */
+.c-button--primary {
+  background-color: var(--mcs-color-brand-primary);
+  color: var(--mcs-color-brand-primary-text);
+}
+.c-button--primary:hover {
+    background-color: var(--mcs-color-brand-primary-hover);
+}
+
+/* Modifier: Secondary/Outline Button */
+.c-button--secondary {
+  background-color: var(--mcs-color-neutral-0);
+  color: var(--mcs-color-brand-primary);
+  border-color: var(--mcs-color-brand-primary);
+}
+.c-button--secondary:hover {
+    background-color: var(--mcs-color-neutral-100);
+}
+
+/* --- Component: c-card --- */
+.c-card {
+  display: block;
+  background-color: var(--mcs-color-neutral-0);
+  border: var(--mcs-border-width-base) solid var(--mcs-color-neutral-300);
+  border-radius: var(--mcs-border-radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.c-card__header,
+.c-card__body,
+.c-card__footer {
+  padding: var(--mcs-spacing-md);
+}
+
+.c-card__header {
+  border-bottom: var(--mcs-border-width-base) solid var(--mcs-color-neutral-300);
+  font-size: var(--mcs-font-size-large);
+  font-weight: var(--mcs-font-weight-bold);
+}
+
+.c-card__footer {
+  border-top: var(--mcs-border-width-base) solid var(--mcs-color-neutral-300);
+  background-color: var(--mcs-color-neutral-100);
+}
+
+
+/* --- Component: c-form-input --- */
+.c-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-form-group__label {
+    margin-bottom: var(--mcs-spacing-xs);
+    font-weight: var(--mcs-font-weight-bold);
+    color: var(--mcs-color-neutral-700);
+}
+
+.c-form-group__input {
+    padding: var(--mcs-spacing-sm);
+    font-size: var(--mcs-font-size-base);
+    border: var(--mcs-border-width-base) solid var(--mcs-color-neutral-500);
+    border-radius: var(--mcs-border-radius-sm);
+    background-color: var(--mcs-color-neutral-0);
+    transition: border-color var(--mcs-transition-duration-base) ease-in-out,
+                box-shadow var(--mcs-transition-duration-base) ease-in-out;
+}
+
+.c-form-group__input:focus {
+    outline: none;
+    border-color: var(--mcs-color-brand-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--mcs-color-brand-primary) 25%, transparent);
+}
+
+.c-form-group__description {
+    font-size: var(--mcs-font-size-small);
+    color: var(--mcs-color-neutral-700);
+    margin-top: var(--mcs-spacing-xs);
+}
+
+
+/* ==========================================================================
+   LAYER 5: EXCEPTION (State Overrides)
+   - Uses `data-*` attributes for state-based styling (e.g., validation, interaction).
+   - Keeps component classes clean and separates concerns.
+   - LLM Annotation: "Component states are handled by data attributes like 'data-mcs-validation-state'. To change the appearance for a state, target the attribute selector (e.g., '[data-mcs-validation-state=\"invalid\"]')."
+   ========================================================================== */
+
+/*
+ * Form Input Validation States
+ * These selectors target the input based on the state of its group container.
+ * This makes it easy for JS to toggle the state on the parent.
+ */
+[data-mcs-validation-state="invalid"] .c-form-group__label {
+    color: var(--mcs-color-error-500);
+}
+
+[data-mcs-validation-state="invalid"] .c-form-group__input {
+    border-color: var(--mcs-color-error-500);
+    background-color: var(--mcs-color-error-100);
+}
+
+[data-mcs-validation-state="invalid"] .c-form-group__input:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--mcs-color-error-500) 25%, transparent);
+}
+
+[data-mcs-validation-state="valid"] .c-form-group__label {
+    color: var(--mcs-color-success-500);
+}
+
+[data-mcs-validation-state="valid"] .c-form-group__input {
+    border-color: var(--mcs-color-success-500);
+    background-color: var(--mcs-color-success-100);
+}
+
+[data-mcs-validation-state="valid"] .c-form-group__input:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--mcs-color-success-500) 25%, transparent);
+}

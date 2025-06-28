@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCSS Login Page</title>
+  <link rel="stylesheet" href="mcss-poc.css" />
+  <!-- Removed Lato font reference; using MCSS default font stack -->
+</head>
+<body>
+  <main class="l-stack" style="min-height: 100vh; justify-content: center; align-items: center; display: flex;">
+    <section class="c-card" style="width: 350px;">
+      <header class="c-card__header">
+        <h1 class="c-card__title">Sign In</h1>
+      </header>
+      <form id="login-form" class="l-stack" style="gap: 1.5rem; padding: 1.5rem;">
+        <div class="c-form-group" id="username-group">
+          <label for="username" class="c-form-group__label">Username</label>
+          <input type="text" id="username" name="username" class="c-form-group__input" required autocomplete="username" />
+        </div>
+        <div class="c-form-group" id="password-group">
+          <label for="password" class="c-form-group__label">Password</label>
+          <input type="password" id="password" name="password" class="c-form-group__input" required autocomplete="current-password" />
+        </div>
+        <button type="submit" class="c-button c-button--primary" style="width: 100%;">Login</button>
+      </form>
+      <footer class="c-card__footer" style="text-align: center;">
+        <small>Forgot your password?</small>
+      </footer>
+    </section>
+  </main>
+  <script src="../dist/main.js"></script>
+</body>
+</html>
