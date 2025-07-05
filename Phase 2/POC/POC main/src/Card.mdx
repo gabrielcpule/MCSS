@@ -1,0 +1,40 @@
+import { Meta, Title, Subtitle, Description, Primary, Controls, Story } from '@storybook/blocks';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+<Title />
+<Subtitle />
+<Description />
+<Primary />
+<Controls />
+
+## Semantic Annotations (RDFa)
+
+The `c-card` component is not just styled visually; it's enriched with a semantic layer using the `mcs:v1` vocabulary to make it machine-comprehensible. This is a core principle of MCSS.
+
+### Vocabulary
+
+The component declares its vocabularies:
+```html
+<article vocab="http://www.mcss.dev/ns/v1# http://schema.org/">
+```
+
+### Component Definition
+
+It identifies itself as both an `mcs:Component` and a `schema:Article`:
+```html
+<article typeof="mcs:Component schema:Article">
+```
+
+### Purpose and Parts
+
+- **`mcs:purpose`**: Explicitly states the component's function: `"A summary card for an article."`.
+- **`mcs:hasPart`**: Links the main component to its constituent parts, like the `c-card__image` and `c-card__content`.
+
+### Behavior
+
+- **`mcs:interaction-type`**: Describes the user action, e.g., `"click"` on the button.
+- **`mcs:consequence`**: Describes the outcome of the interaction: `"Navigates to the full article."`.
+
+This embedded metadata allows automated tools and AI agents to understand the component's function and structure without relying solely on ambiguous class names. [11, 12]

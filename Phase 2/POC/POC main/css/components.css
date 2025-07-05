@@ -1,0 +1,77 @@
+/*
+==================================
+  LAYER 4: COMPONENTS / BLOCKS (c-)
+==================================
+Encapsulated, semantic UI components using BEM.
+*/
+
+/* c-button component */
+.c-button {
+  display: inline-block;
+  padding: var(--mcss-token-space-s) var(--mcss-token-space-m);
+  font-weight: var(--mcss-token-font-weight-bold);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--mcss-token-radius-m);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.c-button--primary {
+  background-color: var(--mcss-token-color-accent-primary);
+  color: var(--mcss-token-color-text-on-accent);
+}
+
+.c-button--primary:hover {
+  background-color: var(--mcss-token-color-accent-primary-hover);
+}
+
+/* c-card component [8] */
+.c-card {
+  display: block;
+  background-color: var(--mcss-token-color-surface-primary);
+  border: 1px solid var(--mcss-token-color-border-default);
+  border-radius: var(--mcss-token-radius-l);
+  box-shadow: var(--mcss-token-shadow-s);
+  overflow: hidden; /* Contains child elements */
+  /* NO EXTERNAL MARGINS [9] */
+}
+
+.c-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.c-card__content {
+  padding: var(--mcss-token-space-l);
+}
+
+.c-card__title {
+  font-size: var(--mcss-token-font-size-l);
+  font-weight: var(--mcss-token-font-weight-bold);
+  margin-bottom: var(--mcss-token-space-s);
+}
+
+.c-card__description {
+  font-size: var(--mcss-token-font-size-m);
+  margin-bottom: var(--mcss-token-space-l);
+}
+
+/*
+==================================
+  LAYER 5: EXCEPTIONS (data-*)
+==================================
+State management using data attributes.
+*/
+
+.c-card[data-state='highlighted'] {
+  border-color: var(--mcss-token-color-accent-primary);
+  box-shadow: var(--mcss-token-shadow-m);
+}
+
+.c-button[data-state='loading'] {
+  cursor: wait;
+  opacity: 0.7;
+}

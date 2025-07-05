@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCSS Proof of Concept</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="l-center" style="padding-block: 2rem;">
+    <h1 style="font-size: var(--mcss-token-font-size-xl);">MCSS Proof of Concept</h1>
+    <p>A demonstration of the 5-layer architecture and semantic annotation.</p>
+  </header>
+
+  <main class="l-stack" style="--mcss-l-stack-space: var(--mcss-token-space-xl);">
+    
+    
+    <article
+      id="interactive-card"
+      class="c-card l-center"
+      style="--mcss-l-center-max-width: 50ch;"
+      vocab="http://www.mcss.dev/ns/v1# http://schema.org/" 
+      typeof="mcs:Component schema:Article"
+      resource="#card-poc-1"
+    >
+      <div property="mcs:purpose" content="A demonstration card component with interactive state." class="u-visually-hidden"></div>
+      
+      <img class="c-card__image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" alt="A laptop with code on the screen." rel="mcs:hasPart" property="schema:image">
+      
+      <div class="c-card__content l-stack" style="--mcss-l-stack-space: var(--mcss-token-space-m);" rel="mcs:hasPart">
+        <h2 class="c-card__title" property="schema:headline">Interactive Card Component</h2>
+        <p class="c-card__description" property="schema:description">
+          This card demonstrates a Block Layer component (`c-card`) with semantic annotations. It uses Composition (`l-center`, `l-stack`) for layout and is styled with Global Layer design tokens.
+        </p>
+        <button 
+          id="card-state-toggle"
+          class="c-button c-button--primary" 
+          rel="mcs:hasPart" 
+          property="mcs:interaction-type" 
+          content="click"
+        >
+          <span property="mcs:triggersStateChange" content="Toggles data-state from '' to 'highlighted'" class="u-visually-hidden"></span>
+          Toggle Highlight State
+        </button>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="l-center u-text-center" style="padding-block: 2rem; margin-top: 2rem; border-top: 1px solid var(--mcss-token-color-border-default);">
+    <p>MCSS PoC Footer</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

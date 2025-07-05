@@ -1,0 +1,22 @@
+/*
+==================================
+  LAYER 2: COMPOSITION (l-)
+==================================
+Content-agnostic layout primitives.
+*/
+
+/* l-stack: For managing vertical flow and rhythm [7] */
+.l-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--mcss-l-stack-space, var(--mcss-token-space-l));
+}
+
+/* l-center: For constraining width and centering content [7] */
+.l-center {
+  box-sizing: content-box; /* Ensures padding doesn't affect max-width */
+  margin-inline: auto;
+  max-width: var(--mcss-l-center-max-width, 60ch);
+  padding-inline: var(--mcss-token-space-m);
+}

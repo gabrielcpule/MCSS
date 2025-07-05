@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "a5186d7d731365c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a96b8c26b908c14",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6aafdf0e30c00e9d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Project guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Project guide"
+            }
+          },
+          {
+            "id": "c163480a23a10ca7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "(System prompt Plan A)Detailed Implementation Guide with System Prompts and Agent Delegation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "(System prompt Plan A)Detailed Implementation Guide with System Prompts and Agent Delegation"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bfc4c811e8adf89c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ad894df6797d2a42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b42d0a5448fb543f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "55e3898b360da2c5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "696d9ade14048fb3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "67458910f394fe1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "8581bb42e4d6b52d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b944c7697ab0bba",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "(check the update) Detailed Implementation Guide with System Prompts and Agent Delegation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for (check the update) Detailed Implementation Guide with System Prompts and Agent Delegation"
+            }
+          },
+          {
+            "id": "d929db2bb17b6bc1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "(check the update) Detailed Implementation Guide with System Prompts and Agent Delegation.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from (check the update) Detailed Implementation Guide with System Prompts and Agent Delegation"
+            }
+          },
+          {
+            "id": "eb474c39b5aa8f9c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d90feadaa6f12123",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "(check the update) Detailed Implementation Guide with System Prompts and Agent Delegation.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of (check the update) Detailed Implementation Guide with System Prompts and Agent Delegation"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "6aafdf0e30c00e9d",
+  "lastOpenFiles": [
+    "step 3.1 prompt.md",
+    "step 2.2 prompt.md",
+    "Project guide.md",
+    "step 2.1 prompt.md",
+    "step 1.3 prompt.md",
+    "Updating steps test 1.md",
+    "Phase 1/Step 1.3 v2 Model Context Style Sheet (MCSS)- An Architectural Framework for Advanced LLM Comprehension.md",
+    "artifact_old/MCSS Framework Architecture Design_.md",
+    "Phase 1/step 1.2 v2 LLM-Optimized System Design Requirements_.md",
+    "Phase 1/step 1.1 # LLM Performance Assessment.md",
+    "Phase 1/MCSS Revisions Tradeoff Analysis_.md",
+    "artifact_old/Names for the framework.md",
+    "artifact_old/(old) v2 LLM-Optimized System Design Requirements_.md",
+    "artifact_old/(old) LLM-Optimized System Design Requirements_.md",
+    "(perplexity labs)MCSS Framework Architecture Specification.md",
+    "(gabriel) Insights and notes.md",
+    "(System prompt Plan A)Detailed Implementation Guide with System Prompts and Agent Delegation.md",
+    "(system prompt plan B) Updated implementation guide Dynamic System Prompt Architecture for Mar.md",
+    "(without atomic design) Model Context Style Sheet (MCSS) An Architectural Framework for Advanced LLM Comprehension.md",
+    "Phase 2/Phase 2.md",
+    "Images/Pasted image 20250629150828.png",
+    "Images/Pasted image 20250629151608.png",
+    "Images",
+    "Images/Pasted image 20250629151005.png",
+    "POC/Geminipro2.5/# MCSS Proof of Concept Development Agent__You ar....md",
+    "README.md",
+    "pre-project artifacts/(initial plan 06-25)Detailed Implementation Guide with System Prompts and Agent Delegation.md",
+    "(adjusting new steps) Dynamic System Prompt Architecture for Progressive.md",
+    "POC/POC system prompt (after step 1.1 and 1.2).md",
+    "MCSS framework architecture documento.md"
+  ]
+}

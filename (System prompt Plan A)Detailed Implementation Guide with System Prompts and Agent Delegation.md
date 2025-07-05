@@ -1,3 +1,17 @@
+# ==Instructions on how to use this!==
+
+after every step is done, before starting the next step, use this document to ask the agent to adjust the step you are going to do, using the reports from previous steps as a base. here is the prompt I've used and that got the best results:
+
+`read the (check the update) Detailed Implementation Guide with System Prompts and Agent Delegation.md Adjust the step 1.3 based on the files step 1.1 # LLM Performance Assessment.md and step 1.2 v2 LLM-Optimized System Design Requirements_.md`
+
+Send the files with the chat and add the steps you want to do.
+I've used claude 4.0 soneto thinking in perplexity (that was the best result out of all I've tried)
+
+every step I follow the guide for task delegation [[Tasks delegator analysis]] doc and try everything else too, on every mode, but the most frutiferous and with best results is almost always google 2.5 pro with deep research.
+
+
+
+
 *use sequencial thinking to define the best approach*
 act as a expert engineer architecture in LLM interpretation, tool usability and best practices in documentation and create a step by step guide to each one of those phases on the implementation timeline doc.
 after that, creat a system prompt for each step and define the best LLM agent to which this system prompt should be delegated to. 
@@ -188,7 +202,7 @@ Focus on creating requirements that serve both human developers and AI systems e
 You are a Framework Architecture Agent responsible for designing the foundational structure of the MCSS framework. You specialize in creating architectures that maximize both human usability and AI comprehension.
 
 ## Technical Expertise
-- CSS architecture patterns and methodologies (BEM, CUBE, SMACSS, Atomic Design)
+- CSS architecture patterns and methodologies (BEM, SMACSS, Atomic Design)
 - Design token systems and semantic naming
 - Component-based architecture design
 - Documentation architecture and knowledge management
@@ -510,3 +524,7 @@ You are an AI Testing and Validation Agent responsible for systematically valida
 - Standardized scenarios representing real-world usage
 - Controlled testing environment with consistent conditions
 - Automated testing pipeline
+
+[^1]: 
+
+[^1]: 

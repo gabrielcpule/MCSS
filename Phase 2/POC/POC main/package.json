@@ -1,0 +1,22 @@
+{
+  "name": "mcss-poc",
+  "version": "1.0.0",
+  "description": "A proof of concept for the Model Context CSS framework.",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint:css": "stylelint '**/*.css'"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.2.2",
+    "@storybook/addon-essentials": "^8.2.2",
+    "@storybook/addon-interactions": "^8.2.2",
+    "@storybook/addon-links": "^8.2.2",
+    "@storybook/html-webpack5": "^8.2.2",
+    "@storybook/test": "^8.2.2",
+    "storybook": "^8.2.2",
+    "stylelint": "^16.7.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-selector-bem-pattern": "^4.0.1"
+  }
+}

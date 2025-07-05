@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCSS Standalone Proof of Concept</title>
+  
+  <!-- 
+    NOTE: For simplicity, all CSS layers have been combined into this single <style> tag.
+    In a real-world project, these would be in separate files as shown in the original POC.
+  -->
+  <style>
+    /*
+    ==================================
+      LAYER 1: GLOBAL (from main.css)
+    ==================================
+    CSS Reset and Design Tokens.
+    */
+
+    /* Modern CSS Reset */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      font-family: var(--mcss-token-font-family-sans);
+      background-color: var(--mcss-token-color-background-primary);
+      color: var(--mcss-token-color-text-primary);
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    /* Design Tokens as CSS Custom Properties */
+    :root {
+      /* Color Tokens */
+      --mcss-token-color-text-primary: #1a1a1a;
+      --mcss-token-color-text-on-accent: #ffffff;
+      --mcss-token-color-background-primary: #f8f9fa;
+      --mcss-token-color-surface-primary: #ffffff;
+      --mcss-token-color-accent-primary: #007bff;
+      --mcss-token-color-accent-primary-hover: #0056b3;
+      --mcss-token-color-border-default: #dee2e6;
+
+      /* Spacing Tokens */
+      --mcss-token-space-s: 0.5rem;
+      --mcss-token-space-m: 1rem;
+      --mcss-token-space-l: 1.5rem;
+      --mcss-token-space-xl: 2rem;
+
+      /* Typography Tokens */
+      --mcss-token-font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      --mcss-token-font-size-s: 0.875rem;
+      --mcss-token-font-size-m: 1rem;
+      --mcss-token-font-size-l: 1.25rem;
+      --mcss-token-font-size-xl: 1.5rem;
+      --mcss-token-font-weight-regular: 400;
+      --mcss-token-font-weight-bold: 700;
+
+      /* Border Radius Tokens */
+      --mcss-token-radius-m: 0.25rem;
+      --mcss-token-radius-l: 0.5rem;
+
+      /* Shadow Tokens */
+      --mcss-token-shadow-s: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --mcss-token-shadow-m: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /*
+    ==================================
+      LAYER 2: COMPOSITION (l-)
+    ==================================
+    Content-agnostic layout primitives.
+    */
+
+    /* l-stack: For managing vertical flow and rhythm */
+    .l-stack {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: var(--mcss-l-stack-space, var(--mcss-token-space-l));
+    }
+
+    /* l-center: For constraining width and centering content */
+    .l-center {
+      box-sizing: content-box; /* Ensures padding doesn't affect max-width */
+      margin-inline: auto;
+      max-width: var(--mcss-l-center-max-width, 60ch);
+      padding-inline: var(--mcss-token-space-m);
+    }
+
+    /*
+    ==================================
+      LAYER 3: UTILITIES (u-)
+    ==================================
+    Constrained, single-purpose helper classes.
+    */
+
+    .u-text-center {
+      text-align: center;
+    }
+
+    .u-visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /*
+    ==================================
+      LAYER 4: COMPONENTS / BLOCKS (c-)
+    ==================================
+    Encapsulated, semantic UI components using BEM.
+    */
+
+    /* c-button component */
+    .c-button {
+      display: inline-block;
+      padding: var(--mcss-token-space-s) var(--mcss-token-space-m);
+      font-weight: var(--mcss-token-font-weight-bold);
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: var(--mcss-token-radius-m);
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .c-button--primary {
+      background-color: var(--mcss-token-color-accent-primary);
+      color: var(--mcss-token-color-text-on-accent);
+    }
+
+    .c-button--primary:hover {
+      background-color: var(--mcss-token-color-accent-primary-hover);
+    }
+
+    /* c-card component */
+    .c-card {
+      display: block;
+      background-color: var(--mcss-token-color-surface-primary);
+      border: 1px solid var(--mcss-token-color-border-default);
+      border-radius: var(--mcss-token-radius-l);
+      box-shadow: var(--mcss-token-shadow-s);
+      overflow: hidden; /* Contains child elements */
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      /* NO EXTERNAL MARGINS */
+    }
+
+    .c-card__image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .c-card__content {
+      padding: var(--mcss-token-space-l);
+    }
+
+    .c-card__title {
+      font-size: var(--mcss-token-font-size-l);
+      font-weight: var(--mcss-token-font-weight-bold);
+      margin-bottom: var(--mcss-token-space-s);
+    }
+
+    .c-card__description {
+      font-size: var(--mcss-token-font-size-m);
+      margin-bottom: var(--mcss-token-space-l);
+    }
+
+    /*
+    ==================================
+      LAYER 5: EXCEPTIONS (data-*)
+    ==================================
+    State management using data attributes.
+    */
+
+    .c-card[data-state='highlighted'] {
+      border-color: var(--mcss-token-color-accent-primary);
+      box-shadow: var(--mcss-token-shadow-m);
+    }
+
+    .c-button[data-state='loading'] {
+      cursor: wait;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="l-center" style="padding-block: 2rem;">
+    <h1 style="font-size: var(--mcss-token-font-size-xl); text-align: center;">MCSS Standalone Proof of Concept</h1>
+    <p style="text-align: center;">A demonstration of the 5-layer architecture and semantic annotation in a single file.</p>
+  </header>
+
+  <main class="l-stack" style="--mcss-l-stack-space: var(--mcss-token-space-xl); padding-block: 2rem;">
+    
+    <!-- 
+      This is the core demonstration component.
+      Notice the combination of:
+      - Composition classes (l-center, l-stack) for layout.
+      - Component classes (c-card, c-card__*, c-button) for the UI element.
+      - RDFa attributes (vocab, typeof, property, content) for semantic meaning.
+      - An ID for JavaScript to target.
+    -->
+    <article
+      id="interactive-card"
+      class="c-card l-center"
+      style="--mcss-l-center-max-width: 50ch;"
+      vocab="http://www.mcss.dev/ns/v1# http://schema.org/" 
+      typeof="mcs:Component schema:Article"
+      resource="#card-poc-1"
+    >
+      <!-- The purpose is hidden visually but available to screen readers and machines -->
+      <div property="mcs:purpose" content="A demonstration card component with interactive state." class="u-visually-hidden"></div>
+      
+      <img class="c-card__image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="A laptop with code on the screen." rel="mcs:hasPart" property="schema:image" 
+      onerror="this.onerror=null;this.src='https://placehold.co/800x450/2d3748/ffffff?text=Image+Not+Found';">
+      
+      <div class="c-card__content l-stack" style="--mcss-l-stack-space: var(--mcss-token-space-m);" rel="mcs:hasPart">
+        <h2 class="c-card__title" property="schema:headline">Interactive Card Component</h2>
+        <p class="c-card__description" property="schema:description">
+          This card demonstrates a Block Layer component (`c-card`) with semantic annotations. It uses Composition (`l-center`, `l-stack`) for layout and is styled with Global Layer design tokens. Click the button to see the Exception Layer in action.
+        </p>
+        <button 
+          id="card-state-toggle"
+          class="c-button c-button--primary" 
+          rel="mcs:hasPart" 
+        >
+          <!-- The interaction's meaning is described semantically -->
+          <span property="mcs:interaction-type" content="click" class="u-visually-hidden"></span>
+          <span property="mcs:triggersStateChange" content="Toggles data-state on the parent card between 'default' and 'highlighted'" class="u-visually-hidden"></span>
+          Toggle Highlight State
+        </button>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="l-center u-text-center" style="padding-block: 2rem; margin-top: 2rem; border-top: 1px solid var(--mcss-token-color-border-default);">
+    <p>MCSS PoC Footer</p>
+  </footer>
+
+  <!-- 
+    Simple JavaScript to handle the interactive part of the demo.
+  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const card = document.getElementById('interactive-card');
+      const toggleButton = document.getElementById('card-state-toggle');
+
+      if (card && toggleButton) {
+        toggleButton.addEventListener('click', () => {
+          const currentState = card.getAttribute('data-state');
+          if (currentState === 'highlighted') {
+            card.removeAttribute('data-state');
+          } else {
+            card.setAttribute('data-state', 'highlighted');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

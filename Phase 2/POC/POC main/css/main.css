@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--mcss-token-font-family-sans);
+  background-color: var(--mcss-token-color-background-primary);
+  color: var(--mcss-token-color-text-primary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Design Tokens as CSS Custom Properties [5, 6] */
+:root {
+  /* Color Tokens */
+  --mcss-token-color-text-primary: #1a1a1a;
+  --mcss-token-color-text-on-accent: #ffffff;
+  --mcss-token-color-background-primary: #f8f9fa;
+  --mcss-token-color-surface-primary: #ffffff;
+  --mcss-token-color-accent-primary: #007bff;
+  --mcss-token-color-accent-primary-hover: #0056b3;
+  --mcss-token-color-border-default: #dee2e6;
+
+  /* Spacing Tokens */
+  --mcss-token-space-s: 0.5rem;
+  --mcss-token-space-m: 1rem;
+  --mcss-token-space-l: 1.5rem;
+  --mcss-token-space-xl: 2rem;
+
+  /* Typography Tokens */
+  --mcss-token-font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --mcss-token-font-size-s: 0.875rem;
+  --mcss-token-font-size-m: 1rem;
+  --mcss-token-font-size-l: 1.25rem;
+  --mcss-token-font-size-xl: 1.5rem;
+  --mcss-token-font-weight-regular: 400;
+  --mcss-token-font-weight-bold: 700;
+
+  /* Border Radius Tokens */
+  --mcss-token-radius-m: 0.25rem;
+  --mcss-token-radius-l: 0.5rem;
+
+  /* Shadow Tokens */
+  --mcss-token-shadow-s: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --mcss-token-shadow-m: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

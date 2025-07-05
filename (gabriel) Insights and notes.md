@@ -9,7 +9,12 @@
 	- See [[Ideias/Projetos/MCSS (ex-LMAOcss)(LLM css project)/Insights and notes.md#Ideas|ideas]]
 - See if it's possible to change the `typeof:"mcss:component mcss:card"` to be just `typeof:"component card"`[^4]  
 	- see ***Justification*** [^6]
-
+- There is a lot on those [RFDa primer](https://www.w3.org/TR/rdfa-primer/) and [HTML + RFDa docs](https://www.w3.org/TR/html-rdfa/)
+	- the rel property seems a good way to replicate properties for all elements below a tag on RFDa primer![[Pasted image 20250629150828.png]]
+	- or the property copying on html + RFDA ![[Pasted image 20250629151005.png]]
+- Css new functions and modules from the w3 are also really good!
+	- [Css mixins](https://www.w3.org/TR/css-mixins-1/) provide a good resource for creating functions within the CSS![[Pasted image 20250629151608.png]]
+	- 
 ## Insights
 - If systems start to use this, transforming a site to a markdown would be redundant because everything on the DOM is declarative, and LLM would have a way better time making actions on a system using this CSS
 - Parsing all information would be in a instant, AIs would find what they need on a instant
