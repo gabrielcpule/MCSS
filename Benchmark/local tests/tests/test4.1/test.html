@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" vocab="https://gabrielcpule.github.io/mcss-vocab/api/mcss/v1.rdf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 4.1: Dashboard Page Layout</title>
+    <style>
+        :root {
+            --font-family-base: system-ui, sans-serif;
+            --color-background: #f9fafb; --color-surface: #ffffff;
+            --color-text-primary: #111827; --color-text-secondary: #6b7280;
+            --color-border-default: #e5e7eb; --color-primary: #2563eb;
+            --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+            --border-radius-lg: 0.5rem; --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --header-height: 60px; --sidebar-width: 240px;
+        }
+        body { font-family: var(--font-family-base); background-color: var(--color-background); color: var(--color-text-primary); margin: 0; }
+        .u-hidden { display: none !important; }
+
+        /* LAYOUT PRIMITIVES */
+        .l-page-grid { display: grid; grid-template-columns: var(--sidebar-width) 1fr; grid-template-rows: var(--header-height) 1fr; height: 100vh; }
+        .l-page-grid__header { grid-column: 1 / 3; }
+        .l-page-grid__sidebar { grid-row: 2 / 3; }
+        .l-page-grid__main { grid-column: 2 / 3; grid-row: 2 / 3; overflow-y: auto; }
+        .l-container { padding: var(--space-6); }
+        .l-stack > * + * { margin-top: var(--space-5); }
+        .l-grid { display: grid; gap: var(--space-5); }
+        .l-grid--2-col { grid-template-columns: repeat(2, 1fr); }
+
+        /* HEADER ORGANISM */
+        .c-header { background-color: var(--color-surface); border-bottom: 1px solid var(--color-border-default); display: flex; align-items: center; padding: 0 var(--space-5); }
+        .c-header__logo { font-weight: 600; font-size: 1.25rem; color: var(--color-primary); }
+
+        /* SIDEBAR ORGANISM */
+        .c-sidebar { background-color: var(--color-surface); border-right: 1px solid var(--color-border-default); padding: var(--space-5); }
+        .c-sidebar__nav-list { list-style: none; padding: 0; margin: 0; }
+        .c-sidebar__nav-item + .c-sidebar__nav-item { margin-top: var(--space-3); }
+        .c-sidebar__nav-link { display: block; padding: var(--space-3); border-radius: 0.375rem; text-decoration: none; color: var(--color-text-secondary); }
+        .c-sidebar__nav-link:hover { background-color: #f3f4f6; color: var(--color-text-primary); }
+        .c-sidebar__nav-link[data-state="active"] { background-color: var(--color-primary); color: white; }
+
+        /* CARD MOLECULE (as widget) */
+        .c-card { background-color: var(--color-surface); border-radius: var(--border-radius-lg); border: 1px solid var(--color-border-default); box-shadow: var(--shadow-sm); }
+        .c-card__header { padding: var(--space-4) var(--space-5); border-bottom: 1px solid var(--color-border-default); }
+        .c-card__title { font-size: 1.125rem; font-weight: 600; }
+        .c-card__body { padding: var(--space-5); }
+
+        /* RESPONSIVE BEHAVIOR */
+        @media (max-width: 768px) {
+            .l-page-grid { grid-template-columns: 1fr; }
+            .l-page-grid__sidebar { display: none; } /* Simple hide for demo */
+            .l-page-grid__main { grid-column: 1 / 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="l-page-grid">
+
+        <!-- Header Organism -->
+        <header class="l-page-grid__header c-header"
+                id="dashboard-header"
+                typeof="mcs:Component"
+                property="mcs:taxonomyLevel" content="mcs:Organism"
+                role="banner">
+            <span property="mcs:purpose" content="Provides top-level branding and user controls for the application." class="u-hidden"></span>
+            <div class="c-header__logo">Dashboard</div>
+        </header>
+
+        <!-- Sidebar Organism -->
+        <aside class="l-page-grid__sidebar c-sidebar"
+               id="dashboard-sidebar"
+               typeof="mcs:Component"
+               property="mcs:taxonomyLevel" content="mcs:Organism">
+            <span property="mcs:purpose" content="Main navigation for the dashboard sections." class="u-hidden"></span>
+            <nav aria-label="Main Navigation">
+                <ul class="c-sidebar__nav-list">
+                    <li class="c-sidebar__nav-item">
+                        <a href="#" class="c-sidebar__nav-link" data-state="active" aria-current="page">Dashboard</a>
+                    </li>
+                    <li class="c-sidebar__nav-item">
+                        <a href="#" class="c-sidebar__nav-link">Analytics</a>
+                    </li>
+                    <li class="c-sidebar__nav-item">
+                        <a href="#" class="c-sidebar__nav-link">Reports</a>
+                    </li>
+                    <li class="c-sidebar__nav-item">
+                        <a href="#" class="c-sidebar__nav-link">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="l-page-grid__main">
+            <div class="l-container">
+                <div class="l-stack">
+                    <h1>Welcome Back!</h1>
+
+                    <div class="l-grid l-grid--2-col">
+                        <!-- Widget 1 (Card Molecule) -->
+                        <div class="c-card"
+                             typeof="mcs:Component"
+                             property="mcs:taxonomyLevel" content="mcs:Molecule"
+                             id="widget-revenue">
+                            <span property="mcs:purpose" content="Displays key revenue metrics." class="u-hidden"></span>
+                            <div class="c-card__header">
+                                <h2 class="c-card__title" property="mcs:part" content="Title">Total Revenue</h2>
+                            </div>
+                            <div class="c-card__body" property="mcs:part" content="Body">
+                                <p style="font-size: 2rem; font-weight: 700;">$45,231.89</p>
+                                <p style="color: green;">+20.1% from last month</p>
+                            </div>
+                        </div>
+
+                        <!-- Widget 2 (Card Molecule) -->
+                        <div class="c-card"
+                             typeof="mcs:Component"
+                             property="mcs:taxonomyLevel" content="mcs:Molecule"
+                             id="widget-users">
+                            <span property="mcs:purpose" content="Displays active user count." class="u-hidden"></span>
+                            <div class="c-card__header">
+                                <h2 class="c-card__title" property="mcs:part" content="Title">Active Users</h2>
+                            </div>
+                            <div class="c-card__body" property="mcs:part" content="Body">
+                                <p style="font-size: 2rem; font-weight: 700;">+2,350</p>
+                                <p>+180.1% from last month</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 3 (Card Molecule) -->
+                    <div class="c-card"
+                         typeof="mcs:Component"
+                         property="mcs:taxonomyLevel" content="mcs:Molecule"
+                         id="widget-recent-sales">
+                        <span property="mcs:purpose" content="Displays a list of recent sales." class="u-hidden"></span>
+                        <div class="c-card__header">
+                            <h2 class="c-card__title" property="mcs:part" content="Title">Recent Sales</h2>
+                        </div>
+                        <div class="c-card__body" property="mcs:part" content="Body">
+                            <p>You made 265 sales this month.</p>
+                            <!-- A more complex component like a list or table would go here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Benchmark Test Results</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons for dashboard -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom styles for dashboard and SaaS page layouts */
+        body {
+            padding-top: 56px; /* Adjust body padding for fixed-top navbar */
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            padding: 48px 0 0;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+
+        .sidebar-sticky {
+            position: relative;
+            top: 0;
+            height: calc(100vh - 48px);
+            padding-top: .5rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .main-content {
+            margin-left: 220px; /* Adjust based on sidebar width */
+            padding-top: 2rem;
+        }
+
+        /* SaaS Page Specific Styles */
+        #saas-sidebar {
+            width: 280px;
+            min-height: 100vh;
+            transition: margin .25s ease-out;
+        }
+
+        #saas-main-workspace {
+            transition: margin .25s ease-out;
+        }
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 56px;
+            }
+            .sidebar {
+                top: 56px;
+                height: auto;
+                position: static;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Bootstrap Benchmark Test Results</h1>
+        <hr class="mb-5">
+
+        <!-- ================================================================== -->
+        <!-- Test 1.1: User Profile Card                                        -->
+        <!-- ================================================================== -->
+        <section id="test-1-1" class="mb-5">
+            <h2>Test 1.1: User Profile Card</h2>
+            <p>A single, responsive card component using Bootstrap's Card and utility classes.</p>
+            <div class="p-4 border rounded">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://via.placeholder.com/286x180.png?text=User+Avatar" class="card-img-top"
+                        alt="User Avatar">
+                    <div class="card-body text-center">
+                        <h2 class="card-title h5">Jane Doe</h2>
+                        <p class="card-text text-muted">Lead Software Engineer</p>
+                        <a href="#" class="btn btn-primary">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================== -->
+        <!-- Test 2.1: Modal Dialog with Form                                   -->
+        <!-- ================================================================== -->
+        <section id="test-2-1" class="mb-5">
+            <h2>Test 2.1: Modal Dialog with Form</h2>
+            <p>A button that triggers an accessible modal containing a Bootstrap-styled form.</p>
+            <div class="p-4 border rounded">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    Launch Contact Modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="contactModalLabel">Contact Us</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="nameInput" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="nameInput"
+                                            placeholder="Your Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emailInput" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="emailInput"
+                                            placeholder="name@example.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="messageTextarea" class="form-label">Message</label>
+                                        <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================== -->
+        <!-- Test 3.1: Advanced Tab Interface                                   -->
+        <!-- ================================================================== -->
+        <section id="test-3-1" class="mb-5">
+            <h2>Test 3.1: Advanced Tab Interface</h2>
+            <p>A tabbed interface with nested tabs and a simulated loading state.</p>
+            <div class="p-4 border rounded">
+                <ul class="nav nav-tabs" id="mainTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="loading-tab" data-bs-toggle="tab"
+                            data-bs-target="#loading-tab-pane" type="button" role="tab"
+                            aria-controls="loading-tab-pane" aria-selected="false">Profile (Simulates Loading)</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="nested-tab" data-bs-toggle="tab"
+                            data-bs-target="#nested-tab-pane" type="button" role="tab"
+                            aria-controls="nested-tab-pane" aria-selected="false">Contact (With Nested Tabs)</button>
+                    </li>
+                </ul>
+                <div class="tab-content border border-top-0 p-3" id="mainTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                        aria-labelledby="home-tab" tabindex="0">
+                        <p>This is the home tab content. It is simple and static.</p>
+                    </div>
+                    <div class="tab-pane fade" id="loading-tab-pane" role="tabpanel" aria-labelledby="loading-tab"
+                        tabindex="0">
+                        <!-- Content will be loaded by JavaScript -->
+                    </div>
+                    <div class="tab-pane fade" id="nested-tab-pane" role="tabpanel" aria-labelledby="nested-tab"
+                        tabindex="0">
+                        <p>This tab contains another set of tabs.</p>
+                        <!-- Nested Tabs -->
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-work-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-work" type="button" role="tab" aria-controls="pills-work"
+                                    aria-selected="true">Work</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-personal-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-personal" type="button" role="tab"
+                                    aria-controls="pills-personal" aria-selected="false">Personal</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-work" role="tabpanel"
+                                aria-labelledby="pills-work-tab" tabindex="0">
+                                Work contact information goes here.
+                            </div>
+                            <div class="tab-pane fade" id="pills-personal" role="tabpanel"
+                                aria-labelledby="pills-personal-tab" tabindex="0">
+                                Personal contact information goes here.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- Test 4.1: Dashboard Page Layout                                    -->
+    <!-- ================================================================== -->
+    <section id="test-4-1" class="mb-5 bg-light py-5">
+        <div class="container">
+            <h2>Test 4.1: Dashboard Page Layout</h2>
+            <p>A full-page responsive dashboard layout with a fixed navbar, sidebar, and content area. (This section breaks out of the main container for a full-width demo).</p>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-dark bg-dark fixed-top flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 me-0 px-3" href="#">Dashboard Co.</a>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="sidebar-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="bi bi-house-door"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark"></i> Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-cart"></i> Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-people"></i> Customers</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card text-white bg-primary">
+                            <div class="card-header">New Users</div>
+                            <div class="card-body">
+                                <h5 class="card-title">1,250</h5>
+                                <p class="card-text">In the last 30 days.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card text-white bg-success">
+                            <div class="card-header">Sales</div>
+                            <div class="card-body">
+                                <h5 class="card-title">$45,800</h5>
+                                <p class="card-text">This fiscal quarter.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card text-white bg-warning">
+                            <div class="card-header">Pending Tasks</div>
+                            <div class="card-body">
+                                <h5 class="card-title">17</h5>
+                                <p class="card-text">Awaiting your review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- Test 5.1: Complete SaaS Application Page                           -->
+    <!-- ================================================================== -->
+    <section id="test-5-1" class="mb-5 bg-light py-5 mt-5">
+        <div class="container">
+            <h2>Test 5.1: Complete SaaS Application Page</h2>
+            <p>A complex, single-page layout integrating a navbar, a collapsible sidebar, toasts, and a modal. (This is a conceptual demo; click the buttons below to see the integrated components in action).</p>
+            <div class="p-4 border rounded bg-white">
+                <p>This layout demonstrates how multiple Bootstrap components work together. The sidebar is collapsible, and you can trigger notifications (toasts) and settings (modal) from the main content area.</p>
+                <button class="btn btn-info" id="showToastBtn">Show Notification</button>
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#userSettingsModal">Open User Settings</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-bell-fill rounded me-2"></i>
+                <strong class="me-auto">Notification</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Your profile has been successfully updated.
+            </div>
+        </div>
+    </div>
+
+    <!-- User Settings Modal -->
+    <div class="modal fade" id="userSettingsModal" tabindex="-1" aria-labelledby="userSettingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userSettingsModalLabel">User Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Here you can configure your user settings, such as notification preferences, theme, and language.</p>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch" checked>
+                        <label class="form-check-label" for="darkModeSwitch">Enable Dark Mode</label>
+                    </div>
+                     <div class="form-check form-switch mt-2">
+                        <input class="form-check-input" type="checkbox" role="switch" id="emailNotificationsSwitch" checked>
+                        <label class="form-check-label" for="emailNotificationsSwitch">Receive Email Notifications</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- A placeholder to add some scroll height to the page -->
+    <div style="height: 200px;"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // --- Test 3.1: Advanced Tab Interface Logic ---
+            const loadingTab = document.querySelector('#loading-tab');
+            if (loadingTab) {
+                loadingTab.addEventListener('show.bs.tab', function (event) {
+                    const pane = document.querySelector(event.target.getAttribute('data-bs-target'));
+                    
+                    // Show spinner
+                    pane.innerHTML = `
+                        <div class="d-flex justify-content-center align-items-center" style="min-height: 100px;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    `;
+
+                    // Simulate fetching content
+                    setTimeout(() => {
+                        pane.innerHTML = `
+                            <h5>User Profile Loaded</h5>
+                            <p><strong>Name:</strong> John Smith</p>
+                            <p><strong>Email:</strong> john.smith@example.com</p>
+                            <p>Content was loaded dynamically after a 2-second delay.</p>
+                        `;
+                    }, 2000);
+                });
+            }
+
+            // --- Test 5.1: SaaS Page Component Coordination ---
+            // Initialize Toast
+            const toastLiveExample = document.getElementById('liveToast');
+            const toast = new bootstrap.Toast(toastLiveExample);
+
+            // Add event listener to trigger toast
+            const toastTrigger = document.getElementById('showToastBtn');
+            if (toastTrigger) {
+                toastTrigger.addEventListener('click', function () {
+                    toast.show();
+                });
+            }
+
+            // Note: The collapsible sidebar and modal for the SaaS page are handled
+            // automatically by Bootstrap's data-bs-* attributes and do not require
+            // custom JavaScript for their basic functionality. This script demonstrates
+            // how you would coordinate other components like toasts.
+
+        });
+    </script>
+
+</body>
+
+</html>

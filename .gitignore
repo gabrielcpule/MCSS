@@ -49,4 +49,5 @@ build/
 # Ignore other common artifacts
 *.univer.md
 .space/
+.obsidian/
 

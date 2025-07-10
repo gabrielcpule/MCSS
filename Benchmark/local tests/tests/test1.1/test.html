@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" vocab="https://gabrielcpule.github.io/mcss-vocab/api/mcss/v1.rdf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1.1: User Profile Card</title>
+    <style>
+        /* This stylesheet is a self-contained example demonstrating MCSS principles. */
+        /* In a real project, these would be in separate files (tokens.css, components.css, etc.) */
+
+        /* LAYER 0: DESIGN TOKENS (subset for this example) */
+        :root {
+            --font-family-base: system-ui, sans-serif;
+            --color-surface: #ffffff;
+            --color-text-primary: #111827;
+            --color-text-secondary: #6b7280;
+            --color-border-default: #e5e7eb;
+            --color-primary: #2563eb;
+            --color-primary-text: #ffffff;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --border-radius-lg: 0.5rem;
+            --border-radius-full: 9999px;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        /* LAYER 1: GLOBAL */
+        body {
+            font-family: var(--font-family-base);
+            background-color: #f9fafb;
+            padding: var(--space-6);
+        }
+
+        /* LAYER 2: LAYOUT */
+        .l-stack > * + * {
+            margin-top: var(--space-4);
+        }
+        .l-flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* LAYER 3: COMPONENT */
+        .c-profile-card {
+            background-color: var(--color-surface);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid var(--color-border-default);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-6);
+            max-width: 320px;
+            text-align: center;
+            /* Golden Rule: No margin here! Spacing is controlled by layout parents. */
+        }
+
+        .c-profile-card__avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--border-radius-full);
+            border: 2px solid var(--color-primary);
+            margin: 0 auto; /* Internal margin is allowed */
+        }
+
+        .c-profile-card__name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .c-profile-card__title {
+            font-size: 1rem;
+            color: var(--color-text-secondary);
+        }
+
+        .c-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            background-color: var(--color-primary);
+            color: var(--color-primary-text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* LAYER 4: UTILITY */
+        .u-hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="l-flex-center">
+
+    <!-- Test 1.1: User Profile Card -->
+    <div class="c-profile-card"
+         typeof="mcs:Component"
+         property="mcs:taxonomyLevel" content="mcs:Organism"
+         property="mcs:componentName" content="User Profile Card"
+         id="user-profile-card-1">
+
+        <span property="mcs:purpose" content="Displays a summary of a user's profile information with a primary contact action." class="u-hidden"></span>
+
+        <!-- Composition: This organism has one child component (the avatar) -->
+        <div property="mcs:hasPart" resource="#user-avatar-1"></div>
+
+        <!-- Component Parts -->
+        <div class="l-stack">
+            <img id="user-avatar-1"
+                 class="c-profile-card__avatar"
+                 src="https://via.placeholder.com/80"
+                 alt="User Avatar"
+                 property="mcs:part" content="Avatar"
+                 typeof="mcs:Component"
+                 property="mcs:taxonomyLevel" content="mcs:Atom">
+
+            <div class="l-stack">
+                <h2 property="mcs:part" content="User Name" class="c-profile-card__name">
+                    Jane Doe
+                </h2>
+                <p property="mcs:part" content="Job Title" class="c-profile-card__title">
+                    Software Engineer
+                </p>
+            </div>
+
+            <a href="#"
+               class="c-button"
+               typeof="mcs:Component"
+               property="mcs:taxonomyLevel" content="mcs:Atom"
+               data-mcs-interaction-type="navigation"
+               data-mcs-consequence="Initiates contact with the user.">
+                <span property="mcs:purpose" content="A primary call-to-action to contact the user." class="u-hidden"></span>
+                Contact
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

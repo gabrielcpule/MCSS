@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Benchmark: Complex Data Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <section id="test-6-1" class="mb-5">
+            <h1>Bootstrap Benchmark: Complex Data Table</h1>
+            <p>A responsive table with sorting, filtering, and pagination using Bootstrap components and vanilla JS.</p>
+            <div id="bootstrap-datatable-container" class="p-4 border rounded">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input type="search" id="bs-filter-input" class="form-control" placeholder="Filter users...">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <caption>User Management</caption>
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">
+                                    <button class="btn btn-link text-white text-decoration-none p-0" data-sort-key="name">Name</button>
+                                </th>
+                                <th scope="col">
+                                    <button class="btn btn-link text-white text-decoration-none p-0" data-sort-key="email">Email</button>
+                                </th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bs-table-body">
+                            <!-- JS will populate this -->
+                        </tbody>
+                    </table>
+                </div>
+                <nav id="bs-pagination-nav" aria-label="Table navigation">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span id="bs-pagination-info"></span>
+                        <ul class="pagination mb-0">
+                            <!-- JS will populate this -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableContainer = document.getElementById('bootstrap-datatable-container');
+            if (tableContainer) {
+                const allUsers = [
+                    { id: 1, name: 'Zoe Smith', email: 'zoe@example.com', role: 'Admin' },
+                    { id: 2, name: 'Adam Johnson', email: 'adam@example.com', role: 'Editor' },
+                    { id: 3, name: 'Jane Doe', email: 'jane@example.com', role: 'Viewer' },
+                    { id: 4, name: 'Peter Jones', email: 'peter@example.com', role: 'Editor' },
+                    { id: 5, name: 'Mary Williams', email: 'mary@example.com', role: 'Admin' },
+                    { id: 6, name: 'Chris Brown', email: 'chris@example.com', role: 'Viewer' },
+                ];
+
+                let state = { filter: '', sortKey: 'name', sortDir: 'asc', currentPage: 1, itemsPerPage: 3 };
+
+                const renderTable = () => {
+                    const filtered = allUsers.filter(user => user.name.toLowerCase().includes(state.filter.toLowerCase()) || user.email.toLowerCase().includes(state.filter.toLowerCase()));
+                    const sorted = [...filtered].sort((a, b) => {
+                        const valA = a[state.sortKey].toLowerCase();
+                        const valB = b[state.sortKey].toLowerCase();
+                        if (valA < valB) return state.sortDir === 'asc' ? -1 : 1;
+                        if (valA > valB) return state.sortDir === 'asc' ? 1 : -1;
+                        return 0;
+                    });
+                    const totalPages = Math.ceil(sorted.length / state.itemsPerPage);
+                    const startIndex = (state.currentPage - 1) * state.itemsPerPage;
+                    const paginatedItems = sorted.slice(startIndex, startIndex + state.itemsPerPage);
+
+                    tableContainer.querySelector('#bs-table-body').innerHTML = paginatedItems.map(user => `
+                        <tr>
+                            <td>${user.name}</td><td>${user.email}</td><td>${user.role}</td>
+                            <td><button class="btn btn-sm btn-outline-primary me-1">Edit</button><button class="btn btn-sm btn-outline-danger">Delete</button></td>
+                        </tr>`).join('');
+
+                    const paginationUl = tableContainer.querySelector('.pagination');
+                    paginationUl.innerHTML = `<li class="page-item ${state.currentPage === 1 ? 'disabled' : ''}"><a class="page-link" href="#" data-page="${state.currentPage - 1}">Previous</a></li>
+                        ${Array.from({ length: totalPages }, (_, i) => `<li class="page-item ${i + 1 === state.currentPage ? 'active' : ''}"><a class="page-link" href="#" data-page="${i + 1}">${i + 1}</a></li>`).join('')}
+                        <li class="page-item ${state.currentPage === totalPages || totalPages === 0 ? 'disabled' : ''}"><a class="page-link" href="#" data-page="${state.currentPage + 1}">Next</a></li>`;
+                    
+                    const startItem = sorted.length > 0 ? startIndex + 1 : 0;
+                    const endItem = Math.min(startIndex + state.itemsPerPage, sorted.length);
+                    tableContainer.querySelector('#bs-pagination-info').textContent = `Showing ${startItem}-${endItem} of ${sorted.length}`;
+                };
+
+                tableContainer.addEventListener('click', (e) => {
+                    if (e.target.dataset.sortKey) {
+                        const key = e.target.dataset.sortKey;
+                        state.sortDir = state.sortKey === key && state.sortDir === 'asc' ? 'desc' : 'asc';
+                        state.sortKey = key;
+                        renderTable();
+                    }
+                    if (e.target.dataset.page) {
+                        e.preventDefault();
+                        state.currentPage = parseInt(e.target.dataset.page, 10);
+                        renderTable();
+                    }
+                });
+
+                tableContainer.querySelector('#bs-filter-input').addEventListener('input', (e) => {
+                    state.filter = e.target.value;
+                    state.currentPage = 1;
+                    renderTable();
+                });
+
+                renderTable();
+            }
+        });
+    </script>
+</body>
+</html>

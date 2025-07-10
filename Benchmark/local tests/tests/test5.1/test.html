@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" vocab="https://gabrielcpule.github.io/mcss-vocab/api/mcss/v1.rdf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 5.1: Complete SaaS Application Page</title>
+    <style>
+        :root {
+            --font-family-base: system-ui, sans-serif;
+            --color-background: #f0f2f5; --color-surface: #ffffff;
+            --color-text-primary: #111827; --color-text-secondary: #6b7280;
+            --color-border-default: #e5e7eb; --color-primary: #4f46e5;
+            --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+            --border-radius-md: 0.375rem; --border-radius-lg: 0.5rem; --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+            --z-index-sticky: 10; --z-index-modal-backdrop: 40; --z-index-modal: 50; --z-index-toast: 60;
+        }
+        body { font-family: var(--font-family-base); background-color: var(--color-background); color: var(--color-text-primary); margin: 0; }
+        .u-hidden { display: none !important; }
+
+        /* LAYOUT PRIMITIVES */
+        .l-app-layout { display: grid; grid-template-columns: 80px 280px 1fr; grid-template-rows: auto 1fr; height: 100vh; }
+        .l-app-layout__global-nav { grid-row: 1 / 3; }
+        .l-app-layout__context-sidebar { grid-row: 1 / 3; }
+        .l-app-layout__workspace { grid-column: 3 / 4; grid-row: 1 / 3; display: flex; flex-direction: column; }
+        .l-workspace__header { flex-shrink: 0; }
+        .l-workspace__main { flex-grow: 1; overflow-y: auto; padding: var(--space-6); }
+        .l-stack > * + * { margin-top: var(--space-5); }
+
+        /* GLOBAL NAV ORGANISM */
+        .c-global-nav { background-color: #1f2937; color: white; display: flex; flex-direction: column; align-items: center; padding: var(--space-5) 0; }
+        .c-global-nav__logo { font-size: 1.5rem; font-weight: 700; margin-bottom: var(--space-6); }
+        .c-global-nav__list { list-style: none; padding: 0; margin: 0; }
+        .c-global-nav__item + .c-global-nav__item { margin-top: var(--space-4); }
+        .c-global-nav__link { display: block; padding: var(--space-3); border-radius: var(--border-radius-md); color: #9ca3af; }
+        .c-global-nav__link:hover { background-color: #374151; }
+        .c-global-nav__link[data-state="active"] { background-color: var(--color-primary); color: white; }
+
+        /* CONTEXTUAL SIDEBAR ORGANISM */
+        .c-context-sidebar { background-color: var(--color-surface); border-right: 1px solid var(--color-border-default); padding: var(--space-5); }
+        .c-context-sidebar__header { margin-bottom: var(--space-5); }
+        .c-context-sidebar__title { font-size: 1.25rem; font-weight: 600; }
+        .c-context-sidebar__list { list-style: none; padding: 0; margin: 0; }
+        .c-context-sidebar__item + .c-context-sidebar__item { margin-top: var(--space-2); }
+        .c-context-sidebar__link { display: block; padding: var(--space-3); border-radius: var(--border-radius-md); text-decoration: none; color: var(--color-text-secondary); }
+        .c-context-sidebar__link:hover { background-color: #f3f4f6; color: var(--color-text-primary); }
+
+        /* WORKSPACE HEADER ORGANISM */
+        .c-workspace-header { background-color: var(--color-surface); border-bottom: 1px solid var(--color-border-default); padding: var(--space-4) var(--space-6); display: flex; justify-content: space-between; align-items: center; }
+        .c-workspace-header__title { font-size: 1.5rem; font-weight: 600; }
+        .c-button { display: inline-block; padding: 0.5rem 1rem; border-radius: var(--border-radius-md); background-color: var(--color-primary); color: white; text-decoration: none; font-weight: 500; border: none; cursor: pointer; }
+
+        /* NOTIFICATION ORGANISM */
+        .c-notification-list { position: fixed; top: var(--space-4); right: var(--space-4); z-index: var(--z-index-toast); }
+        .c-notification { background-color: var(--color-surface); color: var(--color-text-primary); padding: var(--space-4); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); min-width: 300px; }
+        .c-notification + .c-notification { margin-top: var(--space-4); }
+
+        /* USER MANAGEMENT MODAL ORGANISM */
+        .c-modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: var(--z-index-modal); }
+        .c-modal[data-state="closed"] { display: none; }
+        .c-modal__backdrop { position: absolute; inset: 0; background-color: rgba(0,0,0,0.5); z-index: var(--z-index-modal-backdrop); }
+        .c-modal__container { position: relative; background-color: var(--color-surface); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); padding: var(--space-6); width: 100%; max-width: 500px; z-index: var(--z-index-modal); }
+        .c-modal__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); }
+        .c-modal__title { font-size: 1.25rem; font-weight: 600; }
+        .c-modal__close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="l-app-layout">
+        <!-- Global Navigation Organism -->
+        <nav class="l-app-layout__global-nav c-global-nav"
+             id="global-nav"
+             typeof="mcs:Component"
+             property="mcs:taxonomyLevel" content="mcs:Organism"
+             aria-label="Global">
+            <span property="mcs:purpose" content="Provides top-level navigation between major application modules." class="u-hidden"></span>
+            <div class="c-global-nav__logo">SaaS</div>
+            <ul class="c-global-nav__list">
+                <li class="c-global-nav__item"><a href="#" class="c-global-nav__link" data-state="active" aria-current="page" title="Projects">P</a></li>
+                <li class="c-global-nav__item"><a href="#" class="c-global-nav__link" title="Teams">T</a></li>
+                <li class="c-global-nav__item"><a href="#" class="c-global-nav__link" title="Billing">B</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contextual Sidebar Organism -->
+        <aside class="l-app-layout__context-sidebar c-context-sidebar"
+               id="context-sidebar"
+               typeof="mcs:Component"
+               property="mcs:taxonomyLevel" content="mcs:Organism">
+            <span property="mcs:purpose" content="Provides navigation and context within the current application module (Projects)." class="u-hidden"></span>
+            <div class="c-context-sidebar__header">
+                <h1 class="c-context-sidebar__title">Projects</h1>
+            </div>
+            <nav aria-label="Projects">
+                <ul class="c-context-sidebar__list">
+                    <li class="c-context-sidebar__item"><a href="#" class="c-context-sidebar__link">Project Alpha</a></li>
+                    <li class="c-context-sidebar__item"><a href="#" class="c-context-sidebar__link">Project Beta</a></li>
+                    <li class="c-context-sidebar__item"><a href="#" class="c-context-sidebar__link">Archived Projects</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Workspace Organism -->
+        <div class="l-app-layout__workspace">
+            <!-- Workspace Header Organism -->
+            <header class="l-workspace__header c-workspace-header"
+                    id="workspace-header"
+                    typeof="mcs:Component"
+                    property="mcs:taxonomyLevel" content="mcs:Organism">
+                <span property="mcs:purpose" content="Displays the current context (e.g., project name) and provides primary workspace actions." class="u-hidden"></span>
+                <h2 class="c-workspace-header__title">Project Alpha Dashboard</h2>
+                <button class="c-button" data-mcs-interaction-type="state-change" data-mcs-target="#user-modal" data-mcs-consequence="Opens the user management modal.">
+                    Manage Users
+                </button>
+            </header>
+
+            <!-- Main Workspace Content -->
+            <main class="l-workspace__main">
+                <div class="l-stack">
+                    <h3>Tasks</h3>
+                    <p>Content for the main workspace area goes here. This could be a data table, a kanban board, a text editor, etc.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Notification List Organism (Overlay) -->
+    <div class="c-notification-list"
+         id="notification-list"
+         typeof="mcs:Component"
+         property="mcs:taxonomyLevel" content="mcs:Organism"
+         aria-live="polite">
+        <span property="mcs:purpose" content="Displays transient status messages (toasts) to the user." class="u-hidden"></span>
+        
+        <!-- Example Notification (Molecule) -->
+        <div class="c-notification"
+             typeof="mcs:Component"
+             property="mcs:taxonomyLevel" content="mcs:Molecule"
+             role="status">
+            <p>Project saved successfully!</p>
+        </div>
+    </div>
+
+    <!-- User Management Modal Organism (Overlay) -->
+    <div class="c-modal"
+         id="user-modal"
+         typeof="mcs:Component"
+         property="mcs:taxonomyLevel" content="mcs:Organism"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="user-modal-title"
+         data-state="closed">
+        <span property="mcs:purpose" content="Provides an interface for managing users within the current project." class="u-hidden"></span>
+        <div class="c-modal__backdrop" data-mcs-action="close-modal" data-mcs-target="#user-modal"></div>
+        <div class="c-modal__container">
+            <header class="c-modal__header">
+                <h2 id="user-modal-title" class="c-modal__title">Manage Users</h2>
+                <button class="c-modal__close-btn" aria-label="Close dialog" data-mcs-action="close-modal" data-mcs-target="#user-modal">&times;</button>
+            </header>
+            <div class="c-modal__body">
+                <p>User management form or list would go here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Basic script to demonstrate modal open/close.
+        document.addEventListener('click', (e) => {
+            const trigger = e.target.closest('[data-mcs-action="close-modal"], [data-mcs-interaction-type="state-change"]');
+            if (!trigger) return;
+
+            const targetId = trigger.dataset.mcsTarget;
+            if (!targetId) return;
+
+            const modal = document.querySelector(targetId);
+            if (!modal) return;
+
+            const currentState = modal.dataset.state;
+            modal.dataset.state = currentState === 'closed' ? 'open' : 'closed';
+        });
+    </script>
+
+</body>
+</html>

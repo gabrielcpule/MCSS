@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" vocab="https://gabrielcpule.github.io/mcss-vocab/api/mcss/v1.rdf">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCSS Benchmark Test Results</title>
+    <style>
+        /* LAYER 1: GLOBAL (Tokens & Base Styles) */
+        @layer global, layout, component, utility;
+
+        @layer global {
+            :root {
+                /* Colors */
+                --color-text-primary: #212529;
+                --color-text-secondary: #6c757d;
+                --color-background-primary: #fff;
+                --color-background-secondary: #f8f9fa;
+                --color-border-default: #dee2e6;
+                --color-interactive-primary: #0d6efd;
+                --color-interactive-primary-hover: #0b5ed7;
+                --color-text-on-interactive: #fff;
+
+                /* Spacing */
+                --space-1: 0.25rem;
+                --space-2: 0.5rem;
+                --space-3: 0.75rem;
+                --space-4: 1rem;
+
+                /* Typography */
+                --font-family-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+                --font-size-base: 1rem;
+                --font-weight-normal: 400;
+                --font-weight-bold: 700;
+
+                /* Borders */
+                --border-radius-sm: 0.25rem;
+            }
+
+            body {
+                font-family: var(--font-family-sans);
+                font-size: var(--font-size-base);
+                color: var(--color-text-primary);
+                background-color: var(--color-background-primary);
+                margin: 0;
+                padding: var(--space-4);
+            }
+        }
+
+        /* LAYER 2: LAYOUT */
+        @layer layout {
+            .l-stack>*+* {
+                margin-top: var(--space-4);
+            }
+        }
+
+        /* LAYER 3: COMPONENT (c-data-table) */
+        @layer component {
+            .c-data-table {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-4);
+            }
+
+            .c-data-table__controls {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .l-header-bar {
+                margin-bottom: var(--space-4);
+            }
+            .l-header-bar .c-data-table__filter-input {
+                width: 100%;
+                box-sizing: border-box; /* ensure padding doesn't cause overflow */
+            }
+
+            .c-data-table__filter-input {
+                padding: var(--space-2) var(--space-3);
+                border: 1px solid var(--color-border-default);
+                border-radius: var(--border-radius-sm);
+            }
+
+            .c-data-table__wrapper {
+                overflow-x: auto;
+                border: 1px solid var(--color-border-default);
+            }
+
+            .c-data-table__table {
+                width: 100%;
+                border-collapse: collapse;
+                white-space: nowrap;
+            }
+
+            .c-data-table__caption {
+                font-size: 1.25rem;
+                font-weight: var(--font-weight-bold);
+                text-align: left;
+                padding: var(--space-3) 0;
+            }
+
+            .c-data-table__header-cell,
+            .c-data-table__body-cell {
+                padding: var(--space-3);
+                text-align: left;
+                border-bottom: 1px solid var(--color-border-default);
+            }
+
+            .c-data-table__header-cell {
+                font-weight: var(--font-weight-bold);
+            }
+
+            .c-data-table__sort-button {
+                background: none;
+                border: none;
+                font-weight: inherit;
+                font-size: inherit;
+                cursor: pointer;
+                padding: 0;
+                margin-left: var(--space-1);
+            }
+
+            .c-data-table__sort-button[aria-sort="ascending"]::after {
+                content: ' ▲';
+            }
+
+            .c-data-table__sort-button[aria-sort="descending"]::after {
+                content: ' ▼';
+            }
+
+            .c-data-table__row:hover {
+                background-color: var(--color-background-secondary);
+            }
+
+            .c-data-table__actions .c-button {
+                margin-right: var(--space-2);
+            }
+
+            .c-button {
+                padding: var(--space-2) var(--space-3);
+                border: 1px solid var(--color-interactive-primary);
+                background-color: var(--color-interactive-primary);
+                color: var(--color-text-on-interactive);
+                border-radius: var(--border-radius-sm);
+                cursor: pointer;
+            }
+
+            .c-button:hover {
+                background-color: var(--color-interactive-primary-hover);
+            }
+
+            .c-data-table__pagination {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .c-data-table__pagination-controls button {
+                margin: 0 var(--space-1);
+            }
+        }
+
+        /* LAYER 4: UTILITY */
+        @layer utility {
+            .u-hidden {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="l-header-bar">
+        <input type="search" class="c-data-table__filter-input" placeholder="Filter users..." data-mcs-interaction-type="filter" data-mcs-consequence="Filter the user list based on input value." aria-controls="user-table-body">
+    </header>
+
+    <h1>MCSS Benchmark: Complex Data Table</h1>
+
+
+    <div id="user-table-container" class="l-stack">
+        <!-- Test 6.1: Complex Data Table -->
+        <div class="c-data-table" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Organism" id="user-table">
+            <span property="mcs:purpose" content="Display, sort, filter, and paginate a list of users with actions." class="u-hidden"></span>
+            <div property="mcs:hasPart" resource="#table-controls"></div>
+            <div property="mcs:hasPart" resource="#table-wrapper"></div>
+            <div property="mcs:hasPart" resource="#table-pagination"></div>
+
+            <div class="c-data-table__controls" id="table-controls" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Molecule">
+                <span property="mcs:purpose" content="Provide controls for filtering and interacting with the table data." class="u-hidden"></span>
+                <input type="search" class="c-data-table__filter-input" placeholder="Filter users..." data-mcs-interaction-type="filter" data-mcs-consequence="Filter the user list based on input value." aria-controls="user-table-body">
+            </div>
+
+            <div class="c-data-table__wrapper" id="table-wrapper">
+                <table class="c-data-table__table">
+                    <caption class="c-data-table__caption">User Management</caption>
+                    <thead class="c-data-table__header">
+                        <tr>
+                            <th scope="col" class="c-data-table__header-cell">
+                                Name
+                                <button class="c-data-table__sort-button" data-mcs-interaction-type="sort" data-mcs-value="name" data-mcs-consequence="Sort table by user name." aria-sort="none">
+                                </button>
+                            </th>
+                            <th scope="col" class="c-data-table__header-cell">
+                                Email
+                                <button class="c-data-table__sort-button" data-mcs-interaction-type="sort" data-mcs-value="email" data-mcs-consequence="Sort table by user email." aria-sort="none">
+                                </button>
+                            </th>
+                            <th scope="col" class="c-data-table__header-cell">Role</th>
+                            <th scope="col" class="c-data-table__header-cell">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body" class="c-data-table__body">
+                        <!-- Rows will be generated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="c-data-table__pagination" id="table-pagination" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Molecule">
+                <span property="mcs:purpose" content="Control pagination for the table data." class="u-hidden"></span>
+                <div class="c-data-table__pagination-info">
+                    <span id="pagination-info"></span>
+                </div>
+                <div class="c-data-table__pagination-controls">
+                    <button id="prev-page" class="c-button" data-mcs-interaction-type="navigation" data-mcs-consequence="Navigate to the previous page of results.">Previous</button>
+                    <button id="next-page" class="c-button" data-mcs-interaction-type="navigation" data-mcs-consequence="Navigate to the next page of results.">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const controller = new MCSSDataTableController('user-table-container');
+        });
+
+        class MCSSDataTableController {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                if (!this.container) return;
+
+                this.allUsers = [
+                    { id: 1, name: 'Zoe Smith', email: 'zoe@example.com', role: 'Admin' },
+                    { id: 2, name: 'Adam Johnson', email: 'adam@example.com', role: 'Editor' },
+                    { id: 3, name: 'Jane Doe', email: 'jane@example.com', role: 'Viewer' },
+                    { id: 4, name: 'Peter Jones', email: 'peter@example.com', role: 'Editor' },
+                    { id: 5, name: 'Mary Williams', email: 'mary@example.com', role: 'Admin' },
+                    { id: 6, name: 'Chris Brown', email: 'chris@example.com', role: 'Viewer' },
+                ];
+
+                this.state = {
+                    filter: '',
+                    sortKey: 'name',
+                    sortDir: 'ascending',
+                    currentPage: 1,
+                    itemsPerPage: 3,
+                };
+
+                this.init();
+            }
+
+            init() {
+                this.render();
+                this.attachEventListeners();
+            }
+
+            attachEventListeners() {
+                this.container.querySelector('[data-mcs-interaction-type="filter"]').addEventListener('input', (e) => {
+                    this.state.filter = e.target.value;
+                    this.state.currentPage = 1;
+                    this.render();
+                });
+
+                this.container.querySelectorAll('[data-mcs-interaction-type="sort"]').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const newSortKey = e.currentTarget.dataset.mcsValue;
+                        if (this.state.sortKey === newSortKey) {
+                            this.state.sortDir = this.state.sortDir === 'ascending' ? 'descending' : 'ascending';
+                        } else {
+                            this.state.sortKey = newSortKey;
+                            this.state.sortDir = 'ascending';
+                        }
+                        this.render();
+                    });
+                });
+
+                this.container.querySelector('#prev-page').addEventListener('click', () => {
+                    if (this.state.currentPage > 1) {
+                        this.state.currentPage--;
+                        this.render();
+                    }
+                });
+
+                this.container.querySelector('#next-page').addEventListener('click', () => {
+                    const { totalPages } = this.getPaginatedData();
+                    if (this.state.currentPage < totalPages) {
+                        this.state.currentPage++;
+                        this.render();
+                    }
+                });
+            }
+
+            getPaginatedData() {
+                const filtered = this.allUsers.filter(user =>
+                    user.name.toLowerCase().includes(this.state.filter.toLowerCase()) ||
+                    user.email.toLowerCase().includes(this.state.filter.toLowerCase())
+                );
+
+                const sorted = [...filtered].sort((a, b) => {
+                    const valA = a[this.state.sortKey].toLowerCase();
+                    const valB = b[this.state.sortKey].toLowerCase();
+                    if (valA < valB) return this.state.sortDir === 'ascending' ? -1 : 1;
+                    if (valA > valB) return this.state.sortDir === 'ascending' ? 1 : -1;
+                    return 0;
+                });
+
+                const totalPages = Math.ceil(sorted.length / this.state.itemsPerPage);
+                const startIndex = (this.state.currentPage - 1) * this.state.itemsPerPage;
+                const paginatedItems = sorted.slice(startIndex, startIndex + this.state.itemsPerPage);
+
+                return { paginatedItems, totalItems: sorted.length, totalPages };
+            }
+
+            render() {
+                const { paginatedItems, totalItems, totalPages } = this.getPaginatedData();
+                const tbody = this.container.querySelector('#user-table-body');
+                tbody.innerHTML = paginatedItems.map(user => `
+                    <tr class="c-data-table__row">
+                        <td class="c-data-table__body-cell">${user.name}</td>
+                        <td class="c-data-table__body-cell">${user.email}</td>
+                        <td class="c-data-table__body-cell">${user.role}</td>
+                        <td class="c-data-table__body-cell c-data-table__actions">
+                            <button class="c-button" data-mcs-interaction-type="state-change" data-mcs-consequence="Open edit modal for user ${user.id}">Edit</button>
+                            <button class="c-button" data-mcs-interaction-type="submission" data-mcs-consequence="Delete user ${user.id}">Delete</button>
+                        </td>
+                    </tr>
+                `).join('');
+
+                // Update sort indicators
+                this.container.querySelectorAll('[data-mcs-interaction-type="sort"]').forEach(btn => {
+                    const key = btn.dataset.mcsValue;
+                    btn.setAttribute('aria-sort', key === this.state.sortKey ? this.state.sortDir : 'none');
+                });
+
+                // Update pagination
+                const startItem = totalItems > 0 ? (this.state.currentPage - 1) * this.state.itemsPerPage + 1 : 0;
+                const endItem = Math.min(startItem + this.state.itemsPerPage - 1, totalItems);
+                this.container.querySelector('#pagination-info').textContent = `Showing ${startItem}-${endItem} of ${totalItems}`;
+                this.container.querySelector('#prev-page').disabled = this.state.currentPage === 1;
+                this.container.querySelector('#next-page').disabled = this.state.currentPage === totalPages || totalPages === 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
