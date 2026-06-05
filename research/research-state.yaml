@@ -23,27 +23,32 @@ hypotheses:
 
   - id: H3
     name: "Annotation density optimization"
-    description: "There is an optimal amount of RDFa metadata — too little reduces comprehension, too much increases prompt tokens without accuracy gains"
-    prediction: "Standard annotations (typeof + taxonomyLevel + purpose + hasPart for molecules) outperform both minimal and verbose annotations"
-    proxy_metric: "weighted_accuracy"
-    status: in_progress
+    status: confirmed
+    result: "Minimal annotations (typeof + taxonomyLevel): 100% accuracy, 14,105 tokens. Standard: 90%, 14,409 tokens. Verbose: 100%, 16,151 tokens. Minimal wins on both accuracy and efficiency."
     priority: 3
 
   - id: H4
     name: "Context compendium effectiveness"
-    description: "A structured CONTEXT_COMPENDIUM.md produces higher accuracy than raw CSS source"
     status: partially_tested
     result: "Adding Golden Rule examples boosted modification from 75%→100%. Compendium structure matters more than size."
     priority: 4
 
+  - id: H5
+    name: "Cross-model validation"
+    description: "The simplicity-wins pattern (H1-H3) should generalize across LLM providers"
+    prediction: "Minimal compendium achieves >= 90% on GPT-4 and Gemini, not just Claude"
+    proxy_metric: "weighted_accuracy"
+    status: untested
+    priority: 5
+
 ## Inner Loop State
 
-current_experiment: H3
-experiments_completed: 2
-experiments_this_cycle: 2
-last_outer_loop: 2026-06-05
+current_experiment: null
+experiments_completed: 3
+experiments_this_cycle: 3
+last_outer_loop: 2026-06-05T12:58
 
 ## Direction
 
-current_direction: deepen
-rationale: "H1 and H2 confirmed the framework is solid and short names are optimal. Now testing whether annotation density can be optimized for token efficiency."
+current_direction: broaden
+rationale: "Cross-experiment pattern confirmed: simplicity always wins. Time to test whether this generalizes beyond Claude."

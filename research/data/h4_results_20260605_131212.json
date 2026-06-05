@@ -1,0 +1,24 @@
+{
+  "experiment": "H4",
+  "timestamp": "2026-06-05T13:12:12",
+  "results": [
+    {
+      "name": "Micro (148w)",
+      "words": 148,
+      "weighted": 0.9,
+      "gen": 1.0,
+      "mod": 1.0,
+      "comp": 0.5,
+      "total_tokens": 8720
+    },
+    {
+      "name": "Minimal (607w)",
+      "words": 607,
+      "weighted": 1.0,
+      "gen": 1.0,
+      "mod": 1.0,
+      "comp": 1.0,
+      "total_tokens": 14009
+    }
+  ]
+}

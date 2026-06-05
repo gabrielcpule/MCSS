@@ -1,0 +1,36 @@
+{
+  "experiment": "H3",
+  "timestamp": "2026-06-05T12:56:42",
+  "results": [
+    {
+      "variant": "minimal",
+      "weighted": 1.0,
+      "gen": 1.0,
+      "mod": 1.0,
+      "comp": 1.0,
+      "input_tokens": 706,
+      "output_tokens": 13399,
+      "total_tokens": 14105
+    },
+    {
+      "variant": "standard",
+      "weighted": 0.9,
+      "gen": 1.0,
+      "mod": 1.0,
+      "comp": 0.5,
+      "input_tokens": 636,
+      "output_tokens": 13773,
+      "total_tokens": 14409
+    },
+    {
+      "variant": "verbose",
+      "weighted": 1.0,
+      "gen": 1.0,
+      "mod": 1.0,
+      "comp": 1.0,
+      "input_tokens": 836,
+      "output_tokens": 15315,
+      "total_tokens": 16151
+    }
+  ]
+}
