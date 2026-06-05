@@ -1,0 +1,38 @@
+/* ============================================
+ * Layer 4: Utility — Single-Purpose Override Classes
+ * AUTO-GENERATED from token-schema.json — DO NOT EDIT
+ * Prefix: u-*
+ * Rules: One property per class, all use !important, immutable
+ * ============================================ */
+
+.u-text-left { text-align: left !important; }
+.u-text-center { text-align: center !important; }
+.u-text-right { text-align: right !important; }
+
+.u-font-regular { font-weight: var(--font-weight-regular) !important; }
+.u-font-medium { font-weight: var(--font-weight-medium) !important; }
+.u-font-semibold { font-weight: var(--font-weight-semibold) !important; }
+.u-font-bold { font-weight: var(--font-weight-bold) !important; }
+
+.u-hidden { display: hidden !important; }
+.u-block { display: block !important; }
+.u-inline { display: inline !important; }
+.u-inline-block { display: inline-block !important; }
+.u-flex { display: flex !important; }
+.u-inline-flex { display: inline-flex !important; }
+.u-grid { display: grid !important; }
+
+.u-margin-0 { margin: 0 !important; }
+
+.u-padding-0 { padding: 0 !important; }
+
+/* Visually hidden — accessible screen-reader-only content */
+.u-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
+
