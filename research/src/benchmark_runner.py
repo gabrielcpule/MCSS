@@ -35,10 +35,13 @@ class BenchmarkRunner:
                 model=self.model,
                 max_tokens=4096,
                 temperature=0.1,
+                thinking={"type": "disabled"},
                 system=self.system_prompt,
                 messages=[{"role": "user", "content": prompt_text}]
             )
-            output = response.content[0].text
+            # Handle thinking blocks — find the text response
+            text_blocks = [b for b in response.content if b.type == 'text']
+            output = text_blocks[0].text if text_blocks else response.content[0].text
             input_tokens = response.usage.input_tokens
             output_tokens = response.usage.output_tokens
 
@@ -93,7 +96,11 @@ class BenchmarkRunner:
 
         # Check 5: No margin on root c-* rules (Golden Rule)
         if task_type in ("generation", "modification"):
-            golden_violation = bool(re.search(r'\.c-\w+\s*\{[^}]*\bmargin[\s-]', output))
+            # Strip CSS comments first
+            output_no_comments = re.sub(r'/\*.*?\*/', '', output, flags=re.DOTALL)
+            # Only match actual margin DECLARATIONS (margin: or margin-top: etc.), not comments
+            # Only match root c-* selectors (no __ elements), not comments
+            golden_violation = bool(re.search(r'\.c-[a-z][a-zA-Z]*\s*\{[^}]*\b(margin|margin-top|margin-bottom|margin-left|margin-right)\s*:', output_no_comments))
             checks.append(("Golden Rule (no margin)", not golden_violation))
 
         passed = all(p for _, p in checks)

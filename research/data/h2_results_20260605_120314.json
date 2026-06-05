@@ -1,0 +1,24 @@
+{
+  "experiment": "H2",
+  "timestamp": "2026-06-05T12:03:14",
+  "short_names": {
+    "name": "Short names (A)",
+    "weighted": 1.0,
+    "gen": 1.0,
+    "mod": 1.0,
+    "comp": 1.0,
+    "input_tokens": 636,
+    "output_tokens": 14870,
+    "total_tokens": 15506
+  },
+  "namespaced": {
+    "name": "Namespaced (B)",
+    "weighted": 0.9,
+    "gen": 1.0,
+    "mod": 1.0,
+    "comp": 0.5,
+    "input_tokens": 4654,
+    "output_tokens": 14982,
+    "total_tokens": 19636
+  }
+}

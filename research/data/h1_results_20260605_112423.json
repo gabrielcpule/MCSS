@@ -1,0 +1,100 @@
+{
+  "experiment": "H1",
+  "model": "claude-sonnet-4-6",
+  "timestamp": "2026-06-05T11:20:56.766805",
+  "prompts_run": 10,
+  "generation": {
+    "passed": 0,
+    "total": 4,
+    "results": [
+      {
+        "prompt_id": "G-001-01",
+        "task_type": "generation",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      },
+      {
+        "prompt_id": "G-001-02",
+        "task_type": "generation",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      },
+      {
+        "prompt_id": "G-001-03",
+        "task_type": "generation",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      },
+      {
+        "prompt_id": "G-002-01",
+        "task_type": "generation",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      }
+    ]
+  },
+  "modification": {
+    "passed": 0,
+    "total": 4,
+    "results": [
+      {
+        "prompt_id": "M-001-01",
+        "task_type": "modification",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      },
+      {
+        "prompt_id": "M-001-02",
+        "task_type": "modification",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      },
+      {
+        "prompt_id": "M-002-01",
+        "task_type": "modification",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      },
+      {
+        "prompt_id": "M-003-01",
+        "task_type": "modification",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      }
+    ]
+  },
+  "comprehension": {
+    "passed": 0,
+    "total": 2,
+    "results": [
+      {
+        "prompt_id": "C-001-01",
+        "task_type": "comprehension",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      },
+      {
+        "prompt_id": "C-002-01",
+        "task_type": "comprehension",
+        "error": "'ThinkingBlock' object has no attribute 'text'",
+        "passed": false,
+        "score_details": "API error: 'ThinkingBlock' object has no attribute 'text'"
+      }
+    ]
+  },
+  "scores": {
+    "generation_rate": 0.0,
+    "modification_rate": 0.0,
+    "comprehension_rate": 0.0,
+    "weighted_accuracy": 0.0
+  }
+}

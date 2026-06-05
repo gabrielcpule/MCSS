@@ -146,10 +146,35 @@ Wrong: .c-button--loading
 
 Available states: default, loading, disabled, error, success, warning, info, active, checked, on, off, open, closed, focused, indeterminate
 
-## The Golden Rule
+## The Golden Rule (CRITICAL — most common failure)
 
-Components (c-* prefix) MUST NOT declare margin on their root element.
-Layout classes (l-* prefix) control all external spacing.
+Components (c-* prefix) MUST NOT declare margin, margin-top, margin-bottom, margin-left, or margin-right on their root element. Layout classes (l-* prefix) control all external spacing.
+
+### WRONG (will fail validation):
+```css
+.c-button {
+  margin: 8px;                    /* VIOLATION */
+  padding: var(--space-3);
+}
+.c-input[data-state="error"] {
+  margin-bottom: 16px;            /* VIOLATION */
+  border-color: var(--color-border-error);
+}
+```
+
+### CORRECT:
+```css
+.c-button {
+  /* NO margin here */
+  padding: var(--space-3);
+}
+.c-input[data-state="error"] {
+  /* NO margin here — spacing comes from layout */
+  border-color: var(--color-border-error);
+}
+```
+
+Rule: If you are modifying a c-* component and need spacing, wrap it in a layout class (l-stack, l-cluster). NEVER add margin to the component itself.
 
 ## RDFa Annotations
 

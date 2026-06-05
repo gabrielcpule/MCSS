@@ -1,31 +1,4 @@
-#!/usr/bin/env python3
-"""
-Build CONTEXT_COMPENDIUM_v2.md from MCSS v1 framework files.
-This is the LLM system prompt for running MCSS-BENCHMARK-V1.
-"""
-import json
-from pathlib import Path
-
-FRAMEWORK = Path("/home/gabrielp/Projects/MCSS/mcss-framework")
-
-def read(path):
-    return Path(path).read_text()
-
-def build():
-    tokens_css = read(FRAMEWORK / "src/tokens/tokens.css")
-    token_schema = json.loads(read(FRAMEWORK / "src/tokens/token-schema.json"))
-    readme = read(FRAMEWORK / "README.md")
-
-    # Extract key sections
-    token_names = []
-    for line in tokens_css.split('\n'):
-        line = line.strip()
-        if line.startswith('--') and ':' in line:
-            name = line.split(':')[0].strip()
-            token_names.append(name)
-
-    # Build compendium
-    compendium = f"""# MCSS Framework v1 — Context Compendium
+# MCSS Framework v1 — Context Compendium
 
 You are an expert MCSS (Model Context Style Sheet) developer. Use this reference to generate, modify, and analyze MCSS components.
 
@@ -45,25 +18,115 @@ CSS layers enforce priority: global < layout < component < utility < exception
 
 All values MUST use CSS custom properties via var(). No magic numbers.
 
-Available tokens ({len(token_names)} total):
+Available tokens (103 total):
 
 ```
-"""
-    # Group tokens by category
-    categories = {}
-    for name in sorted(token_names):
-        parts = name.split('-')
-        cat = parts[1] if len(parts) > 1 else 'other'
-        if cat not in categories:
-            categories[cat] = []
-        categories[cat].append(name)
 
-    for cat, names in sorted(categories.items()):
-        compendium += f"\n# {cat}\n"
-        for n in names:
-            compendium += f"{n}\n"
+# 
+--mcss-border-radius-full
+--mcss-border-radius-lg
+--mcss-border-radius-md
+--mcss-border-radius-none
+--mcss-border-radius-sm
+--mcss-breakpoint-desktop
+--mcss-breakpoint-mobile
+--mcss-breakpoint-tablet
+--mcss-breakpoint-wide
+--mcss-color-background-brand
+--mcss-color-background-brand-hover
+--mcss-color-background-error
+--mcss-color-background-primary
+--mcss-color-background-secondary
+--mcss-color-background-success
+--mcss-color-background-warning
+--mcss-color-black
+--mcss-color-border-default
+--mcss-color-border-error
+--mcss-color-border-focus
+--mcss-color-border-interactive
+--mcss-color-border-success
+--mcss-color-brand-100
+--mcss-color-brand-200
+--mcss-color-brand-300
+--mcss-color-brand-400
+--mcss-color-brand-50
+--mcss-color-brand-500
+--mcss-color-brand-600
+--mcss-color-brand-700
+--mcss-color-brand-800
+--mcss-color-brand-900
+--mcss-color-gray-100
+--mcss-color-gray-200
+--mcss-color-gray-300
+--mcss-color-gray-400
+--mcss-color-gray-50
+--mcss-color-gray-500
+--mcss-color-gray-600
+--mcss-color-gray-700
+--mcss-color-gray-800
+--mcss-color-gray-900
+--mcss-color-green-100
+--mcss-color-green-500
+--mcss-color-green-800
+--mcss-color-red-100
+--mcss-color-red-500
+--mcss-color-red-800
+--mcss-color-text-error
+--mcss-color-text-link
+--mcss-color-text-link-hover
+--mcss-color-text-on-brand
+--mcss-color-text-primary
+--mcss-color-text-secondary
+--mcss-color-text-success
+--mcss-color-text-warning
+--mcss-color-white
+--mcss-color-yellow-100
+--mcss-color-yellow-500
+--mcss-color-yellow-800
+--mcss-container-max-desktop
+--mcss-container-max-mobile
+--mcss-container-max-tablet
+--mcss-container-max-wide
+--mcss-font-family-mono
+--mcss-font-family-sans
+--mcss-font-size-body
+--mcss-font-size-caption
+--mcss-font-size-display
+--mcss-font-size-heading
+--mcss-font-size-overline
+--mcss-font-size-subtitle
+--mcss-font-size-title
+--mcss-font-weight-bold
+--mcss-font-weight-medium
+--mcss-font-weight-regular
+--mcss-font-weight-semibold
+--mcss-line-height-base
+--mcss-line-height-loose
+--mcss-line-height-tight
+--mcss-shadow-lg
+--mcss-shadow-md
+--mcss-shadow-sm
+--space-1
+--space-10
+--space-12
+--space-16
+--space-2
+--space-3
+--space-4
+--space-5
+--space-6
+--space-8
+--mcss-transition-base
+--mcss-transition-fast
+--mcss-transition-slow
+--mcss-z-index-base
+--mcss-z-index-behind
+--mcss-z-index-dropdown
+--mcss-z-index-modal
+--mcss-z-index-overlay
+--mcss-z-index-sticky
+--mcss-z-index-toast
 
-    compendium += """
 ```
 
 ## Component Naming Convention (ONC)
@@ -95,7 +158,7 @@ Components (c-* prefix) MUST NOT declare margin, margin-top, margin-bottom, marg
 }
 .c-input[data-state="error"] {
   margin-bottom: 16px;            /* VIOLATION */
-  border-color: var(--color-border-error);
+  border-color: var(--mcss-color-border-error);
 }
 ```
 
@@ -107,7 +170,7 @@ Components (c-* prefix) MUST NOT declare margin, margin-top, margin-bottom, marg
 }
 .c-input[data-state="error"] {
   /* NO margin here — spacing comes from layout */
-  border-color: var(--color-border-error);
+  border-color: var(--mcss-color-border-error);
 }
 ```
 
@@ -156,12 +219,3 @@ For generation/modification tasks, output:
 3. Brief explanation of design decisions
 
 For comprehension tasks, analyze the component's purpose, taxonomy, structure, and interaction model.
-"""
-
-    return compendium
-
-if __name__ == '__main__':
-    compendium = build()
-    out = Path("/home/gabrielp/Projects/MCSS/research/data/CONTEXT_COMPENDIUM_v2.md")
-    out.write_text(compendium)
-    print(f"Generated {out} ({len(compendium.split())} words, ~{len(compendium)//4} tokens)")
