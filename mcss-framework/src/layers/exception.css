@@ -1,0 +1,14 @@
+/* ============================================
+ * Layer 5: Exception — Temporary Overrides and Debugging
+ * Usage: Temporary fixes, third-party integration, debugging.
+ * Document every rule: explain why it's here and when to remove it.
+ * This file is intentionally empty. Add exception rules below.
+ * ============================================ */
+
+/* Example:
+ * .legacy-third-party-widget {
+ *   z-index: var(--z-index-overlay) !important;
+ *   Reason: Third-party chat widget requires z-index override.
+ *   Remove when: Widget updates to use standard z-index scale.
+ * }
+ */
