@@ -541,8 +541,6 @@ hr {
   font-weight: var(--font-weight-medium);
   color: #1a1d20;
   color: var(--color-text-primary);
-  margin-block-end: 0.5rem;
-  margin-block-end: var(--space-2);
 }
 }
 

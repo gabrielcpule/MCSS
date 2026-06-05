@@ -713,5 +713,130 @@
     "mtime": 1780491708.4243448,
     "ast_hash": "946ba3a2e71bb73e85258e6cd1d513d3",
     "semantic_hash": "946ba3a2e71bb73e85258e6cd1d513d3"
+  },
+  "/home/gabrielp/Projects/MCSS/.claude/settings.json": {
+    "mtime": 1780517098.3736835,
+    "ast_hash": "bfee062c3962c14264fd704e975a6b38",
+    "semantic_hash": "bfee062c3962c14264fd704e975a6b38"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/cli/index.js": {
+    "mtime": 1780635191.462809,
+    "ast_hash": "c990f3f030f0fd9e2ad38435ddf96d33",
+    "semantic_hash": "c990f3f030f0fd9e2ad38435ddf96d33"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/cli/reporters/terminal.js": {
+    "mtime": 1780635171.8796368,
+    "ast_hash": "2eb05217e1f5cbd8a73a5fb4f60293cd",
+    "semantic_hash": "2eb05217e1f5cbd8a73a5fb4f60293cd"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/cli/validators/css-validator.js": {
+    "mtime": 1780635109.1253815,
+    "ast_hash": "b6448c327ee038390a5f0181d4555ed4",
+    "semantic_hash": "b6448c327ee038390a5f0181d4555ed4"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/cli/validators/html-validator.js": {
+    "mtime": 1780635677.4809551,
+    "ast_hash": "af069920e9d70df828dfe53cf37165bb",
+    "semantic_hash": "af069920e9d70df828dfe53cf37165bb"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/cli/validators/layer-validator.js": {
+    "mtime": 1780635139.125766,
+    "ast_hash": "671204123c5abd2024d235fea2150925",
+    "semantic_hash": "671204123c5abd2024d235fea2150925"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/cli/validators/semantic-validator.js": {
+    "mtime": 1780635151.4506629,
+    "ast_hash": "3bf1f1b01875d0a775fe4b1b129ac054",
+    "semantic_hash": "3bf1f1b01875d0a775fe4b1b129ac054"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/eslint-plugin/index.js": {
+    "mtime": 1780635220.716416,
+    "ast_hash": "cb329071ebf1d18155835cdd505d475d",
+    "semantic_hash": "cb329071ebf1d18155835cdd505d475d"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/eslint-plugin/rules/golden-rule.js": {
+    "mtime": 1780635177.6798184,
+    "ast_hash": "84555b7f2f05967954ee7f3c5c5099f7",
+    "semantic_hash": "84555b7f2f05967954ee7f3c5c5099f7"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/eslint-plugin/rules/no-magic-numbers.js": {
+    "mtime": 1780635127.5389025,
+    "ast_hash": "44df70e564beb2aa33c8ee1bb3f6a910",
+    "semantic_hash": "44df70e564beb2aa33c8ee1bb3f6a910"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/eslint-plugin/rules/onc-compliance.js": {
+    "mtime": 1780635179.1028445,
+    "ast_hash": "077e950ea3221fe253200f311ece4634",
+    "semantic_hash": "077e950ea3221fe253200f311ece4634"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/eslint-plugin/rules/require-data-state.js": {
+    "mtime": 1780635219.7005913,
+    "ast_hash": "aacce1e5599ec462b7f20131f27cf8d9",
+    "semantic_hash": "aacce1e5599ec462b7f20131f27cf8d9"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/eslint-plugin/rules/require-rdfa.js": {
+    "mtime": 1780635217.2145455,
+    "ast_hash": "74017ba6bc02883bc36f2d9a78514f7c",
+    "semantic_hash": "74017ba6bc02883bc36f2d9a78514f7c"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/package.json": {
+    "mtime": 1780633595.9678216,
+    "ast_hash": "492d9e741cff9b0676979c4aa184eea1",
+    "semantic_hash": "492d9e741cff9b0676979c4aa184eea1"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/postcss.config.js": {
+    "mtime": 1780634881.3736322,
+    "ast_hash": "ca0480ba0db7c3b227dc623b4a5ec61a",
+    "semantic_hash": "ca0480ba0db7c3b227dc623b4a5ec61a"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/scripts/generate-utilities.js": {
+    "mtime": 1780634663.7419448,
+    "ast_hash": "f3c532a8f3341785671505a2af1dc0ac",
+    "semantic_hash": "f3c532a8f3341785671505a2af1dc0ac"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/test/cli.test.js": {
+    "mtime": 1780635565.5164542,
+    "ast_hash": "695af1e1b02de0e3c57d3e1c6cce51d4",
+    "semantic_hash": "695af1e1b02de0e3c57d3e1c6cce51d4"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/test/components.test.js": {
+    "mtime": 1780635564.4910765,
+    "ast_hash": "703f2dde354cc3e6ffc79b93cdeec721",
+    "semantic_hash": "703f2dde354cc3e6ffc79b93cdeec721"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/test/layers.test.js": {
+    "mtime": 1780635563.4620569,
+    "ast_hash": "d5fefd1c0c5c8565c41d3529ca8f9471",
+    "semantic_hash": "d5fefd1c0c5c8565c41d3529ca8f9471"
+  },
+  "/home/gabrielp/Projects/MCSS/.superpowers/brainstorm/41922-1780546736/content/waiting.html": {
+    "mtime": 1780581003.0150232,
+    "ast_hash": "92b4ff1033f0762cfa1f90449c09cd8a",
+    "semantic_hash": "92b4ff1033f0762cfa1f90449c09cd8a"
+  },
+  "/home/gabrielp/Projects/MCSS/CLAUDE.md": {
+    "mtime": 1780517098.373334,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": "82efb97a359f5c7290bf2513d14686be"
+  },
+  "/home/gabrielp/Projects/MCSS/docs/superpowers/plans/2026-06-04-mcss-framework-v1.md": {
+    "mtime": 1780632443.4293256,
+    "ast_hash": "f3f7acb61ecfd5569abbf47f70bbf0b0",
+    "semantic_hash": "f3f7acb61ecfd5569abbf47f70bbf0b0"
+  },
+  "/home/gabrielp/Projects/MCSS/docs/superpowers/specs/2026-06-04-mcss-framework-v1-design.md": {
+    "mtime": 1780580954.2983868,
+    "ast_hash": "b4f5b453d654cf4a9f005b5e0a3d1e74",
+    "semantic_hash": "b4f5b453d654cf4a9f005b5e0a3d1e74"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/README.md": {
+    "mtime": 1780635491.1566246,
+    "ast_hash": "232e37ba57f379e6fbfcca14163030e6",
+    "semantic_hash": "232e37ba57f379e6fbfcca14163030e6"
+  },
+  "/home/gabrielp/Projects/MCSS/mcss-framework/test/fixtures/valid-component.html": {
+    "mtime": 1780635656.101831,
+    "ast_hash": "88d13f632c8538cb3645eecaf599b872",
+    "semantic_hash": "88d13f632c8538cb3645eecaf599b872"
   }
 }

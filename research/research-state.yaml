@@ -1,0 +1,70 @@
+# MCSS Framework Evolution — Research State
+
+question: "How does MCSS v1 perform against the MCSS-BENCHMARK-V1 suite, and what targeted improvements increase LLM accuracy beyond the 94.2% baseline?"
+
+status: bootstrapping
+phase: bootstrap
+started: 2026-06-05
+
+## Hypotheses
+
+hypotheses:
+  - id: H1
+    name: "Baseline reproduction"
+    description: "MCSS v1 framework achieves >= 90% weighted accuracy on MCSS-BENCHMARK-V1 when used as system context for an LLM (Claude)"
+    prediction: "The v1 framework CSS + README + token-schema.json as context should produce results comparable to the original 94.2% benchmark"
+    proxy_metric: "weighted_accuracy"
+    baseline: 0.942
+    target: 0.90
+    status: untested
+    priority: 1
+
+  - id: H2
+    name: "Token naming impact"
+    description: "Short semantic token names (--color-text-primary) produce higher LLM accuracy than namespaced tokens (--mcss-color-text-primary)"
+    prediction: "Short names reduce prompt tokens and improve comprehension accuracy vs namespaced"
+    proxy_metric: "weighted_accuracy"
+    baseline: null
+    target: null
+    status: untested
+    priority: 2
+
+  - id: H3
+    name: "Annotation density optimization"
+    description: "There is an optimal amount of RDFa metadata — too little reduces comprehension, too much increases prompt tokens without accuracy gains"
+    prediction: "Required annotations only (typeof + taxonomyLevel + purpose) outperform full annotation set for generation/modification tasks"
+    proxy_metric: "weighted_accuracy"
+    baseline: null
+    target: null
+    status: untested
+    priority: 3
+
+  - id: H4
+    name: "Context compendium effectiveness"
+    description: "A structured CONTEXT_COMPENDIUM.md combining token-schema.json + architecture summary + component catalog produces higher accuracy than just the CSS source + README"
+    prediction: "Structured compendium outperforms raw source for comprehension tasks"
+    proxy_metric: "weighted_accuracy"
+    baseline: null
+    target: null
+    status: untested
+    priority: 4
+
+## Evaluation
+
+primary_metric: "weighted_accuracy"
+formula: "(generation_pass_rate × 0.4) + (modification_pass_rate × 0.4) + (comprehension_pass_rate × 0.2)"
+benchmark: "MCSS-BENCHMARK-V1"
+benchmark_prompts: 100
+baseline_accuracy: 0.942
+
+## Inner Loop State
+
+current_experiment: null
+experiments_completed: 0
+experiments_this_cycle: 0
+last_outer_loop: null
+
+## Direction
+
+current_direction: deepen
+rationale: "Framework v1 is built. Need to establish real baseline first, then iterate."
