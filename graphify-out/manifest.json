@@ -1,0 +1,717 @@
+{
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-material-ui/test-material.jsx": {
+    "mtime": 1780491708.4051363,
+    "ast_hash": "5a88adc8b8829a6600bdbd389f3275a1",
+    "semantic_hash": "5a88adc8b8829a6600bdbd389f3275a1"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/chart_script.py": {
+    "mtime": 1780491708.4107742,
+    "ast_hash": "dc40a259d40121e611c6a5c4e3e37de1",
+    "semantic_hash": "dc40a259d40121e611c6a5c4e3e37de1"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/chart_script_1.py": {
+    "mtime": 1780491708.4108064,
+    "ast_hash": "586b3dea993f9dadcfbcada527e7042d",
+    "semantic_hash": "586b3dea993f9dadcfbcada527e7042d"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/package.json": {
+    "mtime": 1780491708.4145007,
+    "ast_hash": "14c20c27a3d6142c8134cb4658d2561b",
+    "semantic_hash": "14c20c27a3d6142c8134cb4658d2561b"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/src/login.ts": {
+    "mtime": 1780491708.4148545,
+    "ast_hash": "e062ee8aa05bbded9d5cbb25b0d8659b",
+    "semantic_hash": "e062ee8aa05bbded9d5cbb25b0d8659b"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/tsconfig.json": {
+    "mtime": 1780491708.414894,
+    "ast_hash": "7f3a485dd31bea7221cecfd4e5f5acb2",
+    "semantic_hash": "7f3a485dd31bea7221cecfd4e5f5acb2"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/vite.config.ts": {
+    "mtime": 1780491708.414894,
+    "ast_hash": "28403ab1fb06ffb8943facc216872985",
+    "semantic_hash": "28403ab1fb06ffb8943facc216872985"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/login.ts": {
+    "mtime": 1780491708.4150918,
+    "ast_hash": "d7afe505643ee8156b0428e5f4fbf9fe",
+    "semantic_hash": "d7afe505643ee8156b0428e5f4fbf9fe"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/LoginPage.jsx": {
+    "mtime": 1780491708.4167838,
+    "ast_hash": "e6418d69346d2a50d7fed99fbfed22e0",
+    "semantic_hash": "e6418d69346d2a50d7fed99fbfed22e0"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/index.jsx": {
+    "mtime": 1780491708.418126,
+    "ast_hash": "1724a9c461138112794201baf27c6041",
+    "semantic_hash": "1724a9c461138112794201baf27c6041"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/jsconfig.json": {
+    "mtime": 1780491708.4181504,
+    "ast_hash": "57d0006883344cccd1fd536ec23c12d4",
+    "semantic_hash": "57d0006883344cccd1fd536ec23c12d4"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/package.json": {
+    "mtime": 1780491708.4182544,
+    "ast_hash": "3a49d3755aefbd9a4a797085b2a5efb7",
+    "semantic_hash": "3a49d3755aefbd9a4a797085b2a5efb7"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/vite.config.js": {
+    "mtime": 1780491708.4182792,
+    "ast_hash": "2bdfa6e0550dd3f5745ea2825258667b",
+    "semantic_hash": "2bdfa6e0550dd3f5745ea2825258667b"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/package.json": {
+    "mtime": 1780491708.4184735,
+    "ast_hash": "e4f597c432ddbd5513acf44d13ae3192",
+    "semantic_hash": "e4f597c432ddbd5513acf44d13ae3192"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/src/main.ts": {
+    "mtime": 1780491708.4185476,
+    "ast_hash": "82e4b8a193deb463e535f01bf85aca37",
+    "semantic_hash": "82e4b8a193deb463e535f01bf85aca37"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/src/types/index.ts": {
+    "mtime": 1780491708.4186184,
+    "ast_hash": "3a884df08df38410ccf96ba9ad128871",
+    "semantic_hash": "3a884df08df38410ccf96ba9ad128871"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/tsconfig.json": {
+    "mtime": 1780491708.4186184,
+    "ast_hash": "ca454771ce2d4697a98e9d26c32350e3",
+    "semantic_hash": "ca454771ce2d4697a98e9d26c32350e3"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject/login.ts": {
+    "mtime": 1780491708.4188366,
+    "ast_hash": "e3c77fefe7f90e06b16f6c37f7ef7d29",
+    "semantic_hash": "e3c77fefe7f90e06b16f6c37f7ef7d29"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/.stylelintrc.js": {
+    "mtime": 1780491708.4212615,
+    "ast_hash": "41ef0ccd131a5de454109c4c24008a43",
+    "semantic_hash": "41ef0ccd131a5de454109c4c24008a43"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/js/main.js": {
+    "mtime": 1780491708.4215055,
+    "ast_hash": "d4171dfce23b729c222f97f929f1a9ed",
+    "semantic_hash": "d4171dfce23b729c222f97f929f1a9ed"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/package.json": {
+    "mtime": 1780491708.421726,
+    "ast_hash": "43a11c445a03df2f523c40b1e0d2264d",
+    "semantic_hash": "43a11c445a03df2f523c40b1e0d2264d"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/src/Card.stories.js": {
+    "mtime": 1780491708.421795,
+    "ast_hash": "b3fde0a78f5e85714697472cf79473c8",
+    "semantic_hash": "b3fde0a78f5e85714697472cf79473c8"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/src/preview.js": {
+    "mtime": 1780491708.421795,
+    "ast_hash": "bd962b64f91caf3c5333127e56d2652e",
+    "semantic_hash": "bd962b64f91caf3c5333127e56d2652e"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS LLM optmized codebase w operator system/mcss-agent-system.js": {
+    "mtime": 1780491708.423363,
+    "ast_hash": "7ea720e40b748b7b1e0ec3d868b3be9f",
+    "semantic_hash": "7ea720e40b748b7b1e0ec3d868b3be9f"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS LLM optmized codebase w operator system/script.py": {
+    "mtime": 1780491708.4234824,
+    "ast_hash": "853bbc89b7d88ed878b31fe56b7a322b",
+    "semantic_hash": "853bbc89b7d88ed878b31fe56b7a322b"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS LLM optmized codebase w operator system/script_1.py": {
+    "mtime": 1780491708.4235084,
+    "ast_hash": "8f0eae84f2c647674c06d5e72bf96f38",
+    "semantic_hash": "8f0eae84f2c647674c06d5e72bf96f38"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS LLM optmized codebase w operator system/script_2.py": {
+    "mtime": 1780491708.4235432,
+    "ast_hash": "780abdb274dd7c220a736e8d2114ff52",
+    "semantic_hash": "780abdb274dd7c220a736e8d2114ff52"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/chart_script.py": {
+    "mtime": 1780491708.4237192,
+    "ast_hash": "dc40a259d40121e611c6a5c4e3e37de1",
+    "semantic_hash": "dc40a259d40121e611c6a5c4e3e37de1"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/chart_script_1.py": {
+    "mtime": 1780491708.423747,
+    "ast_hash": "586b3dea993f9dadcfbcada527e7042d",
+    "semantic_hash": "586b3dea993f9dadcfbcada527e7042d"
+  },
+  "/home/gabrielp/Projects/MCSS/(System prompt Plan A)Detailed Implementation Guide with System Prompts and Agent Delegation.md": {
+    "mtime": 1780491708.40348,
+    "ast_hash": "7db56a3bf050b70814d35f289d8d7b68",
+    "semantic_hash": "7db56a3bf050b70814d35f289d8d7b68"
+  },
+  "/home/gabrielp/Projects/MCSS/(gabriel) Insights and notes.md": {
+    "mtime": 1780491708.40348,
+    "ast_hash": "52ef9a08cf6997fcfd7bc305efdc59a3",
+    "semantic_hash": "52ef9a08cf6997fcfd7bc305efdc59a3"
+  },
+  "/home/gabrielp/Projects/MCSS/(perplexity labs)MCSS Framework Architecture Specification.md": {
+    "mtime": 1780491708.4041662,
+    "ast_hash": "5bad428295dee6894544071e523d5a73",
+    "semantic_hash": "5bad428295dee6894544071e523d5a73"
+  },
+  "/home/gabrielp/Projects/MCSS/(system prompt plan B) Updated implementation guide Dynamic System Prompt Architecture for Mar.md": {
+    "mtime": 1780491708.404268,
+    "ast_hash": "78a6bfadcf4ba007bfdf18bd59d9672d",
+    "semantic_hash": "78a6bfadcf4ba007bfdf18bd59d9672d"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/labs/Benchmark Test Suite.md": {
+    "mtime": 1780491708.4045284,
+    "ast_hash": "d8c2d9336f73174cb6b6210a86d822f1",
+    "semantic_hash": "d8c2d9336f73174cb6b6210a86d822f1"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/labs/MCSS-BENCHMARK-V1.md": {
+    "mtime": 1780491708.404589,
+    "ast_hash": "2ce9f1e3b9bcf7a95fd60948a9d8e1a9",
+    "semantic_hash": "2ce9f1e3b9bcf7a95fd60948a9d8e1a9"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/labs/PERFORMANCE_REPORT.md": {
+    "mtime": 1780491708.404647,
+    "ast_hash": "b2cdc20b3ff9be18306e5494d094be24",
+    "semantic_hash": "b2cdc20b3ff9be18306e5494d094be24"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/labs/labs.md": {
+    "mtime": 1780491708.4047134,
+    "ast_hash": "d92b6364c14ea7b622067953260d6ae2",
+    "semantic_hash": "d92b6364c14ea7b622067953260d6ae2"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/# Benchmark Test Suite - Bootstrap.md": {
+    "mtime": 1780491708.4047134,
+    "ast_hash": "5468daa2e561e2ea75f28a55f308e610",
+    "semantic_hash": "5468daa2e561e2ea75f28a55f308e610"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/Benchmark Test Suite.md": {
+    "mtime": 1780491708.4048188,
+    "ast_hash": "d8c2d9336f73174cb6b6210a86d822f1",
+    "semantic_hash": "d8c2d9336f73174cb6b6210a86d822f1"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/Index.html": {
+    "mtime": 1780491708.4048188,
+    "ast_hash": "9490b0a2c1251d6b11c7483db2dd36b2",
+    "semantic_hash": "9490b0a2c1251d6b11c7483db2dd36b2"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/benchmark results.md": {
+    "mtime": 1780491708.4048967,
+    "ast_hash": "1e0cc51f28de187c9760c30195ba0692",
+    "semantic_hash": "1e0cc51f28de187c9760c30195ba0692"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-bootstrap/datatable.html": {
+    "mtime": 1780491708.4049337,
+    "ast_hash": "f91849f90a0721197856cde0e2b3527e",
+    "semantic_hash": "f91849f90a0721197856cde0e2b3527e"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-bootstrap/test.html": {
+    "mtime": 1780491708.4049904,
+    "ast_hash": "800f6f45745684422b231f6931e6b41c",
+    "semantic_hash": "800f6f45745684422b231f6931e6b41c"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-material-ui/data-table.html": {
+    "mtime": 1780491708.4049904,
+    "ast_hash": "5e9ef1768ef1d179562d1f35cc3d03bb",
+    "semantic_hash": "5e9ef1768ef1d179562d1f35cc3d03bb"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-material-ui/test.html": {
+    "mtime": 1780491708.4051986,
+    "ast_hash": "d54993bd0a946273fe1aa5dd1323bf96",
+    "semantic_hash": "d54993bd0a946273fe1aa5dd1323bf96"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-tailwind/data-table.html": {
+    "mtime": 1780491708.4051986,
+    "ast_hash": "aadade1eb069a64a1f3de22562d119bd",
+    "semantic_hash": "aadade1eb069a64a1f3de22562d119bd"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-tailwind/test.html": {
+    "mtime": 1780491708.4052951,
+    "ast_hash": "08a928ce3f8d385d4d00c56b15f8987d",
+    "semantic_hash": "08a928ce3f8d385d4d00c56b15f8987d"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/mcss-test-table.html": {
+    "mtime": 1780491708.4052951,
+    "ast_hash": "54e36750bd8de823f6d6ab2e0d4c5781",
+    "semantic_hash": "54e36750bd8de823f6d6ab2e0d4c5781"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test1.1/test.html": {
+    "mtime": 1780491708.4054441,
+    "ast_hash": "ca2aaae40b9ff9500f9f0225e8ed7496",
+    "semantic_hash": "ca2aaae40b9ff9500f9f0225e8ed7496"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test2.1/test.html": {
+    "mtime": 1780491708.4055078,
+    "ast_hash": "e8860fa5e1cb6126626abca25d3d8187",
+    "semantic_hash": "e8860fa5e1cb6126626abca25d3d8187"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test3.1/test.html": {
+    "mtime": 1780491708.4055078,
+    "ast_hash": "5bd181867fd9f55838d442c8b1c3c1a0",
+    "semantic_hash": "5bd181867fd9f55838d442c8b1c3c1a0"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test4.1/test.html": {
+    "mtime": 1780491708.4055078,
+    "ast_hash": "4f85090f3186504b6427197c2ca3017e",
+    "semantic_hash": "4f85090f3186504b6427197c2ca3017e"
+  },
+  "/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test5.1/test.html": {
+    "mtime": 1780491708.4055078,
+    "ast_hash": "f0dd2c6e516305e138db60b844877ec0",
+    "semantic_hash": "f0dd2c6e516305e138db60b844877ec0"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/DOCS_SITEMAP.md": {
+    "mtime": 1780491708.4085577,
+    "ast_hash": "bf62acbeced269a8f8f8f54071b2e2b3",
+    "semantic_hash": "bf62acbeced269a8f8f8f54071b2e2b3"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/README-DOCS.md": {
+    "mtime": 1780491708.410416,
+    "ast_hash": "3d5c766e10b2436265bcf54c7548165a",
+    "semantic_hash": "3d5c766e10b2436265bcf54c7548165a"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/annotation-system.md": {
+    "mtime": 1780491708.4104574,
+    "ast_hash": "3c73b57a4a2fd4493d2309f8949d4a52",
+    "semantic_hash": "3c73b57a4a2fd4493d2309f8949d4a52"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/component-library.md": {
+    "mtime": 1780491708.4108372,
+    "ast_hash": "9fa21ee9462871d71613229c35219948",
+    "semantic_hash": "9fa21ee9462871d71613229c35219948"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/core-concepts.md": {
+    "mtime": 1780491708.4108987,
+    "ast_hash": "0e951ae0ac7c5e8aa5fa042189117ceb",
+    "semantic_hash": "0e951ae0ac7c5e8aa5fa042189117ceb"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/getting-started.md": {
+    "mtime": 1780491708.4110076,
+    "ast_hash": "ee0af67909d4c5fa678a29d56d21273a",
+    "semantic_hash": "ee0af67909d4c5fa678a29d56d21273a"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/index.md": {
+    "mtime": 1780491708.4110525,
+    "ast_hash": "febafb0284befc2090c075d28338f942",
+    "semantic_hash": "febafb0284befc2090c075d28338f942"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/MCSS Revisions Tradeoff Analysis_.md": {
+    "mtime": 1780491708.4124026,
+    "ast_hash": "21385c640f255fa95a369bb5db6105a7",
+    "semantic_hash": "21385c640f255fa95a369bb5db6105a7"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/demo.html": {
+    "mtime": 1780491708.412635,
+    "ast_hash": "eccab47987731675c47a46f9e7c5927c",
+    "semantic_hash": "eccab47987731675c47a46f9e7c5927c"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/documentation.md": {
+    "mtime": 1780491708.4127252,
+    "ast_hash": "09e9303b70c81f1ea4c7ecf1ff90b9b9",
+    "semantic_hash": "09e9303b70c81f1ea4c7ecf1ff90b9b9"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/documentation.md": {
+    "mtime": 1780491708.4128015,
+    "ast_hash": "09e9303b70c81f1ea4c7ecf1ff90b9b9",
+    "semantic_hash": "09e9303b70c81f1ea4c7ecf1ff90b9b9"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/MCSS-customizations.md": {
+    "mtime": 1780491708.414309,
+    "ast_hash": "d0a9fa914f6a47adc894b97205ea03cc",
+    "semantic_hash": "d0a9fa914f6a47adc894b97205ea03cc"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/README.md": {
+    "mtime": 1780491708.4143698,
+    "ast_hash": "2695dc92ad98dadb79236339182ddf4f",
+    "semantic_hash": "2695dc92ad98dadb79236339182ddf4f"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/index.html": {
+    "mtime": 1780491708.4144025,
+    "ast_hash": "8d7fa801a13998d9b96411a6a5e1ccb2",
+    "semantic_hash": "8d7fa801a13998d9b96411a6a5e1ccb2"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/MCSS-POC_customizations.md": {
+    "mtime": 1780491708.414894,
+    "ast_hash": "992a50b4f7abc45b57aa6686780f6757",
+    "semantic_hash": "992a50b4f7abc45b57aa6686780f6757"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/documentation.md": {
+    "mtime": 1780491708.414988,
+    "ast_hash": "09e9303b70c81f1ea4c7ecf1ff90b9b9",
+    "semantic_hash": "09e9303b70c81f1ea4c7ecf1ff90b9b9"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/githubcopilot_chat.md": {
+    "mtime": 1780491708.415015,
+    "ast_hash": "ebf1b8debb0d56977962bdeacf96fbd5",
+    "semantic_hash": "ebf1b8debb0d56977962bdeacf96fbd5"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/login.html": {
+    "mtime": 1780491708.415015,
+    "ast_hash": "b6accee41c9b0b08d46ed28403f6c173",
+    "semantic_hash": "b6accee41c9b0b08d46ed28403f6c173"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/# MCSS Proof of Concept Development Agent__You ar....md": {
+    "mtime": 1780491708.4151282,
+    "ast_hash": "732467212a7c9d7384cfec5f368df342",
+    "semantic_hash": "732467212a7c9d7384cfec5f368df342"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/MCSS-POC_customizations.md": {
+    "mtime": 1780491708.4151282,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/demogem.html": {
+    "mtime": 1780491708.4152403,
+    "ast_hash": "c3045d0a4ec0a350d6573b0def04041e",
+    "semantic_hash": "c3045d0a4ec0a350d6573b0def04041e"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/# MCSS Proof of Concept Development Agent__You ar....md": {
+    "mtime": 1780491708.415321,
+    "ast_hash": "732467212a7c9d7384cfec5f368df342",
+    "semantic_hash": "732467212a7c9d7384cfec5f368df342"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/# MCSS Proof of Concept Development Agent__You ar....md": {
+    "mtime": 1780491708.4155579,
+    "ast_hash": "732467212a7c9d7384cfec5f368df342",
+    "semantic_hash": "732467212a7c9d7384cfec5f368df342"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/MCSS-POC_customizationsrec.md": {
+    "mtime": 1780491708.4167838,
+    "ast_hash": "dbbf3a27e4a13c1386e83532b364d956",
+    "semantic_hash": "dbbf3a27e4a13c1386e83532b364d956"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/index.html": {
+    "mtime": 1780491708.4181,
+    "ast_hash": "fa1bb63544fab7510dcd116e292a3330",
+    "semantic_hash": "fa1bb63544fab7510dcd116e292a3330"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/README.md": {
+    "mtime": 1780491708.4182792,
+    "ast_hash": "963efd3713094f788e3acb198bb8d6c0",
+    "semantic_hash": "963efd3713094f788e3acb198bb8d6c0"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/public/index.html": {
+    "mtime": 1780491708.4185011,
+    "ast_hash": "6c57a9c764c744c67a14af0dcedc9515",
+    "semantic_hash": "6c57a9c764c744c67a14af0dcedc9515"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject/MCSS-POC_customizations.md": {
+    "mtime": 1780491708.4186184,
+    "ast_hash": "66316efbebd1bbcf0af3e8130063fe2a",
+    "semantic_hash": "66316efbebd1bbcf0af3e8130063fe2a"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject/githubcopilot_chat.md": {
+    "mtime": 1780491708.4187646,
+    "ast_hash": "4251875f8f276a56948ef03e203aefdd",
+    "semantic_hash": "4251875f8f276a56948ef03e203aefdd"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject/login.html": {
+    "mtime": 1780491708.4187646,
+    "ast_hash": "a33323f4476f0fee1679b0efa721e17f",
+    "semantic_hash": "a33323f4476f0fee1679b0efa721e17f"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/# MCSS Proof of Concept Development Agent__You ar....md": {
+    "mtime": 1780491708.4188647,
+    "ast_hash": "732467212a7c9d7384cfec5f368df342",
+    "semantic_hash": "732467212a7c9d7384cfec5f368df342"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/MCSS-missing-vs-tailwind.md": {
+    "mtime": 1780491708.4189444,
+    "ast_hash": "b8081a910db26f283fbebafa66c2342b",
+    "semantic_hash": "b8081a910db26f283fbebafa66c2342b"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/logindemo-mcss-embedded.html": {
+    "mtime": 1780491708.4203131,
+    "ast_hash": "f19e6e21756562e86b8124a99176403f",
+    "semantic_hash": "f19e6e21756562e86b8124a99176403f"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/logindemo-mcss.html": {
+    "mtime": 1780491708.4203546,
+    "ast_hash": "c20d978b06b9e8016ab39db3564df96f",
+    "semantic_hash": "c20d978b06b9e8016ab39db3564df96f"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/logindemo-tailwind.html": {
+    "mtime": 1780491708.4203546,
+    "ast_hash": "a0e7f825310c0e078238f2f210878cdb",
+    "semantic_hash": "a0e7f825310c0e078238f2f210878cdb"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/POC system prompt (after step 1.1 and 1.2).md": {
+    "mtime": 1780491708.4204323,
+    "ast_hash": "4844f35e6e0cc09f467e9d199d11bb4b",
+    "semantic_hash": "4844f35e6e0cc09f467e9d199d11bb4b"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/perplexity_lab/Documentation.md": {
+    "mtime": 1780491708.4205053,
+    "ast_hash": "eee105b088341f59c30508b26e379535",
+    "semantic_hash": "eee105b088341f59c30508b26e379535"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/perplexity_lab/demo.html": {
+    "mtime": 1780491708.4205642,
+    "ast_hash": "5dfc3a481bcdb809b329ccd52ff154aa",
+    "semantic_hash": "5dfc3a481bcdb809b329ccd52ff154aa"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/Peer review/Peer review.md": {
+    "mtime": 1780491708.4206712,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/Peer review/peer factual review (claude) of step 1.1 and 1.2.md": {
+    "mtime": 1780491708.4207091,
+    "ast_hash": "5110cc57f677e295119d1fc547233bb8",
+    "semantic_hash": "5110cc57f677e295119d1fc547233bb8"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/Peer review/peer factual review (gemini) of step 1.1 and 1.2.md": {
+    "mtime": 1780491708.42077,
+    "ast_hash": "fc0533944434f4fc44c1d8320cdc8c29",
+    "semantic_hash": "fc0533944434f4fc44c1d8320cdc8c29"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/Peer review/peer factual review (gpt) of step 1.1 and 1.2.md": {
+    "mtime": 1780491708.420817,
+    "ast_hash": "c0628270232a9dc1c09f13894bd33c48",
+    "semantic_hash": "c0628270232a9dc1c09f13894bd33c48"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/Phase 1.md": {
+    "mtime": 1780491708.420817,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/Step 1.3 v2 Model Context Style Sheet (MCSS)- An Architectural Framework for Advanced LLM Comprehension.md": {
+    "mtime": 1780491708.420817,
+    "ast_hash": "32c4a40bfa977e681ffaeed239c2d218",
+    "semantic_hash": "32c4a40bfa977e681ffaeed239c2d218"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/step 1.1 # LLM Performance Assessment.md": {
+    "mtime": 1780491708.421036,
+    "ast_hash": "71a44e05f8f50bfe0399d387bc8d541a",
+    "semantic_hash": "71a44e05f8f50bfe0399d387bc8d541a"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/step 1.2 v2 LLM-Optimized System Design Requirements_.md": {
+    "mtime": 1780491708.4210918,
+    "ast_hash": "518e2d3cb587cb44e1ceb93f9f6dcb7a",
+    "semantic_hash": "518e2d3cb587cb44e1ceb93f9f6dcb7a"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/index.html": {
+    "mtime": 1780491708.421425,
+    "ast_hash": "c365ea680125d98cd4ec30a6d9c688e2",
+    "semantic_hash": "c365ea680125d98cd4ec30a6d9c688e2"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/mcss.txt": {
+    "mtime": 1780491708.4215055,
+    "ast_hash": "63884efd3632a223f1cc248bc6dc6a1a",
+    "semantic_hash": "63884efd3632a223f1cc248bc6dc6a1a"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/src/Card.mdx": {
+    "mtime": 1780491708.4217522,
+    "ast_hash": "a9e5761ee8bf3b4d04e251e11ea6a674",
+    "semantic_hash": "a9e5761ee8bf3b4d04e251e11ea6a674"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/test.html": {
+    "mtime": 1780491708.421795,
+    "ast_hash": "0ce23616be1efbea36aaf5384e789fd7",
+    "semantic_hash": "0ce23616be1efbea36aaf5384e789fd7"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 2/Phase 2.md": {
+    "mtime": 1780491708.4218905,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 3/step 3.1 MCSS Component Generation Agent.md": {
+    "mtime": 1780491708.4222126,
+    "ast_hash": "daef7684cffd8e792d9df3577df03939",
+    "semantic_hash": "daef7684cffd8e792d9df3577df03939"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 4/step 4.1 MCSS Annotation Schema Formalization.md": {
+    "mtime": 1780491708.4222126,
+    "ast_hash": "e81fc2a231239b81a518acec16395c3a",
+    "semantic_hash": "e81fc2a231239b81a518acec16395c3a"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 4/step 4.2 MCSS Context Compendium and Prompts.md": {
+    "mtime": 1780491708.422579,
+    "ast_hash": "0de1b9859d4a3c0d098aa2e3ad3ce536",
+    "semantic_hash": "0de1b9859d4a3c0d098aa2e3ad3ce536"
+  },
+  "/home/gabrielp/Projects/MCSS/Project guide.md": {
+    "mtime": 1780491708.422579,
+    "ast_hash": "d55c1b3dede28d12c0215873700f8481",
+    "semantic_hash": "d55c1b3dede28d12c0215873700f8481"
+  },
+  "/home/gabrielp/Projects/MCSS/README.md": {
+    "mtime": 1780491708.422579,
+    "ast_hash": "9eeadf0e6e78747ece22784bbb836f47",
+    "semantic_hash": "9eeadf0e6e78747ece22784bbb836f47"
+  },
+  "/home/gabrielp/Projects/MCSS/Updating steps test 1.md": {
+    "mtime": 1780491708.4228976,
+    "ast_hash": "a5635e9fe9247c52bfd97470a441eb24",
+    "semantic_hash": "a5635e9fe9247c52bfd97470a441eb24"
+  },
+  "/home/gabrielp/Projects/MCSS/artifact_old/(old) LLM-Optimized System Design Requirements_.md": {
+    "mtime": 1780491708.4228976,
+    "ast_hash": "01fa5f18706fa8fc213e377628545968",
+    "semantic_hash": "01fa5f18706fa8fc213e377628545968"
+  },
+  "/home/gabrielp/Projects/MCSS/artifact_old/(old) v2 LLM-Optimized System Design Requirements_.md": {
+    "mtime": 1780491708.4229846,
+    "ast_hash": "518e2d3cb587cb44e1ceb93f9f6dcb7a",
+    "semantic_hash": "518e2d3cb587cb44e1ceb93f9f6dcb7a"
+  },
+  "/home/gabrielp/Projects/MCSS/artifact_old/MCSS Framework Architecture Design_.md": {
+    "mtime": 1780491708.423043,
+    "ast_hash": "684490d8d3cbd08aaf6f66a0c00f3c96",
+    "semantic_hash": "684490d8d3cbd08aaf6f66a0c00f3c96"
+  },
+  "/home/gabrielp/Projects/MCSS/artifact_old/Names for the framework.md": {
+    "mtime": 1780491708.4231906,
+    "ast_hash": "12f153955bdc8fe1b469bf66c05676b2",
+    "semantic_hash": "12f153955bdc8fe1b469bf66c05676b2"
+  },
+  "/home/gabrielp/Projects/MCSS/artifact_old/llm csv use cases.md": {
+    "mtime": 1780491708.4231906,
+    "ast_hash": "914a532e18f744ca06de0ded03f9bac1",
+    "semantic_hash": "914a532e18f744ca06de0ded03f9bac1"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS LLM optmized codebase w operator system/mcss-llm-codebase.md": {
+    "mtime": 1780491708.4234338,
+    "ast_hash": "52da8783f31b1cdd027ad3242ecda75d",
+    "semantic_hash": "52da8783f31b1cdd027ad3242ecda75d"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/DOCS_SITEMAP.md": {
+    "mtime": 1780491708.4235432,
+    "ast_hash": "bf62acbeced269a8f8f8f54071b2e2b3",
+    "semantic_hash": "bf62acbeced269a8f8f8f54071b2e2b3"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/README-DOCS.md": {
+    "mtime": 1780491708.4236293,
+    "ast_hash": "3d5c766e10b2436265bcf54c7548165a",
+    "semantic_hash": "3d5c766e10b2436265bcf54c7548165a"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/annotation-system.md": {
+    "mtime": 1780491708.4236293,
+    "ast_hash": "3c73b57a4a2fd4493d2309f8949d4a52",
+    "semantic_hash": "3c73b57a4a2fd4493d2309f8949d4a52"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/component-library.md": {
+    "mtime": 1780491708.4237747,
+    "ast_hash": "9fa21ee9462871d71613229c35219948",
+    "semantic_hash": "9fa21ee9462871d71613229c35219948"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/core-concepts.md": {
+    "mtime": 1780491708.4238334,
+    "ast_hash": "0e951ae0ac7c5e8aa5fa042189117ceb",
+    "semantic_hash": "0e951ae0ac7c5e8aa5fa042189117ceb"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/getting-started.md": {
+    "mtime": 1780491708.4239297,
+    "ast_hash": "ee0af67909d4c5fa678a29d56d21273a",
+    "semantic_hash": "ee0af67909d4c5fa678a29d56d21273a"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/index.md": {
+    "mtime": 1780491708.423972,
+    "ast_hash": "febafb0284befc2090c075d28338f942",
+    "semantic_hash": "febafb0284befc2090c075d28338f942"
+  },
+  "/home/gabrielp/Projects/MCSS/pre-project artifacts/(initial plan 06-25)Detailed Implementation Guide with System Prompts and Agent Delegation.md": {
+    "mtime": 1780491708.4251592,
+    "ast_hash": "d17caa8cff8469fc21d29252d7dc8e9d",
+    "semantic_hash": "d17caa8cff8469fc21d29252d7dc8e9d"
+  },
+  "/home/gabrielp/Projects/MCSS/pre-project artifacts/(initial research containing programming language-frontend language-framework research)LLM-Native Programming Language_ A Comprehensive D.md": {
+    "mtime": 1780491708.4252753,
+    "ast_hash": "d4ce7e8f13500104d1186d68a26fd730",
+    "semantic_hash": "d4ce7e8f13500104d1186d68a26fd730"
+  },
+  "/home/gabrielp/Projects/MCSS/pre-project artifacts/Tasks delegator analysis.md": {
+    "mtime": 1780491708.425368,
+    "ast_hash": "0d2061755c71aa98bf6c41a1259b9eec",
+    "semantic_hash": "0d2061755c71aa98bf6c41a1259b9eec"
+  },
+  "/home/gabrielp/Projects/MCSS/site core.md": {
+    "mtime": 1780491708.4254262,
+    "ast_hash": "5bd36d187d4a4d7ae923276f0ec965d7",
+    "semantic_hash": "5bd36d187d4a4d7ae923276f0ec965d7"
+  },
+  "/home/gabrielp/Projects/MCSS/step 1.3 prompt.md": {
+    "mtime": 1780491708.4254262,
+    "ast_hash": "3ac72e70bf16162fccc7d611d4c50ef4",
+    "semantic_hash": "3ac72e70bf16162fccc7d611d4c50ef4"
+  },
+  "/home/gabrielp/Projects/MCSS/step 2.1 prompt.md": {
+    "mtime": 1780491708.4255722,
+    "ast_hash": "17359186ab0e796456d43faa6f4b9d2b",
+    "semantic_hash": "17359186ab0e796456d43faa6f4b9d2b"
+  },
+  "/home/gabrielp/Projects/MCSS/step 2.2 prompt.md": {
+    "mtime": 1780491708.4256167,
+    "ast_hash": "a384292b6005e73da7635be857ab0b39",
+    "semantic_hash": "a384292b6005e73da7635be857ab0b39"
+  },
+  "/home/gabrielp/Projects/MCSS/step 3.1 prompt.md": {
+    "mtime": 1780491708.4256167,
+    "ast_hash": "926f711d305c26d3cf1cb61dc2e64539",
+    "semantic_hash": "926f711d305c26d3cf1cb61dc2e64539"
+  },
+  "/home/gabrielp/Projects/MCSS/Images/Pasted image 20250629150828.png": {
+    "mtime": 1780491708.4055576,
+    "ast_hash": "0a3b2b6128ded3ce296e03069d298900",
+    "semantic_hash": "0a3b2b6128ded3ce296e03069d298900"
+  },
+  "/home/gabrielp/Projects/MCSS/Images/Pasted image 20250629151005.png": {
+    "mtime": 1780491708.4075577,
+    "ast_hash": "a9df0b46811f5c05400a003d524da080",
+    "semantic_hash": "a9df0b46811f5c05400a003d524da080"
+  },
+  "/home/gabrielp/Projects/MCSS/Images/Pasted image 20250629151608.png": {
+    "mtime": 1780491708.4085577,
+    "ast_hash": "11cffa1210518e4577472e7f1bc847aa",
+    "semantic_hash": "11cffa1210518e4577472e7f1bc847aa"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/mcss_architecture.png": {
+    "mtime": 1780491708.4110906,
+    "ast_hash": "cbdca8bde68964798d5c6d6c190b7a92",
+    "semantic_hash": "cbdca8bde68964798d5c6d6c190b7a92"
+  },
+  "/home/gabrielp/Projects/MCSS/MCSS-documentation/mcss_taxonomy_tree.png": {
+    "mtime": 1780491708.4114482,
+    "ast_hash": "946ba3a2e71bb73e85258e6cd1d513d3",
+    "semantic_hash": "946ba3a2e71bb73e85258e6cd1d513d3"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/image.png": {
+    "mtime": 1780491708.412853,
+    "ast_hash": "c91cc6dffb8a1d9fab8f59be75233925",
+    "semantic_hash": "c91cc6dffb8a1d9fab8f59be75233925"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/image.png": {
+    "mtime": 1780491708.4155579,
+    "ast_hash": "c91cc6dffb8a1d9fab8f59be75233925",
+    "semantic_hash": "c91cc6dffb8a1d9fab8f59be75233925"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/image.png": {
+    "mtime": 1780491708.416852,
+    "ast_hash": "c91cc6dffb8a1d9fab8f59be75233925",
+    "semantic_hash": "c91cc6dffb8a1d9fab8f59be75233925"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/after asking to create a container on the right on mcss.png": {
+    "mtime": 1780491708.4189782,
+    "ast_hash": "06f080df254d4d4a2a8573f8299d2abb",
+    "semantic_hash": "06f080df254d4d4a2a8573f8299d2abb"
+  },
+  "/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/after asking to create a container on the right on tailwind.png": {
+    "mtime": 1780491708.4196627,
+    "ast_hash": "482fb12af80a2cb2bf7ca1a996f32947",
+    "semantic_hash": "482fb12af80a2cb2bf7ca1a996f32947"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/mcss_architecture.png": {
+    "mtime": 1780491708.4240127,
+    "ast_hash": "cbdca8bde68964798d5c6d6c190b7a92",
+    "semantic_hash": "cbdca8bde68964798d5c6d6c190b7a92"
+  },
+  "/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/mcss_taxonomy_tree.png": {
+    "mtime": 1780491708.4243448,
+    "ast_hash": "946ba3a2e71bb73e85258e6cd1d513d3",
+    "semantic_hash": "946ba3a2e71bb73e85258e6cd1d513d3"
+  }
+}

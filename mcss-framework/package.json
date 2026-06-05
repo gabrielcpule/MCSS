@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Model Context Style Sheet — LLM-optimized CSS framework with semantic annotations",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcpule/MCSS.git",
+    "directory": "mcss-framework"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "main": "dist/mcss.css",
   "exports": {
     ".": "./dist/mcss.css",
@@ -21,7 +29,7 @@
     "scripts/"
   ],
   "scripts": {
-    "build": "node scripts/generate-utilities.js && postcss src/mcss.css -o dist/mcss.css && postcss src/mcss.css -o dist/mcss.min.css --env production",
+    "build": "node scripts/generate-utilities.js && postcss src/mcss.css -o dist/mcss.css && postcss dist/mcss.css -o dist/mcss.min.css --env production",
     "test": "vitest run",
     "test:watch": "vitest",
     "prepublishOnly": "npm run build && npm test"
@@ -37,6 +45,6 @@
   "dependencies": {
     "htmlparser2": "^9.0.0",
     "commander": "^12.0.0",
-    "chalk": "^5.0.0"
+    "chalk": "^4.1.2"
   }
 }

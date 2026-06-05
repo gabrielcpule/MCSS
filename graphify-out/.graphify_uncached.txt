@@ -1,0 +1,114 @@
+/home/gabrielp/Projects/MCSS/(System prompt Plan A)Detailed Implementation Guide with System Prompts and Agent Delegation.md
+/home/gabrielp/Projects/MCSS/(gabriel) Insights and notes.md
+/home/gabrielp/Projects/MCSS/(perplexity labs)MCSS Framework Architecture Specification.md
+/home/gabrielp/Projects/MCSS/(system prompt plan B) Updated implementation guide Dynamic System Prompt Architecture for Mar.md
+/home/gabrielp/Projects/MCSS/Benchmark/labs/Benchmark Test Suite.md
+/home/gabrielp/Projects/MCSS/Benchmark/labs/MCSS-BENCHMARK-V1.md
+/home/gabrielp/Projects/MCSS/Benchmark/labs/PERFORMANCE_REPORT.md
+/home/gabrielp/Projects/MCSS/Benchmark/labs/labs.md
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/# Benchmark Test Suite - Bootstrap.md
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/Benchmark Test Suite.md
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/Index.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/benchmark results.md
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-bootstrap/datatable.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-bootstrap/test.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-material-ui/data-table.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-material-ui/test.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-tailwind/data-table.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/test-tailwind/test.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/mcss-test-table.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test1.1/test.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test2.1/test.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test3.1/test.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test4.1/test.html
+/home/gabrielp/Projects/MCSS/Benchmark/local tests/tests/test5.1/test.html
+/home/gabrielp/Projects/MCSS/MCSS-documentation/DOCS_SITEMAP.md
+/home/gabrielp/Projects/MCSS/MCSS-documentation/README-DOCS.md
+/home/gabrielp/Projects/MCSS/MCSS-documentation/annotation-system.md
+/home/gabrielp/Projects/MCSS/MCSS-documentation/component-library.md
+/home/gabrielp/Projects/MCSS/MCSS-documentation/core-concepts.md
+/home/gabrielp/Projects/MCSS/MCSS-documentation/getting-started.md
+/home/gabrielp/Projects/MCSS/MCSS-documentation/index.md
+/home/gabrielp/Projects/MCSS/Phase 1/MCSS Revisions Tradeoff Analysis_.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/demo.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/documentation.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/documentation.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/MCSS-customizations.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/README.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/typescrio/index.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/MCSS-POC_customizations.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/documentation.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/githubcopilot_chat.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject/login.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/# MCSS Proof of Concept Development Agent__You ar....md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/MCSS-POC_customizations.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/demogem.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/# MCSS Proof of Concept Development Agent__You ar....md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/# MCSS Proof of Concept Development Agent__You ar....md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/MCSS-POC_customizationsrec.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/index.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/README.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page/public/index.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject/MCSS-POC_customizations.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject/githubcopilot_chat.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject/login.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/# MCSS Proof of Concept Development Agent__You ar....md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/MCSS-missing-vs-tailwind.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/logindemo-mcss-embedded.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/logindemo-mcss.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/logindemo-tailwind.html
+/home/gabrielp/Projects/MCSS/Phase 1/POC/POC system prompt (after step 1.1 and 1.2).md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/perplexity_lab/Documentation.md
+/home/gabrielp/Projects/MCSS/Phase 1/POC/perplexity_lab/demo.html
+/home/gabrielp/Projects/MCSS/Phase 1/Peer review/Peer review.md
+/home/gabrielp/Projects/MCSS/Phase 1/Peer review/peer factual review (claude) of step 1.1 and 1.2.md
+/home/gabrielp/Projects/MCSS/Phase 1/Peer review/peer factual review (gemini) of step 1.1 and 1.2.md
+/home/gabrielp/Projects/MCSS/Phase 1/Peer review/peer factual review (gpt) of step 1.1 and 1.2.md
+/home/gabrielp/Projects/MCSS/Phase 1/Phase 1.md
+/home/gabrielp/Projects/MCSS/Phase 1/Step 1.3 v2 Model Context Style Sheet (MCSS)- An Architectural Framework for Advanced LLM Comprehension.md
+/home/gabrielp/Projects/MCSS/Phase 1/step 1.1 # LLM Performance Assessment.md
+/home/gabrielp/Projects/MCSS/Phase 1/step 1.2 v2 LLM-Optimized System Design Requirements_.md
+/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/index.html
+/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/mcss.txt
+/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/src/Card.mdx
+/home/gabrielp/Projects/MCSS/Phase 2/POC/POC main/test.html
+/home/gabrielp/Projects/MCSS/Phase 2/Phase 2.md
+/home/gabrielp/Projects/MCSS/Phase 3/step 3.1 MCSS Component Generation Agent.md
+/home/gabrielp/Projects/MCSS/Phase 4/step 4.1 MCSS Annotation Schema Formalization.md
+/home/gabrielp/Projects/MCSS/Phase 4/step 4.2 MCSS Context Compendium and Prompts.md
+/home/gabrielp/Projects/MCSS/Project guide.md
+/home/gabrielp/Projects/MCSS/README.md
+/home/gabrielp/Projects/MCSS/Updating steps test 1.md
+/home/gabrielp/Projects/MCSS/artifact_old/(old) LLM-Optimized System Design Requirements_.md
+/home/gabrielp/Projects/MCSS/artifact_old/(old) v2 LLM-Optimized System Design Requirements_.md
+/home/gabrielp/Projects/MCSS/artifact_old/MCSS Framework Architecture Design_.md
+/home/gabrielp/Projects/MCSS/artifact_old/Names for the framework.md
+/home/gabrielp/Projects/MCSS/artifact_old/llm csv use cases.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS LLM optmized codebase w operator system/mcss-llm-codebase.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/DOCS_SITEMAP.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/README-DOCS.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/annotation-system.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/component-library.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/core-concepts.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/getting-started.md
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/index.md
+/home/gabrielp/Projects/MCSS/pre-project artifacts/(initial plan 06-25)Detailed Implementation Guide with System Prompts and Agent Delegation.md
+/home/gabrielp/Projects/MCSS/pre-project artifacts/(initial research containing programming language-frontend language-framework research)LLM-Native Programming Language_ A Comprehensive D.md
+/home/gabrielp/Projects/MCSS/pre-project artifacts/Tasks delegator analysis.md
+/home/gabrielp/Projects/MCSS/site core.md
+/home/gabrielp/Projects/MCSS/step 1.3 prompt.md
+/home/gabrielp/Projects/MCSS/step 2.1 prompt.md
+/home/gabrielp/Projects/MCSS/step 2.2 prompt.md
+/home/gabrielp/Projects/MCSS/step 3.1 prompt.md
+/home/gabrielp/Projects/MCSS/Images/Pasted image 20250629150828.png
+/home/gabrielp/Projects/MCSS/Images/Pasted image 20250629151005.png
+/home/gabrielp/Projects/MCSS/Images/Pasted image 20250629151608.png
+/home/gabrielp/Projects/MCSS/MCSS-documentation/mcss_architecture.png
+/home/gabrielp/Projects/MCSS/MCSS-documentation/mcss_taxonomy_tree.png
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Claude4thinking/test-blankproject-wimage/image.png
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/image.png
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-blankproject-wimage/mcss-login-page-reac/image.png
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/after asking to create a container on the right on mcss.png
+/home/gabrielp/Projects/MCSS/Phase 1/POC/Geminipro2.5/test-doneproject-tailwind/after asking to create a container on the right on tailwind.png
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/mcss_architecture.png
+/home/gabrielp/Projects/MCSS/codebase and documentation/MCSS documentation/mcss_taxonomy_tree.png
