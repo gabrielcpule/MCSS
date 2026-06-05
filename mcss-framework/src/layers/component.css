@@ -1,0 +1,32 @@
+/* ============================================
+ * Layer 3: Component — Aggregated c-* components
+ * Imports all atom and molecule CSS files.
+ * Override this file to include only needed components.
+ * ============================================ */
+
+/* Atoms */
+@import "../components/atoms/badge.css";
+@import "../components/atoms/label.css";
+@import "../components/atoms/divider.css";
+@import "../components/atoms/text.css";
+@import "../components/atoms/link.css";
+@import "../components/atoms/image.css";
+@import "../components/atoms/button.css";
+@import "../components/atoms/input.css";
+@import "../components/atoms/checkbox.css";
+@import "../components/atoms/toggle.css";
+@import "../components/atoms/avatar.css";
+@import "../components/atoms/icon.css";
+@import "../components/atoms/spinner.css";
+@import "../components/atoms/tooltip.css";
+@import "../components/atoms/progress.css";
+
+/* Molecules */
+@import "../components/molecules/card.css";
+@import "../components/molecules/search-form.css";
+@import "../components/molecules/login-form.css";
+@import "../components/molecules/alert.css";
+@import "../components/molecules/breadcrumb.css";
+@import "../components/molecules/pagination.css";
+@import "../components/molecules/dropdown.css";
+@import "../components/molecules/navigation.css";
