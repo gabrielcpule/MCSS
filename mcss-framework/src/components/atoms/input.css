@@ -1,0 +1,43 @@
+/* ============================================
+ * Component: Input
+ * Taxonomy: mcs:Atom
+ * Purpose: Text input fields for forms — text, email, password, number, search
+ * States: default, disabled, error, focused (via data-state)
+ * LLM Hint: Always pair with c-label. Use type attribute for HTML input types.
+ * ============================================ */
+
+.c-input {
+  display: block;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-sans);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--border-radius-md);
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.c-input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.c-input:focus {
+  border-color: var(--color-border-interactive);
+  box-shadow: 0 0 0 3px var(--color-brand-100);
+  outline: none;
+}
+
+.c-input[data-state="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--color-background-secondary);
+}
+
+.c-input[data-state="error"] {
+  border-color: var(--color-border-error);
+  box-shadow: 0 0 0 3px var(--color-red-100);
+}
