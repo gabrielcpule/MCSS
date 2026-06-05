@@ -1,0 +1,51 @@
+/* ============================================
+ * Component: Card
+ * Taxonomy: mcs:Molecule
+ * Purpose: Structured content container for related information
+ * Variants: elevated (via data-variant) for shadow emphasis
+ * Elements: __header, __body, __footer, __image
+ * LLM Hint: Composes text, button, image atoms. Use in l-grid for card grids.
+ * ============================================ */
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.c-card[data-variant="elevated"] {
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+.c-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.c-card__header {
+  padding: var(--space-5) var(--space-5) 0;
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.c-card__body {
+  padding: var(--space-5);
+  flex: 1;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-base);
+}
+
+.c-card__footer {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-border-default);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
