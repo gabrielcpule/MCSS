@@ -1,0 +1,140 @@
+{
+  "experiment": "FULL_BENCHMARK",
+  "timestamp": "2026-06-05T15:42:11",
+  "compendium": "minimal (607 words)",
+  "model": "claude-sonnet-4-6",
+  "weighted_accuracy": 0.8200000000000002,
+  "generation": {
+    "rate": 0.8,
+    "pass": 32,
+    "total": 40,
+    "failures": [
+      {
+        "id": "G-002-02",
+        "failures": [
+          "typeof"
+        ]
+      },
+      {
+        "id": "G-002-03",
+        "failures": [
+          "data-state",
+          "golden-rule"
+        ]
+      },
+      {
+        "id": "G-002-05",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "G-003-02",
+        "failures": [
+          "golden-rule"
+        ]
+      },
+      {
+        "id": "G-003-08",
+        "failures": [
+          "typeof",
+          "golden-rule"
+        ]
+      },
+      {
+        "id": "G-003-11",
+        "failures": [
+          "golden-rule"
+        ]
+      },
+      {
+        "id": "G-003-13",
+        "failures": [
+          "golden-rule"
+        ]
+      },
+      {
+        "id": "G-003-15",
+        "failures": [
+          "data-state"
+        ]
+      }
+    ]
+  },
+  "modification": {
+    "rate": 0.825,
+    "pass": 33,
+    "total": 40,
+    "failures": [
+      {
+        "id": "M-002-02",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "M-002-07",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "M-002-09",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "M-002-12",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "M-002-15",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "M-003-08",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "M-003-10",
+        "failures": [
+          "golden-rule"
+        ]
+      }
+    ]
+  },
+  "comprehension": {
+    "rate": 0.85,
+    "pass": 17,
+    "total": 20,
+    "failures": [
+      {
+        "id": "C-001-03",
+        "failures": [
+          "data-state"
+        ]
+      },
+      {
+        "id": "C-001-05",
+        "failures": [
+          "tokens"
+        ]
+      },
+      {
+        "id": "C-002-07",
+        "failures": [
+          "tokens"
+        ]
+      }
+    ]
+  },
+  "total_tokens": 191915,
+  "elapsed_seconds": 2137.516440629959
+}
