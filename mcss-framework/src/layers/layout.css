@@ -1,0 +1,114 @@
+/* ============================================
+ * Layer 2: Layout — Page Structure and Arrangement
+ * Prefix: l-*
+ * Scope: Controls positioning and spacing between components.
+ * Must NEVER style component internals.
+ * ============================================ */
+
+/* --- Container --- */
+.l-container {
+  width: 100%;
+  max-width: var(--container-max-wide);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+@media (min-width: 641px) {
+  .l-container {
+    padding-inline: var(--space-6);
+  }
+}
+
+/* --- Grid --- */
+.l-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.l-grid--2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.l-grid--3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.l-grid--4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 640px) {
+  .l-grid--2-col,
+  .l-grid--3-col,
+  .l-grid--4-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Stack (vertical spacing via owl selector) --- */
+.l-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-stack > * + * {
+  margin-block-start: var(--space-4);
+}
+
+.l-stack--tight > * + * {
+  margin-block-start: var(--space-2);
+}
+
+.l-stack--loose > * + * {
+  margin-block-start: var(--space-8);
+}
+
+/* --- Center (horizontally center content, max-width constraint) --- */
+.l-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.l-center > * {
+  max-width: var(--container-max-desktop);
+}
+
+/* --- Cluster (inline items that wrap) --- */
+.l-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* --- Switcher (switches between horizontal and vertical at threshold) --- */
+.l-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.l-switcher > * {
+  flex-basis: calc((var(--container-max-desktop) - 100%) * 999);
+  flex-grow: 1;
+}
+
+/* --- Sidebar (sidebar + main content layout) --- */
+.l-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.l-sidebar > :first-child {
+  flex-basis: var(--space-16);
+  flex-grow: 1;
+}
+
+.l-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+}
