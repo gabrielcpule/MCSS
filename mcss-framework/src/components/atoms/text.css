@@ -1,0 +1,34 @@
+/* ============================================
+ * Component: Text
+ * Taxonomy: mcs:Atom
+ * Purpose: Typographic text styles for body, caption, overline, and code
+ * States: body (default), caption, overline, code (via data-state)
+ * LLM Hint: Apply to <p>, <span>, or <div> elements for semantic text styling
+ * ============================================ */
+
+.c-text {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+}
+
+.c-text[data-state="caption"] {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+}
+
+.c-text[data-state="overline"] {
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.c-text[data-state="code"] {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-caption);
+  padding: 0.125em 0.375em;
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-sm);
+}

@@ -1,0 +1,32 @@
+/* ============================================
+ * Component: Image
+ * Taxonomy: mcs:Atom
+ * Purpose: Responsive images with optional fixed aspect ratios
+ * States: responsive (default), fixed-ratio 1:1, 4:3, 16:9 (via data-variant)
+ * LLM Hint: Always set alt text. Use data-variant for constrained aspect ratios
+ * ============================================ */
+
+.c-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+}
+
+.c-image[data-variant="1:1"] {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+}
+
+.c-image[data-variant="4:3"] {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.c-image[data-variant="16:9"] {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}

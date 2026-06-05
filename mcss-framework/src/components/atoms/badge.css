@@ -1,0 +1,41 @@
+/* ============================================
+ * Component: Badge
+ * Taxonomy: mcs:Atom
+ * Purpose: Displays status indicators or category labels
+ * States: success, warning, error, info, neutral (via data-state)
+ * LLM Hint: Use for inline status tags, counts, or category markers
+ * ============================================ */
+
+.c-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+}
+
+.c-badge[data-state="success"] {
+  background-color: var(--color-background-success);
+  color: var(--color-text-success);
+}
+
+.c-badge[data-state="warning"] {
+  background-color: var(--color-background-warning);
+  color: var(--color-text-warning);
+}
+
+.c-badge[data-state="error"] {
+  background-color: var(--color-background-error);
+  color: var(--color-text-error);
+}
+
+.c-badge[data-state="info"] {
+  background-color: var(--color-brand-100);
+  color: var(--color-brand-800);
+}
