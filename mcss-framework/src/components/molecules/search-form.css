@@ -1,0 +1,22 @@
+/* ============================================
+ * Component: Search Form
+ * Taxonomy: mcs:Molecule
+ * Purpose: Search input with submit button for content queries
+ * Elements: __input, __button
+ * Composes: c-input, c-button
+ * LLM Hint: Use role="search" on the form element for ARIA landmark.
+ * ============================================ */
+
+.c-search-form {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.c-search-form__input {
+  flex: 1;
+}
+
+.c-search-form__button {
+  flex-shrink: 0;
+}
