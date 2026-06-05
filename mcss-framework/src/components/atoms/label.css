@@ -11,5 +11,4 @@
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
-  margin-block-end: var(--space-2);
 }

@@ -1,0 +1,12 @@
+.c-button {
+  display: inline-flex;
+  padding: var(--space-3) var(--space-5);
+  color: var(--color-text-on-brand);
+  background-color: var(--color-background-brand);
+  border-radius: var(--border-radius-md);
+}
+
+.c-button[data-state="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

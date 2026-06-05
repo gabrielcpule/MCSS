@@ -52,7 +52,7 @@ class HtmlValidator {
       if (prop === 'typeof') continue; // already verified
 
       const hasProp = Object.entries(el.attribs || {}).some(([k, v]) =>
-        k === 'property' && v === prop
+        k === 'property' && v.split(/\s+/).includes(prop)
       ) || el.attribs?.[prop] !== undefined;
 
       if (!hasProp) {
