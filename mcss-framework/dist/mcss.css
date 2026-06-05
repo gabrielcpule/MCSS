@@ -1,0 +1,1827 @@
+/* ============================================
+ * MCSS Framework — Entry Point
+ * Assembles all 5 layers in cascade order.
+ * ============================================ */
+
+/* Design Tokens — must load first so layers can reference them */
+
+/* ============================================
+ * MCSS Design Tokens v1.0
+ * All visual values flow through these tokens.
+ * No magic numbers anywhere else in the framework.
+ * ============================================ */
+
+:root {
+  /* === Color: Neutral Scale === */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #e9ecef;
+  --color-gray-200: #dee2e6;
+  --color-gray-300: #ced4da;
+  --color-gray-400: #adb5bd;
+  --color-gray-500: #6c757d;
+  --color-gray-600: #495057;
+  --color-gray-700: #343a40;
+  --color-gray-800: #212529;
+  --color-gray-900: #1a1d20;
+
+  /* === Color: Brand Scale (Blue by default) === */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+
+  /* === Color: Status Scales === */
+  --color-green-100: #dcfce7;
+  --color-green-500: #22c55e;
+  --color-green-800: #166534;
+  --color-red-100: #fee2e2;
+  --color-red-500: #ef4444;
+  --color-red-800: #991b1b;
+  --color-yellow-100: #fef9c3;
+  --color-yellow-500: #eab308;
+  --color-yellow-800: #854d0e;
+
+  /* === Color: Semantic Aliases === */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-on-brand: var(--color-white);
+  --color-text-link: var(--color-brand-600);
+  --color-text-link-hover: var(--color-brand-700);
+  --color-text-error: var(--color-red-800);
+  --color-text-success: var(--color-green-800);
+  --color-text-warning: var(--color-yellow-800);
+
+  --color-background-primary: var(--color-white);
+  --color-background-secondary: var(--color-gray-50);
+  --color-background-brand: var(--color-brand-600);
+  --color-background-brand-hover: var(--color-brand-700);
+  --color-background-success: var(--color-green-100);
+  --color-background-error: var(--color-red-100);
+  --color-background-warning: var(--color-yellow-100);
+
+  --color-border-default: var(--color-gray-200);
+  --color-border-interactive: var(--color-brand-500);
+  --color-border-error: var(--color-red-500);
+  --color-border-success: var(--color-green-500);
+  --color-border-focus: var(--color-brand-400);
+
+  /* === Spacing === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* === Typography: Font Family === */
+  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  /* === Typography: Font Size === */
+  --font-size-display: 3rem;
+  --font-size-title: 2rem;
+  --font-size-heading: 1.5rem;
+  --font-size-subtitle: 1.25rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.875rem;
+  --font-size-overline: 0.75rem;
+
+  /* === Typography: Font Weight === */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* === Typography: Line Height === */
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-loose: 1.75;
+
+  /* === Border Radius === */
+  --border-radius-none: 0;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-full: 9999px;
+
+  /* === Shadow === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* === Responsive Breakpoints (min-width thresholds) === */
+  --breakpoint-mobile: 0;
+  --breakpoint-tablet: 641px;
+  --breakpoint-desktop: 769px;
+  --breakpoint-wide: 1025px;
+
+  /* === Z-Index Scale === */
+  --z-index-behind: -1;
+  --z-index-base: 0;
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-overlay: 300;
+  --z-index-modal: 400;
+  --z-index-toast: 500;
+
+  /* === Transitions === */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* === Container Widths === */
+  --container-max-mobile: 100%;
+  --container-max-tablet: 640px;
+  --container-max-desktop: 768px;
+  --container-max-wide: 1024px;
+}
+
+/* 5-Layer Architecture (low to high priority) */
+
+@layer global {
+
+/* ============================================
+ * Layer 1: Global — Foundation and Reset
+ * Scope: Element selectors only. No classes allowed.
+ * All values must use design tokens.
+ * ============================================ */
+
+/* --- Modern CSS Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  font-size: var(--font-size-body);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  background-color: #ffffff;
+  background-color: var(--color-background-primary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* --- Element Defaults --- */
+h1 {
+  font-size: 2rem;
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25;
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-size: var(--font-size-heading);
+  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.25;
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.25;
+  line-height: var(--line-height-tight);
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+}
+
+a {
+  color: #2563eb;
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: #1d4ed8;
+  color: var(--color-text-link-hover);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+ul, ol {
+  padding-inline-start: 1.5rem;
+  padding-inline-start: var(--space-6);
+}
+
+blockquote {
+  border-inline-start: 4px solid #dee2e6;
+  border-inline-start: 4px solid var(--color-border-default);
+  padding-inline-start: 1rem;
+  padding-inline-start: var(--space-4);
+  color: #495057;
+  color: var(--color-text-secondary);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-family: var(--font-family-mono);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+}
+
+pre {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-family: var(--font-family-mono);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  padding: 1rem;
+  padding: var(--space-4);
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--color-border-default);
+  margin: 1.5rem 0;
+  margin: var(--space-6) 0;
+}
+}
+
+@layer layout {
+
+/* ============================================
+ * Layer 2: Layout — Page Structure and Arrangement
+ * Prefix: l-*
+ * Scope: Controls positioning and spacing between components.
+ * Must NEVER style component internals.
+ * ============================================ */
+
+/* --- Container --- */
+.l-container {
+  width: 100%;
+  max-width: 1024px;
+  max-width: var(--container-max-wide);
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-inline: var(--space-4);
+}
+
+@media (min-width: 641px) {
+  .l-container {
+    padding-inline: 1.5rem;
+    padding-inline: var(--space-6);
+  }
+}
+
+/* --- Grid --- */
+.l-grid {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-gap: var(--space-6);
+  gap: 1.5rem;
+  gap: var(--space-6);
+}
+
+.l-grid--2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.l-grid--3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.l-grid--4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 640px) {
+  .l-grid--2-col,
+  .l-grid--3-col,
+  .l-grid--4-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Stack (vertical spacing via owl selector) --- */
+.l-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-stack > * + * {
+  margin-block-start: 1rem;
+  margin-block-start: var(--space-4);
+}
+
+.l-stack--tight > * + * {
+  margin-block-start: 0.5rem;
+  margin-block-start: var(--space-2);
+}
+
+.l-stack--loose > * + * {
+  margin-block-start: 2rem;
+  margin-block-start: var(--space-8);
+}
+
+/* --- Center (horizontally center content, max-width constraint) --- */
+.l-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.l-center > * {
+  max-width: 768px;
+  max-width: var(--container-max-desktop);
+}
+
+/* --- Cluster (inline items that wrap) --- */
+.l-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* --- Switcher (switches between horizontal and vertical at threshold) --- */
+.l-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  gap: var(--space-4);
+}
+
+.l-switcher > * {
+  flex-basis: calc((768px - 100%) * 999);
+  flex-basis: calc((var(--container-max-desktop) - 100%) * 999);
+  flex-grow: 1;
+}
+
+/* --- Sidebar (sidebar + main content layout) --- */
+.l-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  gap: var(--space-6);
+}
+
+.l-sidebar > :first-child {
+  flex-basis: 4rem;
+  flex-basis: var(--space-16);
+  flex-grow: 1;
+}
+
+.l-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Layer 3: Component — Aggregated c-* components
+ * Imports all atom and molecule CSS files.
+ * Override this file to include only needed components.
+ * ============================================ */
+
+/* Atoms */
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Badge
+ * Taxonomy: mcs:Atom
+ * Purpose: Displays status indicators or category labels
+ * States: success, warning, error, info, neutral (via data-state)
+ * LLM Hint: Use for inline status tags, counts, or category markers
+ * ============================================ */
+
+.c-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.75rem;
+  font-size: var(--font-size-overline);
+  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.25;
+  line-height: var(--line-height-tight);
+  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+  color: #495057;
+  color: var(--color-text-secondary);
+}
+
+.c-badge[data-state="success"] {
+  background-color: #dcfce7;
+  background-color: var(--color-background-success);
+  color: #166534;
+  color: var(--color-text-success);
+}
+
+.c-badge[data-state="warning"] {
+  background-color: #fef9c3;
+  background-color: var(--color-background-warning);
+  color: #854d0e;
+  color: var(--color-text-warning);
+}
+
+.c-badge[data-state="error"] {
+  background-color: #fee2e2;
+  background-color: var(--color-background-error);
+  color: #991b1b;
+  color: var(--color-text-error);
+}
+
+.c-badge[data-state="info"] {
+  background-color: #dbeafe;
+  background-color: var(--color-brand-100);
+  color: #1e40af;
+  color: var(--color-brand-800);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Label
+ * Taxonomy: mcs:Atom
+ * Purpose: Labels form inputs with accessible text
+ * States: default
+ * LLM Hint: Always pair with an input. Use for attribute to link.
+ * ============================================ */
+
+.c-label {
+  display: block;
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  margin-block-end: 0.5rem;
+  margin-block-end: var(--space-2);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Divider
+ * Taxonomy: mcs:Atom
+ * Purpose: Visual separator between content sections
+ * States: horizontal (default), vertical (via data-state)
+ * LLM Hint: Use to separate unrelated content groups
+ * ============================================ */
+
+.c-divider {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: #dee2e6;
+  background-color: var(--color-border-default);
+}
+
+.c-divider[data-state="vertical"] {
+  width: 1px;
+  height: auto;
+  align-self: stretch;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Text
+ * Taxonomy: mcs:Atom
+ * Purpose: Typographic text styles for body, caption, overline, and code
+ * States: body (default), caption, overline, code (via data-state)
+ * LLM Hint: Apply to <p>, <span>, or <div> elements for semantic text styling
+ * ============================================ */
+
+.c-text {
+  font-size: 1rem;
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  line-height: var(--line-height-base);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+}
+
+.c-text[data-state="caption"] {
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  color: #495057;
+  color: var(--color-text-secondary);
+}
+
+.c-text[data-state="overline"] {
+  font-size: 0.75rem;
+  font-size: var(--font-size-overline);
+  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #495057;
+  color: var(--color-text-secondary);
+}
+
+.c-text[data-state="code"] {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-family: var(--font-family-mono);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  padding: 0.125em 0.375em;
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+  border-radius: 0.25rem;
+  border-radius: var(--border-radius-sm);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Link
+ * Taxonomy: mcs:Atom
+ * Purpose: Navigational hyperlinks with semantic variants
+ * States: default, subtle, external (via data-variant)
+ * LLM Hint: Use for navigation. data-variant="external" adds external-link indicator
+ * ============================================ */
+
+.c-link {
+  color: #2563eb;
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+  transition: color 150ms ease;
+  transition: color var(--transition-fast);
+}
+
+.c-link:hover {
+  color: #1d4ed8;
+  color: var(--color-text-link-hover);
+}
+
+.c-link[data-variant="subtle"] {
+  color: #495057;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.c-link[data-variant="subtle"]:hover {
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+}
+
+.c-link[data-variant="external"]::after {
+  content: " \2197";
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Image
+ * Taxonomy: mcs:Atom
+ * Purpose: Responsive images with optional fixed aspect ratios
+ * States: responsive (default), fixed-ratio 1:1, 4:3, 16:9 (via data-variant)
+ * LLM Hint: Always set alt text. Use data-variant for constrained aspect ratios
+ * ============================================ */
+
+.c-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+}
+
+.c-image[data-variant="1:1"] {
+  aspect-ratio: 1 / 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.c-image[data-variant="4:3"] {
+  aspect-ratio: 4 / 3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.c-image[data-variant="16:9"] {
+  aspect-ratio: 16 / 9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Button
+ * Taxonomy: mcs:Atom
+ * Purpose: Triggers user actions — submissions, navigation, toggles
+ * States: default, loading, disabled, error (via data-state)
+ * Variants: primary, secondary, outline, ghost (via data-variant)
+ * LLM Hint: Use data-variant for visual hierarchy. data-state for behavioral state.
+ * ============================================ */
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  gap: var(--space-2);
+  padding: 0.75rem 1.25rem;
+  padding: var(--space-3) var(--space-5);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+  line-height: var(--line-height-tight);
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+  background-color: #2563eb;
+  background-color: var(--color-background-brand);
+  color: #ffffff;
+  color: var(--color-text-on-brand);
+  cursor: pointer;
+  transition: background-color 150ms ease,
+              border-color 150ms ease,
+              opacity 150ms ease;
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast),
+              opacity var(--transition-fast);
+  text-decoration: none;
+}
+
+.c-button:hover {
+  background-color: #1d4ed8;
+  background-color: var(--color-background-brand-hover);
+}
+
+.c-button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* --- Variants --- */
+.c-button[data-variant="secondary"] {
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  border-color: #dee2e6;
+  border-color: var(--color-border-default);
+}
+
+.c-button[data-variant="secondary"]:hover {
+  background-color: #e9ecef;
+  background-color: var(--color-gray-100);
+}
+
+.c-button[data-variant="outline"] {
+  background-color: transparent;
+  color: #2563eb;
+  color: var(--color-brand-600);
+  border-color: #3b82f6;
+  border-color: var(--color-border-interactive);
+}
+
+.c-button[data-variant="outline"]:hover {
+  background-color: #eff6ff;
+  background-color: var(--color-brand-50);
+}
+
+.c-button[data-variant="ghost"] {
+  background-color: transparent;
+  color: #495057;
+  color: var(--color-text-secondary);
+}
+
+.c-button[data-variant="ghost"]:hover {
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+}
+
+/* --- States --- */
+.c-button[data-state="loading"] {
+  opacity: 0.7;
+  cursor: wait;
+  pointer-events: none;
+}
+
+.c-button[data-state="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c-button[data-state="error"] {
+  background-color: #ef4444;
+  background-color: var(--color-red-500);
+  border-color: #ef4444;
+  border-color: var(--color-border-error);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Input
+ * Taxonomy: mcs:Atom
+ * Purpose: Text input fields for forms — text, email, password, number, search
+ * States: default, disabled, error, focused (via data-state)
+ * LLM Hint: Always pair with c-label. Use type attribute for HTML input types.
+ * ============================================ */
+
+.c-input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+  font-size: var(--font-size-body);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-family-sans);
+  line-height: 1.5;
+  line-height: var(--line-height-base);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  background-color: #ffffff;
+  background-color: var(--color-background-primary);
+  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-border-default);
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+  transition: border-color 150ms ease,
+              box-shadow 150ms ease;
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.c-input::-moz-placeholder {
+  color: #adb5bd;
+  color: var(--color-gray-400);
+}
+
+.c-input::placeholder {
+  color: #adb5bd;
+  color: var(--color-gray-400);
+}
+
+.c-input:focus {
+  border-color: #3b82f6;
+  border-color: var(--color-border-interactive);
+  box-shadow: 0 0 0 3px #dbeafe;
+  box-shadow: 0 0 0 3px var(--color-brand-100);
+  outline: none;
+}
+
+.c-input[data-state="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+}
+
+.c-input[data-state="error"] {
+  border-color: #ef4444;
+  border-color: var(--color-border-error);
+  box-shadow: 0 0 0 3px #fee2e2;
+  box-shadow: 0 0 0 3px var(--color-red-100);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Checkbox
+ * Taxonomy: mcs:Atom
+ * Purpose: Binary selection control for forms and lists
+ * States: checked, disabled, indeterminate (via data-state)
+ * LLM Hint: Use within c-label for accessible click targets. Supports indeterminate for parent selections.
+ * ============================================ */
+
+.c-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+}
+
+.c-checkbox__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 2px solid #dee2e6;
+  border: 2px solid var(--color-border-default);
+  border-radius: 0.25rem;
+  border-radius: var(--border-radius-sm);
+  background-color: #ffffff;
+  background-color: var(--color-background-primary);
+  cursor: pointer;
+  transition: background-color 150ms ease,
+              border-color 150ms ease;
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast);
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+}
+
+.c-checkbox__input::before {
+  content: "";
+  width: 0.625rem;
+  height: 0.625rem;
+  transform: scale(0);
+  transition: transform 150ms ease;
+  transition: transform var(--transition-fast);
+  background-color: #ffffff;
+  background-color: var(--color-text-on-brand);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.c-checkbox__input:checked {
+  background-color: #2563eb;
+  background-color: var(--color-background-brand);
+  border-color: #2563eb;
+  border-color: var(--color-background-brand);
+}
+
+.c-checkbox__input:checked::before {
+  transform: scale(1);
+}
+
+.c-checkbox__input:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.c-checkbox[data-state="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c-checkbox[data-state="disabled"] .c-checkbox__input {
+  cursor: not-allowed;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Toggle
+ * Taxonomy: mcs:Atom
+ * Purpose: Binary on/off switch control
+ * States: on, off (default), disabled (via data-state)
+ * LLM Hint: Use for settings toggles. More emphatic than checkbox — changes take immediate effect.
+ * ============================================ */
+
+.c-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+}
+
+.c-toggle__track {
+  width: 2.5rem;
+  height: 1.375rem;
+  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
+  background-color: #dee2e6;
+  background-color: var(--color-gray-200);
+  position: relative;
+  transition: background-color 150ms ease;
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.c-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
+  background-color: #ffffff;
+  background-color: var(--color-white);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+  transition: transform 150ms ease;
+  transition: transform var(--transition-fast);
+}
+
+.c-toggle[data-state="on"] .c-toggle__track {
+  background-color: #2563eb;
+  background-color: var(--color-background-brand);
+}
+
+.c-toggle[data-state="on"] .c-toggle__thumb {
+  transform: translateX(1.125rem);
+}
+
+.c-toggle:focus-visible .c-toggle__track {
+  outline: 2px solid #60a5fa;
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.c-toggle[data-state="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Avatar
+ * Taxonomy: mcs:Atom
+ * Purpose: Displays user profile image with fallback initials
+ * States: small, medium (default), large (via data-state)
+ * LLM Hint: Provide img src for photos. Fallback text becomes initials on load failure.
+ * ============================================ */
+
+.c-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
+  background-color: #dbeafe;
+  background-color: var(--color-brand-100);
+  color: #1d4ed8;
+  color: var(--color-brand-700);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.c-avatar__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-avatar__fallback {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c-avatar[data-state="small"] {
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: 0.75rem;
+  font-size: var(--font-size-overline);
+}
+
+.c-avatar[data-state="large"] {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.25rem;
+  font-size: var(--font-size-subtitle);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Icon
+ * Taxonomy: mcs:Atom
+ * Purpose: Displays SVG icons at consistent sizes
+ * States: small, medium (default), large (via data-state)
+ * LLM Hint: Place SVG inline. Use currentColor for icon fill to inherit text color.
+ * ============================================ */
+
+.c-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.c-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.c-icon[data-state="small"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.c-icon[data-state="large"] {
+  width: 2rem;
+  height: 2rem;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Spinner
+ * Taxonomy: mcs:Atom
+ * Purpose: Indicates loading or processing state
+ * States: small, medium (default), large (via data-state)
+ * LLM Hint: Use for async operations. Place inside loading buttons or as standalone indicator.
+ * ============================================ */
+
+.c-spinner {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #dee2e6;
+  border: 2px solid var(--color-border-default);
+  border-top-color: #2563eb;
+  border-top-color: var(--color-background-brand);
+  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
+  animation: mcss-spin 0.6s linear infinite;
+}
+
+.c-spinner[data-state="small"] {
+  width: 1rem;
+  height: 1rem;
+  border-width: 1.5px;
+}
+
+.c-spinner[data-state="large"] {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-width: 3px;
+}
+
+@keyframes mcss-spin {
+  to { transform: rotate(360deg); }
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Tooltip
+ * Taxonomy: mcs:Atom
+ * Purpose: Contextual hover tooltip for supplementary information
+ * Positions: top, bottom, left, right (via data-position)
+ * LLM Hint: Wrap trigger element in c-tooltip. Put tooltip text in c-tooltip__content.
+ * ============================================ */
+
+.c-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.c-tooltip__content {
+  position: absolute;
+  padding: 0.5rem 0.75rem;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+  font-size: var(--font-size-overline);
+  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  color: #ffffff;
+  color: var(--color-text-on-brand);
+  background-color: #212529;
+  background-color: var(--color-gray-800);
+  border-radius: 0.25rem;
+  border-radius: var(--border-radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 150ms ease;
+  transition: opacity var(--transition-fast);
+  z-index: 100;
+  z-index: var(--z-index-dropdown);
+}
+
+/* Position: top (default) */
+.c-tooltip__content {
+  bottom: calc(100% + 0.5rem);
+  bottom: calc(100% + var(--space-2));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.c-tooltip[data-position="bottom"] .c-tooltip__content {
+  bottom: auto;
+  top: calc(100% + 0.5rem);
+  top: calc(100% + var(--space-2));
+}
+
+.c-tooltip[data-position="left"] .c-tooltip__content {
+  bottom: auto;
+  left: auto;
+  right: calc(100% + 0.5rem);
+  right: calc(100% + var(--space-2));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.c-tooltip[data-position="right"] .c-tooltip__content {
+  left: calc(100% + 0.5rem);
+  left: calc(100% + var(--space-2));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.c-tooltip:hover .c-tooltip__content,
+.c-tooltip:focus-within .c-tooltip__content {
+  opacity: 1;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Progress
+ * Taxonomy: mcs:Atom
+ * Purpose: Visual indicator of completion or loading progress
+ * States: indeterminate, determinate with 0-100% (via data-state)
+ * LLM Hint: Set --mcss-progress-value CSS variable for determinate. Omit for indeterminate spinner bar.
+ * ============================================ */
+
+.c-progress {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+.c-progress__bar {
+  height: 100%;
+  background-color: #2563eb;
+  background-color: var(--color-background-brand);
+  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
+  transition: width 250ms ease;
+  transition: width var(--transition-base);
+  width: 0%;
+  width: var(--mcss-progress-value, 0%);
+}
+
+.c-progress[data-state="indeterminate"] .c-progress__bar {
+  width: 40%;
+  animation: mcss-progress-indeterminate 1.5s ease-in-out infinite;
+}
+
+@keyframes mcss-progress-indeterminate {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(250%); }
+}
+}
+
+@layer component {
+
+/* Molecules */
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Card
+ * Taxonomy: mcs:Molecule
+ * Purpose: Structured content container for related information
+ * Variants: elevated (via data-variant) for shadow emphasis
+ * Elements: __header, __body, __footer, __image
+ * LLM Hint: Composes text, button, image atoms. Use in l-grid for card grids.
+ * ============================================ */
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  background-color: var(--color-background-primary);
+  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-border-default);
+  border-radius: 1rem;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.c-card[data-variant="elevated"] {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--shadow-md);
+}
+
+.c-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-card__header {
+  padding: 1.25rem 1.25rem 0;
+  padding: var(--space-5) var(--space-5) 0;
+  font-size: 1.25rem;
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+}
+
+.c-card__body {
+  padding: 1.25rem;
+  padding: var(--space-5);
+  flex: 1;
+  font-size: 1rem;
+  font-size: var(--font-size-body);
+  color: #495057;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  line-height: var(--line-height-base);
+}
+
+.c-card__footer {
+  padding: 1rem 1.25rem;
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--color-border-default);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  gap: var(--space-3);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Search Form
+ * Taxonomy: mcs:Molecule
+ * Purpose: Search input with submit button for content queries
+ * Elements: __input, __button
+ * Composes: c-input, c-button
+ * LLM Hint: Use role="search" on the form element for ARIA landmark.
+ * ============================================ */
+
+.c-search-form {
+  display: flex;
+  gap: 0.5rem;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.c-search-form__input {
+  flex: 1;
+}
+
+.c-search-form__button {
+  flex-shrink: 0;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Login Form
+ * Taxonomy: mcs:Molecule
+ * Purpose: Email/password authentication form with recovery link
+ * Elements: __field, __submit, __recovery
+ * Composes: c-label, c-input, c-button, c-link
+ * LLM Hint: Fields use c-input with type="email" and type="password". Recovery link uses c-link.
+ * ============================================ */
+
+.c-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  gap: var(--space-5);
+  padding: 2rem;
+  padding: var(--space-8);
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.c-login-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  gap: var(--space-2);
+}
+
+.c-login-form__submit {
+  margin-block-start: 0.75rem;
+  margin-block-start: var(--space-3);
+}
+
+.c-login-form__recovery {
+  text-align: center;
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Alert
+ * Taxonomy: mcs:Molecule
+ * Purpose: Contextual feedback messages for user actions
+ * States: info (default), success, warning, error (via data-state)
+ * Elements: __icon, __content, __dismiss
+ * Composes: c-icon, c-text, c-button
+ * LLM Hint: Use for form feedback, status messages, system notifications. Dismissible variant uses __dismiss button.
+ * ============================================ */
+
+.c-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  gap: var(--space-3);
+  padding: 1rem;
+  padding: var(--space-4);
+  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-border-default);
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  line-height: 1.5;
+  line-height: var(--line-height-base);
+}
+
+.c-alert__icon {
+  flex-shrink: 0;
+}
+
+.c-alert__content {
+  flex: 1;
+}
+
+.c-alert__dismiss {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #495057;
+  color: var(--color-text-secondary);
+  padding: 0.25rem;
+  padding: var(--space-1);
+}
+
+.c-alert[data-state="success"] {
+  background-color: #dcfce7;
+  background-color: var(--color-background-success);
+  border-color: #22c55e;
+  border-color: var(--color-border-success);
+  color: #166534;
+  color: var(--color-text-success);
+}
+
+.c-alert[data-state="warning"] {
+  background-color: #fef9c3;
+  background-color: var(--color-background-warning);
+  border-color: #eab308;
+  border-color: var(--color-yellow-500);
+  color: #854d0e;
+  color: var(--color-text-warning);
+}
+
+.c-alert[data-state="error"] {
+  background-color: #fee2e2;
+  background-color: var(--color-background-error);
+  border-color: #ef4444;
+  border-color: var(--color-border-error);
+  color: #991b1b;
+  color: var(--color-text-error);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Breadcrumb
+ * Taxonomy: mcs:Molecule
+ * Purpose: Navigation trail showing current page location in hierarchy
+ * Elements: __list, __item, __separator
+ * Composes: c-link
+ * LLM Hint: Use aria-label="Breadcrumb" on nav. Last item is current page (aria-current="page").
+ * ============================================ */
+
+.c-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+}
+
+.c-breadcrumb__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  gap: var(--space-2);
+  color: #495057;
+  color: var(--color-text-secondary);
+}
+
+.c-breadcrumb__separator {
+  color: #ced4da;
+  color: var(--color-gray-300);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Pagination
+ * Taxonomy: mcs:Molecule
+ * Purpose: Page navigation for paginated content lists
+ * Elements: __list, __item, __ellipsis
+ * Composes: c-button
+ * LLM Hint: Use aria-label="Pagination" on nav. Active page gets data-state="active".
+ * ============================================ */
+
+.c-pagination__list {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  gap: var(--space-1);
+  list-style: none;
+  padding: 0;
+}
+
+.c-pagination__item {
+  min-width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color 150ms ease;
+  transition: background-color var(--transition-fast);
+}
+
+.c-pagination__item:hover {
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+}
+
+.c-pagination__item[data-state="active"] {
+  background-color: #2563eb;
+  background-color: var(--color-background-brand);
+  color: #ffffff;
+  color: var(--color-text-on-brand);
+}
+
+.c-pagination__item[data-state="disabled"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c-pagination__ellipsis {
+  min-width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #495057;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Dropdown
+ * Taxonomy: mcs:Molecule
+ * Purpose: Toggleable menu of actions or navigation links
+ * States: open, closed (default) (via data-state)
+ * Elements: __trigger, __menu, __item
+ * Composes: c-button, c-link
+ * LLM Hint: Toggle data-state="open" via JavaScript to show menu. Use aria-expanded on trigger.
+ * ============================================ */
+
+.c-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.c-dropdown__trigger {
+  cursor: pointer;
+}
+
+.c-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  top: calc(100% + var(--space-1));
+  left: 0;
+  min-width: 12rem;
+  background-color: #ffffff;
+  background-color: var(--color-background-primary);
+  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-border-default);
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
+  padding: 0.25rem;
+  padding: var(--space-1);
+  z-index: 100;
+  z-index: var(--z-index-dropdown);
+  display: none;
+}
+
+.c-dropdown[data-state="open"] > .c-dropdown__menu {
+  display: block;
+}
+
+.c-dropdown__item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.c-dropdown__item:hover {
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+}
+}
+
+@layer component {
+
+/* ============================================
+ * Component: Navigation
+ * Taxonomy: mcs:Molecule
+ * Purpose: Primary site navigation with horizontal or vertical layout
+ * Variants: horizontal (default), vertical (via data-variant)
+ * Elements: __list, __item, __link
+ * Composes: c-link
+ * LLM Hint: Use aria-label="Main" or "Primary" on nav. Active link gets data-state="active".
+ * ============================================ */
+
+.c-navigation__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 0.25rem;
+  gap: var(--space-1);
+}
+
+.c-navigation__link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+  font-size: var(--font-size-caption);
+  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  color: #495057;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
+  transition: color 150ms ease,
+              background-color 150ms ease;
+  transition: color var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+.c-navigation__link:hover {
+  color: #1a1d20;
+  color: var(--color-text-primary);
+  background-color: #f8f9fa;
+  background-color: var(--color-background-secondary);
+}
+
+.c-navigation__link[data-state="active"] {
+  color: #2563eb;
+  color: var(--color-background-brand);
+  background-color: #eff6ff;
+  background-color: var(--color-brand-50);
+}
+
+/* --- Vertical variant --- */
+.c-navigation[data-variant="vertical"] .c-navigation__list {
+  flex-direction: column;
+  gap: 0.25rem;
+  gap: var(--space-1);
+}
+
+.c-navigation[data-variant="vertical"] .c-navigation__link {
+  width: 100%;
+}
+}
+
+@layer utility {
+
+/* ============================================
+ * Layer 4: Utility — Single-Purpose Override Classes
+ * AUTO-GENERATED from token-schema.json — DO NOT EDIT
+ * Prefix: u-*
+ * Rules: One property per class, all use !important, immutable
+ * ============================================ */
+
+.u-text-left { text-align: left !important; }
+.u-text-center { text-align: center !important; }
+.u-text-right { text-align: right !important; }
+
+.u-font-regular { font-weight: 400 !important; font-weight: var(--font-weight-regular) !important; }
+.u-font-medium { font-weight: 500 !important; font-weight: var(--font-weight-medium) !important; }
+.u-font-semibold { font-weight: 600 !important; font-weight: var(--font-weight-semibold) !important; }
+.u-font-bold { font-weight: 700 !important; font-weight: var(--font-weight-bold) !important; }
+
+.u-hidden { display: hidden !important; }
+.u-block { display: block !important; }
+.u-inline { display: inline !important; }
+.u-inline-block { display: inline-block !important; }
+.u-flex { display: flex !important; }
+.u-inline-flex { display: inline-flex !important; }
+.u-grid { display: grid !important; }
+
+.u-margin-0 { margin: 0 !important; }
+
+.u-padding-0 { padding: 0 !important; }
+
+/* Visually hidden — accessible screen-reader-only content */
+.u-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
+}
+
+@layer exception {
+
+/* ============================================
+ * Layer 5: Exception — Temporary Overrides and Debugging
+ * Usage: Temporary fixes, third-party integration, debugging.
+ * Document every rule: explain why it's here and when to remove it.
+ * This file is intentionally empty. Add exception rules below.
+ * ============================================ */
+
+/* Example:
+ * .legacy-third-party-widget {
+ *   z-index: var(--z-index-overlay) !important;
+ *   Reason: Third-party chat widget requires z-index override.
+ *   Remove when: Widget updates to use standard z-index scale.
+ * }
+ */
+}

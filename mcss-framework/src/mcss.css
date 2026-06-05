@@ -1,0 +1,14 @@
+/* ============================================
+ * MCSS Framework — Entry Point
+ * Assembles all 5 layers in cascade order.
+ * ============================================ */
+
+/* Design Tokens — must load first so layers can reference them */
+@import "tokens/tokens.css";
+
+/* 5-Layer Architecture (low to high priority) */
+@import "layers/global.css"     layer(global);
+@import "layers/layout.css"     layer(layout);
+@import "layers/component.css"  layer(component);
+@import "layers/utility.css"    layer(utility);
+@import "layers/exception.css"  layer(exception);

@@ -5,8 +5,7 @@ module.exports = (ctx) => ({
       stage: 3,
       features: {
         'nesting-rules': true,
-        'custom-media-queries': true,
-        'cascade-layers': true
+        'custom-media-queries': true
       }
     }),
     ...(ctx.env === 'production'
