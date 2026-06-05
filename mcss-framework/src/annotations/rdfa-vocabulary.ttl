@@ -1,0 +1,49 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mcs:  <https://gabrielcpule.github.io/mcss-vocab/api/mcss/v1.rdf#> .
+
+# MCSS Component Class
+mcs:Component rdf:type rdfs:Class ;
+    rdfs:label "MCSS Component" ;
+    rdfs:comment "The base class for all MCSS framework components. Must be declared on every component element." .
+
+# Taxonomy Levels
+mcs:Atom rdf:type rdfs:Class ;
+    rdfs:label "Atom" ;
+    rdfs:comment "Smallest indivisible functional UI unit (button, input, badge, icon)." ;
+    rdfs:subClassOf mcs:Component .
+
+mcs:Molecule rdf:type rdfs:Class ;
+    rdfs:label "Molecule" ;
+    rdfs:comment "Group of atoms forming a simple reusable component (card, form, alert)." ;
+    rdfs:subClassOf mcs:Component .
+
+mcs:Organism rdf:type rdfs:Class ;
+    rdfs:label "Organism" ;
+    rdfs:comment "Complex component forming a distinct interface section (header, dashboard, data table)." ;
+    rdfs:subClassOf mcs:Component .
+
+# Properties
+mcs:taxonomyLevel rdf:type rdf:Property ;
+    rdfs:label "Taxonomy Level" ;
+    rdfs:comment "The Atomic Design classification of this component." ;
+    rdfs:domain mcs:Component ;
+    rdfs:range rdfs:Class .
+
+mcs:purpose rdf:type rdf:Property ;
+    rdfs:label "Purpose" ;
+    rdfs:comment "Functional description of the component's role in the interface." ;
+    rdfs:domain mcs:Component ;
+    rdfs:range rdfs:Literal .
+
+mcs:hasPart rdf:type rdf:Property ;
+    rdfs:label "Has Part" ;
+    rdfs:comment "Declares a structural relationship between a parent component and its child elements. Used in molecules and organisms." ;
+    rdfs:domain mcs:Component ;
+    rdfs:range mcs:Component .
+
+mcs:componentName rdf:type rdf:Property ;
+    rdfs:label "Component Name" ;
+    rdfs:comment "Optional human-readable name for the component instance." ;
+    rdfs:domain mcs:Component ;
+    rdfs:range rdfs:Literal .
