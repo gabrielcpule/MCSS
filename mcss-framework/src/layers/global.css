@@ -1,0 +1,131 @@
+/* ============================================
+ * Layer 1: Global — Foundation and Reset
+ * Scope: Element selectors only. No classes allowed.
+ * All values must use design tokens.
+ * ============================================ */
+
+/* --- Modern CSS Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* --- Element Defaults --- */
+h1 {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h4, h5, h6 {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: var(--font-weight-semibold);
+}
+
+th, td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+ul, ol {
+  padding-inline-start: var(--space-6);
+}
+
+blockquote {
+  border-inline-start: 4px solid var(--color-border-default);
+  padding-inline-start: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+code {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-caption);
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-caption);
+  padding: var(--space-4);
+  background-color: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border-default);
+  margin: var(--space-6) 0;
+}
