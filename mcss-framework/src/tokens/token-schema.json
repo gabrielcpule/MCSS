@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "MCSS token catalog — single source of truth for validation and utility generation",
+  "tokens": {
+    "color": {
+      "white": {},
+      "black": {},
+      "gray": { "scale": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900] },
+      "brand": { "scale": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900] },
+      "green": { "scale": [100, 500, 800] },
+      "red": { "scale": [100, 500, 800] },
+      "yellow": { "scale": [100, 500, 800] }
+    },
+    "text": {
+      "primary": {}, "secondary": {}, "on-brand": {}, "link": {}, "link-hover": {},
+      "error": {}, "success": {}, "warning": {}
+    },
+    "background": {
+      "primary": {}, "secondary": {}, "brand": {}, "brand-hover": {},
+      "success": {}, "error": {}, "warning": {}
+    },
+    "border": {
+      "default": {}, "interactive": {}, "error": {}, "success": {}, "focus": {}
+    }
+  },
+  "categories": {
+    "space": { "prefix": "space", "scale": [1, 2, 3, 4, 5, 6, 8, 10, 12, 16] },
+    "font-family": { "prefix": "font-family", "values": ["sans", "mono"] },
+    "font-size": { "prefix": "font-size", "values": ["display", "title", "heading", "subtitle", "body", "caption", "overline"] },
+    "font-weight": { "prefix": "font-weight", "values": ["regular", "medium", "semibold", "bold"] },
+    "line-height": { "prefix": "line-height", "values": ["tight", "base", "loose"] },
+    "border-radius": { "prefix": "border-radius", "values": ["none", "sm", "md", "lg", "full"] },
+    "shadow": { "prefix": "shadow", "values": ["sm", "md", "lg"] },
+    "breakpoint": { "prefix": "breakpoint", "values": ["mobile", "tablet", "desktop", "wide"] },
+    "z-index": { "prefix": "z-index", "values": ["behind", "base", "dropdown", "sticky", "overlay", "modal", "toast"] },
+    "transition": { "prefix": "transition", "values": ["fast", "base", "slow"] },
+    "container-max": { "prefix": "container-max", "values": ["mobile", "tablet", "desktop", "wide"] }
+  },
+  "utilities": {
+    "text-align": { "values": ["left", "center", "right"], "properties": ["text-align"] },
+    "font-weight": { "values": ["regular", "medium", "semibold", "bold"], "properties": ["font-weight"] },
+    "display": { "values": ["hidden", "block", "inline", "inline-block", "flex", "inline-flex", "grid"], "properties": ["display"] },
+    "margin": { "values": ["0"], "properties": ["margin"] },
+    "padding": { "values": ["0"], "properties": ["padding"] },
+    "visually-hidden": { "values": ["hidden"], "properties": ["position", "width", "height", "overflow", "clip"] }
+  },
+  "layers": {
+    "order": ["global", "layout", "component", "utility", "exception"],
+    "prefixes": {
+      "layout": "l-",
+      "component": "c-",
+      "utility": "u-"
+    },
+    "rules": {
+      "global": { "noClassSelectors": true, "tokensRequired": true },
+      "layout": { "prefix": "l-", "noComponentInternals": true },
+      "component": { "prefix": "c-", "noExternalMargin": true, "stateViaDataState": true },
+      "utility": { "prefix": "u-", "singleProperty": true, "importantRequired": true },
+      "exception": { "documentationRequired": true }
+    }
+  },
+  "rdfa": {
+    "vocabulary": "https://gabrielcpule.github.io/mcss-vocab/api/mcss/v1.rdf",
+    "requiredProperties": ["typeof", "mcs:taxonomyLevel", "mcs:purpose"],
+    "validTaxonomyLevels": ["mcs:Atom", "mcs:Molecule", "mcs:Organism"],
+    "behavioralAttributes": [
+      "data-mcs-interaction-type",
+      "data-mcs-consequence",
+      "data-mcs-triggers-event",
+      "data-mcs-receives-event"
+    ],
+    "allowedValues": {
+      "data-mcs-interaction-type": ["click", "hover", "submission", "toggle", "drag", "focus", "input", "visual-indicator"]
+    }
+  }
+}
