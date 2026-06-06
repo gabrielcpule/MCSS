@@ -1,0 +1,62 @@
+{
+  "experiment": "TRANSLATION",
+  "timestamp": "2026-06-05T20:19:57",
+  "pass_rate": 0.8,
+  "total": 5,
+  "passed": 4,
+  "total_tokens": 12384,
+  "results": [
+    {
+      "id": "T-001",
+      "name": "Login Form",
+      "source": "Tailwind CSS",
+      "passed": false,
+      "failures": [
+        "no-tailwind-remnants"
+      ],
+      "input_tokens": 631,
+      "output_tokens": 2547,
+      "output": "# MCSS Login Form Component\n\n## HTML Structure\n\n```html\n<!-- Login Form Molecule -->\n<form \n  class=\"c-login-form\" \n  typeof=\"mcs:Component\" \n  property=\"mcs:taxonomyLevel\" content=\"mcs:Molecule\"\n  property=\"mcs:purpose\" content=\"User authentication form with email and password fields\"\n  data-mcs-interaction-type=\"submission\"\n  data-mcs-consequence=\"Authenticates user credentials\"\n  data-mcs-triggers-event=\"login:submit\"\n  data-state=\"default\"\n>\n  <!-- Email Input Atom -->\n  <div class=\"c-login-"
+    },
+    {
+      "id": "T-002",
+      "name": "Card Component",
+      "source": "Tailwind CSS",
+      "passed": true,
+      "failures": [],
+      "input_tokens": 390,
+      "output_tokens": 2052,
+      "output": "# MCSS Card Component Translation\n\n## HTML Structure\n\n```html\n<!-- Card Molecule -->\n<div \n  class=\"c-card\" \n  typeof=\"mcs:Component\" \n  property=\"mcs:taxonomyLevel\" content=\"mcs:Molecule\"\n  property=\"mcs:purpose\" content=\"Container for grouped content with header, body, and footer sections\"\n  data-state=\"default\"\n>\n  <!-- Card Header -->\n  <div \n    class=\"c-card__header\" \n    typeof=\"mcs:Component\" \n    property=\"mcs:taxonomyLevel\" content=\"mcs:Atom\"\n    property=\"mcs:purpose\" content=\"Card he"
+    },
+    {
+      "id": "T-003",
+      "name": "Navigation Bar",
+      "source": "Tailwind CSS",
+      "passed": true,
+      "failures": [],
+      "input_tokens": 459,
+      "output_tokens": 1588,
+      "output": "Here's the MCSS translation of the Tailwind CSS Navigation Bar:\n\n## MCSS Navigation Component\n\n### HTML Structure\n\n```html\n<nav class=\"c-navigation\" \n     typeof=\"mcs:Component\" \n     property=\"mcs:taxonomyLevel\" content=\"mcs:Molecule\"\n     property=\"mcs:purpose\" content=\"Primary site navigation with responsive layout\"\n     aria-label=\"Main Navigation\"\n     data-state=\"default\">\n  \n  <div class=\"l-container\">\n    <div class=\"c-navigation__inner\">\n      \n      <!-- Logo Section -->\n      <div cla"
+    },
+    {
+      "id": "T-004",
+      "name": "Data Table",
+      "source": "Tailwind CSS",
+      "passed": true,
+      "failures": [],
+      "input_tokens": 592,
+      "output_tokens": 1639,
+      "output": "# MCSS Data Table Component\n\n## HTML\n\n```html\n<div class=\"c-data-table\" typeof=\"mcs:Component\" property=\"mcs:taxonomyLevel\" content=\"mcs:Molecule\" property=\"mcs:purpose\" content=\"Display tabular data with sortable columns and row actions\">\n  <table class=\"c-data-table__table\">\n    <thead class=\"c-data-table__header\">\n      <tr class=\"c-data-table__row\">\n        <th scope=\"col\" class=\"c-data-table__header-cell c-data-table__header-cell--sortable\" data-state=\"default\" property=\"mcs:hasPart\" resour"
+    },
+    {
+      "id": "T-005",
+      "name": "Alert Message",
+      "source": "Tailwind CSS",
+      "passed": true,
+      "failures": [],
+      "input_tokens": 684,
+      "output_tokens": 1802,
+      "output": "Here's the MCSS translation of the Tailwind CSS Alert Message component:\n\n## MCSS Alert Component\n\n### HTML Structure\n\n```html\n<div \n  class=\"c-alert c-alert--success\" \n  typeof=\"mcs:Component\" \n  property=\"mcs:taxonomyLevel\" content=\"mcs:Molecule\"\n  property=\"mcs:purpose\" content=\"Displays success notification with dismiss action\"\n  data-state=\"default\"\n  data-mcs-interaction-type=\"dismiss\"\n  data-mcs-consequence=\"Removes alert from view\"\n  data-mcs-triggers-event=\"alert:dismissed\"\n>\n  <div cla"
+    }
+  ]
+}

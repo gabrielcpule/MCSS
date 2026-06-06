@@ -1,0 +1,332 @@
+{
+  "experiment": "CROSS_FRAMEWORK",
+  "timestamp": "2026-06-05T21:34:14",
+  "mcss": {
+    "name": "MCSS",
+    "gen": 0.8,
+    "mod": 0.825,
+    "comp": 0.85,
+    "weighted": 0.8200000000000002,
+    "total_tokens": 191915
+  },
+  "tailwind": {
+    "name": "Tailwind CSS",
+    "gen": 0.55,
+    "mod": 0.55,
+    "comp": 0.5,
+    "weighted": 0.54,
+    "total_tokens": 185470,
+    "results": {
+      "gen": [
+        22,
+        40,
+        [
+          {
+            "id": "G-001-01",
+            "failures": [
+              "semantic-html",
+              "state-variants"
+            ]
+          },
+          {
+            "id": "G-001-02",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-001-03",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-001-04",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-001-06",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-001-07",
+            "failures": [
+              "semantic-html",
+              "responsive",
+              "state-variants"
+            ]
+          },
+          {
+            "id": "G-001-08",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-001-09",
+            "failures": [
+              "semantic-html",
+              "responsive",
+              "state-variants"
+            ]
+          },
+          {
+            "id": "G-001-10",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-002-02",
+            "failures": [
+              "responsive",
+              "accessibility"
+            ]
+          },
+          {
+            "id": "G-002-03",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-002-04",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-002-08",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-002-09",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-002-12",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "G-002-14",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-003-13",
+            "failures": [
+              "responsive"
+            ]
+          },
+          {
+            "id": "G-003-14",
+            "failures": [
+              "accessibility"
+            ]
+          }
+        ]
+      ],
+      "mod": [
+        22,
+        40,
+        [
+          {
+            "id": "M-001-03",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "M-001-04",
+            "failures": [
+              "semantic-html",
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-001-06",
+            "failures": [
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-001-15",
+            "failures": [
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-01",
+            "failures": [
+              "utility-classes",
+              "no-raw-css",
+              "semantic-html",
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-02",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "M-002-03",
+            "failures": [
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-04",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "M-002-05",
+            "failures": [
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-06",
+            "failures": [
+              "semantic-html",
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-07",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "M-002-08",
+            "failures": [
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-09",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "M-002-10",
+            "failures": [
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-11",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "M-002-14",
+            "failures": [
+              "semantic-html",
+              "accessibility"
+            ]
+          },
+          {
+            "id": "M-002-15",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "M-003-02",
+            "failures": [
+              "semantic-html"
+            ]
+          }
+        ]
+      ],
+      "comp": [
+        10,
+        20,
+        [
+          {
+            "id": "C-001-03",
+            "failures": [
+              "utility-classes",
+              "accessibility"
+            ]
+          },
+          {
+            "id": "C-001-04",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "C-001-05",
+            "failures": [
+              "utility-classes",
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "C-001-08",
+            "failures": [
+              "semantic-html",
+              "accessibility"
+            ]
+          },
+          {
+            "id": "C-001-10",
+            "failures": [
+              "accessibility"
+            ]
+          },
+          {
+            "id": "C-002-02",
+            "failures": [
+              "utility-classes",
+              "no-raw-css"
+            ]
+          },
+          {
+            "id": "C-002-05",
+            "failures": [
+              "no-raw-css"
+            ]
+          },
+          {
+            "id": "C-002-06",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "C-002-08",
+            "failures": [
+              "semantic-html"
+            ]
+          },
+          {
+            "id": "C-002-09",
+            "failures": [
+              "semantic-html"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}
