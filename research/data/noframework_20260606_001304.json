@@ -1,0 +1,18 @@
+{
+  "experiment": "H7_NO_FRAMEWORK",
+  "timestamp": "2026-06-06T00:13:04",
+  "mcss_compliance": 0.0,
+  "tw_compliance": 0.0,
+  "results": {
+    "mcss": {
+      "pass": 0,
+      "total": 20,
+      "tokens": 44345
+    },
+    "tw": {
+      "pass": 0,
+      "total": 20,
+      "tokens": 44345
+    }
+  }
+}

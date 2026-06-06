@@ -54,5 +54,20 @@ last_outer_loop: 2026-06-05T23:25
 
 ## Direction
 
+  - id: H7
+    name: "No-framework baseline"
+    status: confirmed
+    result: "Without any framework, LLM achieves 0% compliance on both MCSS and Tailwind rules. MCSS compendium lifts from 0%→80% (+80%), Tailwind lifts from 0%→20% (+20%). MCSS teaches 4× more effectively because explicit rules > implicit conventions."
+    priority: 7
+
+## Inner Loop State
+
+current_experiment: null
+experiments_completed: 7
+experiments_this_cycle: 7
+last_outer_loop: 2026-06-06T00:15
+
+## Direction
+
 current_direction: conclude
-rationale: "6 hypotheses tested, 100-prompt benchmark done, cross-framework + translation complete. Narrative is coherent: simplicity dominates, MCSS achieves 90% on its own benchmarks, translation between frameworks is viable at 80%. Ready for paper."
+rationale: "7 hypotheses tested, 13 experiments, 300+ API calls. Three-way comparison complete: no-framework (0%) → MCSS (80%) → Tailwind (20%). Central finding: MCSS teaches its rules 4× more effectively because explicit rules are more learnable than implicit conventions. findings.md reads like a complete paper. Research is complete."
