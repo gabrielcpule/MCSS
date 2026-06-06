@@ -1,0 +1,1485 @@
+{
+  "experiment": "FAIR_COMPARISON",
+  "timestamp": "2026-06-05T23:46:22",
+  "cross_framework": {
+    "MCSS": {
+      "pass": 16,
+      "total": 20,
+      "tokens": 32020,
+      "scores": [
+        {
+          "id": "P01",
+          "pass": false,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              false
+            ]
+          ]
+        },
+        {
+          "id": "P02",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P03",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P04",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P05",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P06",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P07",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P08",
+          "pass": false,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              false
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P09",
+          "pass": false,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              false
+            ]
+          ]
+        },
+        {
+          "id": "P10",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P11",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P12",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P13",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P14",
+          "pass": false,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              false
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P15",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P16",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P17",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P18",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P19",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P20",
+          "pass": true,
+          "checks": [
+            [
+              "c-classes",
+              true
+            ],
+            [
+              "var-tokens",
+              true
+            ],
+            [
+              "data-state",
+              true
+            ],
+            [
+              "typeof",
+              true
+            ],
+            [
+              "taxonomy",
+              true
+            ],
+            [
+              "golden-rule",
+              true
+            ],
+            [
+              "includes-css",
+              true
+            ],
+            [
+              "bem-elements",
+              true
+            ]
+          ]
+        }
+      ]
+    },
+    "Tailwind": {
+      "pass": 4,
+      "total": 20,
+      "tokens": 29202,
+      "scores": [
+        {
+          "id": "P01",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              false
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P02",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P03",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              false
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P04",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P05",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P06",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P07",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              false
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              false
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P08",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P09",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              false
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P10",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P11",
+          "pass": true,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P12",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              false
+            ],
+            [
+              "state-variants",
+              false
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              false
+            ]
+          ]
+        },
+        {
+          "id": "P13",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P14",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              false
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P15",
+          "pass": true,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P16",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              false
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P17",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              false
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P18",
+          "pass": false,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              false
+            ],
+            [
+              "state-variants",
+              false
+            ],
+            [
+              "responsive",
+              false
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P19",
+          "pass": true,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        },
+        {
+          "id": "P20",
+          "pass": true,
+          "checks": [
+            [
+              "utility-classes",
+              true
+            ],
+            [
+              "semantic-html",
+              true
+            ],
+            [
+              "state-variants",
+              true
+            ],
+            [
+              "responsive",
+              true
+            ],
+            [
+              "accessibility",
+              true
+            ],
+            [
+              "utility-first",
+              true
+            ],
+            [
+              "no-inline-styles",
+              true
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "reverse_translation": {
+    "rate": 1.0,
+    "passed": 3,
+    "total": 3,
+    "results": [
+      {
+        "id": "R-001",
+        "name": "Login Form",
+        "passed": true,
+        "fails": []
+      },
+      {
+        "id": "R-002",
+        "name": "Card",
+        "passed": true,
+        "fails": []
+      },
+      {
+        "id": "R-003",
+        "name": "Alert",
+        "passed": true,
+        "fails": []
+      }
+    ]
+  }
+}
