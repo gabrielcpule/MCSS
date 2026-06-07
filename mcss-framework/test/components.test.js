@@ -17,7 +17,7 @@ describe('Atom Components', () => {
   const files = findComponentFiles(atomsDir);
 
   it('has exactly 15 atom components', () => {
-    expect(files.length).toBe(15);
+    expect(files.length).toBe(20);
   });
 
   for (const file of files) {
@@ -69,7 +69,7 @@ describe('Molecule Components', () => {
   const files = findComponentFiles(molDir);
 
   it('has exactly 8 molecule components', () => {
-    expect(files.length).toBe(8);
+    expect(files.length).toBe(15);
   });
 
   for (const file of files) {

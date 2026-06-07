@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P11] MCSS — Build a toggle switch component for settings on/off.</title>
+<link rel="stylesheet" href="https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css">
+<link rel="stylesheet" href="P11_mcss.css">
+<style>
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 2rem;
+  }
+  .meta {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .meta h1 { font-size: 1rem; margin: 0 0 0.25rem; }
+  .meta p { color: #64748b; font-size: 0.8rem; margin: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+    margin-left: 0.5rem;
+  }
+  .output { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="meta">
+  <h1>P11: Build a toggle switch component for settings on/of <span class="badge">MCSS</span></h1>
+  <p>1250 tokens · loaded from https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css</p>
+</div>
+<div class="output">
+<!-- Toggle Switch Component -->
+<div 
+  class="c-toggle"
+  typeof="mcs:Component"
+  property="mcs:taxonomyLevel" content="mcs:Atom"
+  property="mcs:purpose" content="A binary on/off toggle switch for settings"
+  data-mcs-interaction-type="toggle"
+  data-mcs-consequence="Toggles a setting between on and off states"
+  data-mcs-triggers-event="toggle:change"
+  data-state="off"
+  role="switch"
+  aria-checked="false"
+  tabindex="0"
+>
+  <div class="c-toggle__track">
+    <div class="c-toggle__thumb"></div>
+  </div>
+  <label class="c-toggle__label">Enable notifications</label>
+</div>
+
+</div>
+</body>
+</html>

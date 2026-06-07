@@ -1,20 +1,8 @@
 /* ============================================
- * Component: Divider
- * Taxonomy: mcs:Atom
- * Purpose: Visual separator between content sections
- * States: horizontal (default), vertical (via data-state)
- * LLM Hint: Use to separate unrelated content groups
+ * Component: Divider | Taxonomy: mcs:Atom
+ * Purpose: Visual separator
+ * States: horizontal (default), vertical (data-state)
  * ============================================ */
 
-.c-divider {
-  border: none;
-  width: 100%;
-  height: 1px;
-  background-color: var(--color-border-default);
-}
-
-.c-divider[data-state="vertical"] {
-  width: 1px;
-  height: auto;
-  align-self: stretch;
-}
+.c-divider { border: none; width: 100%; height: 1px; background-color: var(--color-border-default); }
+.c-divider[data-state="vertical"] { width: 1px; height: auto; align-self: stretch; }

@@ -1,0 +1,13 @@
+/* ============================================
+ * Component: File Upload | Taxonomy: mcs:Molecule
+ * Purpose: Drag-and-drop file upload area
+ * States: default, dragover, uploading, complete, error (data-state)
+ * Elements: __zone, __icon, __text, __list
+ * ============================================ */
+
+.c-file-upload__zone { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-3); padding: var(--space-10); border: 2px dashed var(--color-border-default); border-radius: var(--border-radius-lg); background-color: var(--color-background-secondary); cursor: pointer; transition: border-color var(--transition-fast), background-color var(--transition-fast); text-align: center; }
+.c-file-upload__zone:hover { border-color: var(--color-border-interactive); background-color: var(--color-brand-50); }
+.c-file-upload[data-state="dragover"] .c-file-upload__zone { border-color: var(--color-background-brand); background-color: var(--color-brand-50); }
+.c-file-upload__icon { color: var(--color-gray-400); }
+.c-file-upload__text { font-size: var(--font-size-caption); color: var(--color-text-secondary); }
+.c-file-upload__list { margin-top: var(--space-4); }

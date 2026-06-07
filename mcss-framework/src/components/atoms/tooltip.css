@@ -1,58 +1,12 @@
 /* ============================================
- * Component: Tooltip
- * Taxonomy: mcs:Atom
- * Purpose: Contextual hover tooltip for supplementary information
- * Positions: top, bottom, left, right (via data-position)
- * LLM Hint: Wrap trigger element in c-tooltip. Put tooltip text in c-tooltip__content.
+ * Component: Tooltip | Taxonomy: mcs:Atom
+ * Purpose: Contextual hover tooltip
+ * Positions: top (default), bottom, left, right (data-position)
  * ============================================ */
 
-.c-tooltip {
-  position: relative;
-  display: inline-flex;
-}
-
-.c-tooltip__content {
-  position: absolute;
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--font-size-overline);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-on-brand);
-  background-color: var(--color-gray-800);
-  border-radius: var(--border-radius-sm);
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-  z-index: var(--z-index-dropdown);
-}
-
-/* Position: top (default) */
-.c-tooltip__content {
-  bottom: calc(100% + var(--space-2));
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.c-tooltip[data-position="bottom"] .c-tooltip__content {
-  bottom: auto;
-  top: calc(100% + var(--space-2));
-}
-
-.c-tooltip[data-position="left"] .c-tooltip__content {
-  bottom: auto;
-  left: auto;
-  right: calc(100% + var(--space-2));
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.c-tooltip[data-position="right"] .c-tooltip__content {
-  left: calc(100% + var(--space-2));
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.c-tooltip:hover .c-tooltip__content,
-.c-tooltip:focus-within .c-tooltip__content {
-  opacity: 1;
-}
+.c-tooltip { position: relative; display: inline-flex; }
+.c-tooltip__content { position: absolute; bottom: calc(100% + var(--space-2)); left: 50%; transform: translateX(-50%); padding: var(--space-2) var(--space-3); font-size: var(--font-size-overline); font-weight: var(--font-weight-medium); color: var(--color-text-on-brand); background-color: var(--color-gray-800); border-radius: var(--border-radius-sm); white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity var(--transition-fast); z-index: var(--z-index-dropdown); }
+.c-tooltip[data-position="bottom"] .c-tooltip__content { bottom: auto; top: calc(100% + var(--space-2)); }
+.c-tooltip[data-position="left"] .c-tooltip__content { left: auto; right: calc(100% + var(--space-2)); top: 50%; transform: translateY(-50%); }
+.c-tooltip[data-position="right"] .c-tooltip__content { left: calc(100% + var(--space-2)); top: 50%; transform: translateY(-50%); }
+.c-tooltip:hover .c-tooltip__content, .c-tooltip:focus-within .c-tooltip__content { opacity: 1; }

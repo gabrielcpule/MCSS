@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P02] MCSS — Create a card component with a title, description text, and </title>
+<link rel="stylesheet" href="https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css">
+<link rel="stylesheet" href="P02_mcss.css">
+<style>
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 2rem;
+  }
+  .meta {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .meta h1 { font-size: 1rem; margin: 0 0 0.25rem; }
+  .meta p { color: #64748b; font-size: 0.8rem; margin: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+    margin-left: 0.5rem;
+  }
+  .output { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="meta">
+  <h1>P02: Create a card component with a title, description  <span class="badge">MCSS</span></h1>
+  <p>1075 tokens · loaded from https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css</p>
+</div>
+<div class="output">
+<div class="c-card" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Molecule" property="mcs:purpose" content="A reusable card with title, description, and action button">
+  <div class="c-card__header" property="mcs:hasPart" resource="#card-title">
+    <h3 class="c-card__title" id="card-title">Card Title</h3>
+  </div>
+  <div class="c-card__body">
+    <p class="c-card__description">This is a description text for the card component. It provides context and information about the card's content.</p>
+  </div>
+  <div class="c-card__footer">
+    <button class="c-button" data-state="default" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Atom" property="mcs:purpose" content="Action button within card">
+      <span class="c-button__label">Learn More</span>
+    </button>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* ============================================
+ * Component: Radio | Taxonomy: mcs:Atom
+ * Purpose: Single-select radio button
+ * States: checked, disabled (data-state)
+ * ============================================ */
+
+.c-radio { display: inline-flex; align-items: center; gap: var(--space-2); cursor: pointer; font-size: var(--font-size-caption); color: var(--color-text-primary); }
+.c-radio__input { appearance: none; width: 1.125rem; height: 1.125rem; border: 2px solid var(--color-border-default); border-radius: var(--border-radius-full); background-color: var(--color-background-primary); cursor: pointer; transition: border-color var(--transition-fast); flex-shrink: 0; display: grid; place-content: center; }
+.c-radio__input::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: var(--border-radius-full); transform: scale(0); transition: transform var(--transition-fast); background-color: var(--color-background-brand); }
+.c-radio__input:checked { border-color: var(--color-background-brand); }
+.c-radio__input:checked::before { transform: scale(1); }
+.c-radio[data-state="disabled"] { opacity: 0.5; cursor: not-allowed; }

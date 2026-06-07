@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P07] MCSS — Build a data table with Name, Title, and Status columns. Inc</title>
+<link rel="stylesheet" href="https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css">
+<link rel="stylesheet" href="P07_mcss.css">
+<style>
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 2rem;
+  }
+  .meta {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .meta h1 { font-size: 1rem; margin: 0 0 0.25rem; }
+  .meta p { color: #64748b; font-size: 0.8rem; margin: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+    margin-left: 0.5rem;
+  }
+  .output { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="meta">
+  <h1>P07: Build a data table with Name, Title, and Status co <span class="badge">MCSS</span></h1>
+  <p>981 tokens · loaded from https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css</p>
+</div>
+<div class="output">
+<!-- Data Table Component -->
+<div typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Molecule" property="mcs:purpose" content="Displays tabular data with header and data rows">
+  <table class="c-table" data-state="default">
+    <thead class="c-table__header">
+      <tr class="c-table__row">
+        <th class="c-table__cell c-table__cell--header" scope="col">Name</th>
+        <th class="c-table__cell c-table__cell--header" scope="col">Title</th>
+        <th class="c-table__cell c-table__cell--header" scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody class="c-table__body">
+      <tr class="c-table__row">
+        <td class="c-table__cell">Jane Doe</td>
+        <td class="c-table__cell">Software Engineer</td>
+        <td class="c-table__cell">
+          <span class="c-badge c-badge--success" data-state="default">Active</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+</body>
+</html>

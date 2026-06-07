@@ -1,32 +1,10 @@
 /* ============================================
- * Component: Login Form
- * Taxonomy: mcs:Molecule
- * Purpose: Email/password authentication form with recovery link
+ * Component: Login Form | Taxonomy: mcs:Molecule
+ * Purpose: Email/password authentication form
  * Elements: __field, __submit, __recovery
- * Composes: c-label, c-input, c-button, c-link
- * LLM Hint: Fields use c-input with type="email" and type="password". Recovery link uses c-link.
  * ============================================ */
 
-.c-login-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-  padding: var(--space-8);
-  max-width: 28rem;
-  margin-inline: auto;
-}
-
-.c-login-form__field {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.c-login-form__submit {
-  margin-block-start: var(--space-3);
-}
-
-.c-login-form__recovery {
-  text-align: center;
-  font-size: var(--font-size-caption);
-}
+.c-login-form { display: flex; flex-direction: column; gap: var(--space-5); padding: var(--space-8); max-width: 28rem; margin-inline: auto; }
+.c-login-form__field { display: flex; flex-direction: column; gap: var(--space-2); }
+.c-login-form__submit { margin-block-start: var(--space-3); }
+.c-login-form__recovery { text-align: center; font-size: var(--font-size-caption); }

@@ -1,0 +1,11 @@
+/* ============================================
+ * Component: Kanban Board | Taxonomy: mcs:Organism
+ * Purpose: Draggable task board with columns
+ * Elements: __column, __card, __add-button
+ * ============================================ */
+
+.c-kanban-board { display: flex; gap: var(--space-4); overflow-x: auto; padding: var(--space-4); min-height: 60vh; }
+.c-kanban-board__column { flex: 0 0 18rem; background-color: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); }
+.c-kanban-board__card { background-color: var(--color-background-primary); border: 1px solid var(--color-border-default); border-radius: var(--border-radius-md); padding: var(--space-3); cursor: grab; box-shadow: var(--shadow-sm); }
+.c-kanban-board__card:hover { box-shadow: var(--shadow-md); }
+.c-kanban-board__add-button { width: 100%; padding: var(--space-2); background: none; border: 1px dashed var(--color-border-default); border-radius: var(--border-radius-md); color: var(--color-text-secondary); cursor: pointer; font-size: var(--font-size-caption); }

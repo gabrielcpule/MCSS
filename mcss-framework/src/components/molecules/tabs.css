@@ -1,0 +1,12 @@
+/* ============================================
+ * Component: Tabs | Taxonomy: mcs:Molecule
+ * Purpose: Tabbed content panels
+ * Elements: __list, __tab, __panel
+ * ============================================ */
+
+.c-tabs__list { display: flex; border-bottom: 2px solid var(--color-border-default); gap: 0; }
+.c-tabs__tab { padding: var(--space-3) var(--space-5); font-size: var(--font-size-caption); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color var(--transition-fast), border-color var(--transition-fast); background: none; border-top: none; border-left: none; border-right: none; }
+.c-tabs__tab:hover { color: var(--color-text-primary); }
+.c-tabs__tab[data-state="active"] { color: var(--color-background-brand); border-bottom-color: var(--color-background-brand); }
+.c-tabs__panel { padding: var(--space-5) 0; }
+.c-tabs__panel[data-state="hidden"] { display: none; }

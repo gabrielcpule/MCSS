@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P04] MCSS — Create an alert message for success notifications. Include a</title>
+<link rel="stylesheet" href="https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css">
+<link rel="stylesheet" href="P04_mcss.css">
+<style>
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 2rem;
+  }
+  .meta {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .meta h1 { font-size: 1rem; margin: 0 0 0.25rem; }
+  .meta p { color: #64748b; font-size: 0.8rem; margin: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+    margin-left: 0.5rem;
+  }
+  .output { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="meta">
+  <h1>P04: Create an alert message for success notifications. <span class="badge">MCSS</span></h1>
+  <p>1098 tokens · loaded from https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css</p>
+</div>
+<div class="output">
+<div 
+  class="c-alert c-alert--success" 
+  role="alert"
+  typeof="mcs:Component"
+  property="mcs:taxonomyLevel" content="mcs:Molecule"
+  property="mcs:purpose" content="Success notification with dismiss functionality"
+  data-mcs-interaction-type="click"
+  data-mcs-consequence="Dismisses the alert"
+  data-mcs-triggers-event="alert:dismiss"
+  data-state="default"
+>
+  <span class="c-alert__icon" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-1 15l-5-5 1.41-1.41L9 12.17l6.59-6.59L17 7l-8 8z" fill="currentColor"/>
+    </svg>
+  </span>
+  
+  <div class="c-alert__content">
+    <p class="c-alert__message">Operation completed successfully!</p>
+  </div>
+  
+  <button 
+    class="c-alert__dismiss" 
+    aria-label="Dismiss alert"
+    data-state="default"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+</div>
+</body>
+</html>

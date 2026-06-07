@@ -1,34 +1,11 @@
 /* ============================================
- * Component: Link
- * Taxonomy: mcs:Atom
- * Purpose: Navigational hyperlinks with semantic variants
- * States: default, subtle, external (via data-variant)
- * LLM Hint: Use for navigation. data-variant="external" adds external-link indicator
+ * Component: Link | Taxonomy: mcs:Atom
+ * Purpose: Navigational hyperlinks
+ * Variants: default, subtle, external
  * ============================================ */
 
-.c-link {
-  color: var(--color-text-link);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-  cursor: pointer;
-  transition: color var(--transition-fast);
-}
-
-.c-link:hover {
-  color: var(--color-text-link-hover);
-}
-
-.c-link[data-variant="subtle"] {
-  color: var(--color-text-secondary);
-  text-decoration: none;
-}
-
-.c-link[data-variant="subtle"]:hover {
-  color: var(--color-text-primary);
-  text-decoration: underline;
-}
-
-.c-link[data-variant="external"]::after {
-  content: " \2197";
-  font-size: var(--font-size-caption);
-}
+.c-link { color: var(--color-text-link); text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; transition: color var(--transition-fast); }
+.c-link:hover { color: var(--color-text-link-hover); }
+.c-link[data-variant="subtle"] { color: var(--color-text-secondary); text-decoration: none; }
+.c-link[data-variant="subtle"]:hover { color: var(--color-text-primary); text-decoration: underline; }
+.c-link[data-variant="external"]::after { content: " ↗"; font-size: var(--font-size-caption); }

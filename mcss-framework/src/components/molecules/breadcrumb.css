@@ -1,29 +1,9 @@
 /* ============================================
- * Component: Breadcrumb
- * Taxonomy: mcs:Molecule
- * Purpose: Navigation trail showing current page location in hierarchy
+ * Component: Breadcrumb | Taxonomy: mcs:Molecule
+ * Purpose: Navigation trail showing page hierarchy
  * Elements: __list, __item, __separator
- * Composes: c-link
- * LLM Hint: Use aria-label="Breadcrumb" on nav. Last item is current page (aria-current="page").
  * ============================================ */
 
-.c-breadcrumb__list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  gap: var(--space-2);
-  font-size: var(--font-size-caption);
-}
-
-.c-breadcrumb__item {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  color: var(--color-text-secondary);
-}
-
-.c-breadcrumb__separator {
-  color: var(--color-gray-300);
-  user-select: none;
-}
+.c-breadcrumb__list { display: flex; align-items: center; list-style: none; padding: 0; gap: var(--space-2); font-size: var(--font-size-caption); }
+.c-breadcrumb__item { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-text-secondary); }
+.c-breadcrumb__separator { color: var(--color-gray-300); user-select: none; }

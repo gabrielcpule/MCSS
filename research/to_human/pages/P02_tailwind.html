@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P02] Tailwind — Create a card component with a title, description text, and </title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: system-ui, sans-serif; background: #fff; margin: 0; padding: 2rem; }
+  .meta { max-width: 800px; margin: 0 auto 2rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0; }
+  .meta h1 { font-size: 1rem; margin: 0 0 0.25rem; }
+  .meta p { color: #64748b; font-size: 0.8rem; margin: 0; }
+  .badge { display: inline-block; font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 9999px; background: #d1fae5; color: #065f46; font-weight: 600; margin-left: 0.5rem; }
+  .output { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="meta"><h1>P02: Create a card component with a title, description  <span class="badge">Tailwind</span></h1><p>785 tokens · Tailwind CDN</p></div>
+<div class="output"><div class="bg-white rounded-xl shadow-md overflow-hidden max-w-sm">
+  <!-- Card Image (optional) -->
+  <img 
+    class="w-full h-48 object-cover" 
+    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" 
+    alt="Workspace setup"
+  >
+  
+  <!-- Card Content -->
+  <div class="p-6">
+    <!-- Title -->
+    <h3 class="text-xl font-bold text-gray-900 mb-2">
+      Getting Started with Design
+    </h3>
+    
+    <!-- Description -->
+    <p class="text-gray-600 leading-relaxed mb-6">
+      Learn the fundamentals of modern design principles and how to apply them to create beautiful, user-friendly interfaces that stand out.
+    </p>
+    
+    <!-- Action Button -->
+    <button class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200">
+      Read More
+      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+</div>
+</div>
+</body>
+</html>

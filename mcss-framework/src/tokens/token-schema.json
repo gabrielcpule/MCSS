@@ -63,14 +63,16 @@
     "vocabulary": "https://gabrielcpule.github.io/mcss-vocab/api/mcss/v1.rdf",
     "requiredProperties": ["typeof", "mcs:taxonomyLevel", "mcs:purpose"],
     "validTaxonomyLevels": ["mcs:Atom", "mcs:Molecule", "mcs:Organism"],
+    "annotationFormat": "html-comment",
+    "commentPattern": "<!-- @component {level} purpose=\"{desc}\" -->",
     "behavioralAttributes": [
-      "data-mcs-interaction-type",
-      "data-mcs-consequence",
-      "data-mcs-triggers-event",
-      "data-mcs-receives-event"
+      "data-action",
+      "data-result",
+      "data-emits",
+      "data-listens"
     ],
     "allowedValues": {
-      "data-mcs-interaction-type": ["click", "hover", "submission", "toggle", "drag", "focus", "input", "visual-indicator"]
+      "data-action": ["click", "hover", "submit", "toggle", "drag", "focus", "input", "indicator"]
     }
   }
 }

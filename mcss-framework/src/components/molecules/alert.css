@@ -1,57 +1,25 @@
 /* ============================================
- * Component: Alert
- * Taxonomy: mcs:Molecule
- * Purpose: Contextual feedback messages for user actions
- * States: info (default), success, warning, error (via data-state)
+ * Component: Alert | Taxonomy: mcs:Molecule
+ * Purpose: Contextual feedback messages
+ * States: info (default), success, warning, error (data-state)
  * Elements: __icon, __content, __dismiss
- * Composes: c-icon, c-text, c-button
- * LLM Hint: Use for form feedback, status messages, system notifications. Dismissible variant uses __dismiss button.
  * ============================================ */
 
-.c-alert {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  padding: var(--space-4);
+.c-alert--info,
+.c-alert--success,
+.c-alert--warning,
+.c-alert--error {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  padding: var(--space-4); border-radius: var(--border-radius-md);
+  font-size: var(--font-size-caption); line-height: var(--line-height-base);
   border: 1px solid var(--color-border-default);
-  border-radius: var(--border-radius-md);
-  background-color: var(--color-background-secondary);
-  color: var(--color-text-primary);
-  font-size: var(--font-size-caption);
-  line-height: var(--line-height-base);
 }
 
-.c-alert__icon {
-  flex-shrink: 0;
-}
+.c-alert--info { background-color: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-default); }
+.c-alert--success { background-color: var(--color-background-success); color: var(--color-text-success); border-color: var(--color-border-success); }
+.c-alert--warning { background-color: var(--color-background-warning); color: var(--color-text-warning); border-color: var(--color-yellow-500); }
+.c-alert--error { background-color: var(--color-background-error); color: var(--color-text-error); border-color: var(--color-border-error); }
 
-.c-alert__content {
-  flex: 1;
-}
-
-.c-alert__dismiss {
-  flex-shrink: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text-secondary);
-  padding: var(--space-1);
-}
-
-.c-alert[data-state="success"] {
-  background-color: var(--color-background-success);
-  border-color: var(--color-border-success);
-  color: var(--color-text-success);
-}
-
-.c-alert[data-state="warning"] {
-  background-color: var(--color-background-warning);
-  border-color: var(--color-yellow-500);
-  color: var(--color-text-warning);
-}
-
-.c-alert[data-state="error"] {
-  background-color: var(--color-background-error);
-  border-color: var(--color-border-error);
-  color: var(--color-text-error);
-}
+.c-alert__icon { flex-shrink: 0; }
+.c-alert__content { flex: 1; }
+.c-alert__dismiss { flex-shrink: 0; background: none; border: none; cursor: pointer; color: var(--color-text-secondary); padding: var(--space-1); }

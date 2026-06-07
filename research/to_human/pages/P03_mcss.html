@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P03] MCSS — Build a navigation bar with a logo on the left, and Home/Abo</title>
+<link rel="stylesheet" href="https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css">
+<link rel="stylesheet" href="P03_mcss.css">
+<style>
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 2rem;
+  }
+  .meta {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .meta h1 { font-size: 1rem; margin: 0 0 0.25rem; }
+  .meta p { color: #64748b; font-size: 0.8rem; margin: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 9999px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+    margin-left: 0.5rem;
+  }
+  .output { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="meta">
+  <h1>P03: Build a navigation bar with a logo on the left, an <span class="badge">MCSS</span></h1>
+  <p>1228 tokens · loaded from https://gabrielcpule.github.io/MCSS/mcss-framework/dist/mcss.min.css</p>
+</div>
+<div class="output">
+<nav class="l-container l-cluster" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Molecule" property="mcs:purpose" content="Primary site navigation bar with logo and page links">
+  <div class="l-cluster__inner c-navigation" data-state="default">
+    <!-- Logo (left) -->
+    <a href="/" class="c-navigation__logo" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Atom" property="mcs:purpose" content="Site logo linking to homepage">
+      <img src="/logo.svg" alt="Site Logo" class="c-navigation__logo-image" />
+    </a>
+
+    <!-- Navigation links (right) -->
+    <ul class="c-navigation__links" role="list">
+      <li class="c-navigation__item" data-state="active">
+        <a href="/" class="c-link c-navigation__link" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Atom" property="mcs:purpose" content="Home page link">
+          Home
+        </a>
+      </li>
+      <li class="c-navigation__item">
+        <a href="/about" class="c-link c-navigation__link" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Atom" property="mcs:purpose" content="About page link">
+          About
+        </a>
+      </li>
+      <li class="c-navigation__item">
+        <a href="/contact" class="c-link c-navigation__link" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Atom" property="mcs:purpose" content="Contact page link">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+</body>
+</html>

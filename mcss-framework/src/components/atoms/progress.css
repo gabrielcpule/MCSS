@@ -1,33 +1,10 @@
 /* ============================================
- * Component: Progress
- * Taxonomy: mcs:Atom
- * Purpose: Visual indicator of completion or loading progress
- * States: indeterminate, determinate with 0-100% (via data-state)
- * LLM Hint: Set --mcss-progress-value CSS variable for determinate. Omit for indeterminate spinner bar.
+ * Component: Progress | Taxonomy: mcs:Atom
+ * Purpose: Completion or loading progress indicator
+ * States: indeterminate, determinate (data-state)
  * ============================================ */
 
-.c-progress {
-  width: 100%;
-  height: 0.5rem;
-  background-color: var(--color-background-secondary);
-  border-radius: var(--border-radius-full);
-  overflow: hidden;
-}
-
-.c-progress__bar {
-  height: 100%;
-  background-color: var(--color-background-brand);
-  border-radius: var(--border-radius-full);
-  transition: width var(--transition-base);
-  width: var(--mcss-progress-value, 0%);
-}
-
-.c-progress[data-state="indeterminate"] .c-progress__bar {
-  width: 40%;
-  animation: mcss-progress-indeterminate 1.5s ease-in-out infinite;
-}
-
-@keyframes mcss-progress-indeterminate {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(250%); }
-}
+.c-progress { width: 100%; height: 0.5rem; background-color: var(--color-background-secondary); border-radius: var(--border-radius-full); overflow: hidden; }
+.c-progress__bar { height: 100%; background-color: var(--color-background-brand); border-radius: var(--border-radius-full); transition: width var(--transition-base); width: var(--mcss-progress-value, 0%); }
+.c-progress[data-state="indeterminate"] .c-progress__bar { width: 40%; animation: mcss-progress-indeterminate 1.5s ease-in-out infinite; }
+@keyframes mcss-progress-indeterminate { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }

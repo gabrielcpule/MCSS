@@ -1,0 +1,14 @@
+/* ============================================
+ * Component: Combobox | Taxonomy: mcs:Molecule
+ * Purpose: Text input with filtered dropdown
+ * States: open, closed (data-state)
+ * Elements: __input, __menu, __option
+ * ============================================ */
+
+.c-combobox { position: relative; }
+.c-combobox__input { width: 100%; }
+.c-combobox__menu { position: absolute; top: 100%; left: 0; right: 0; background-color: var(--color-background-primary); border: 1px solid var(--color-border-default); border-radius: var(--border-radius-md); box-shadow: var(--shadow-md); z-index: var(--z-index-dropdown); max-height: 12rem; overflow-y: auto; display: none; }
+.c-combobox[data-state="open"] .c-combobox__menu { display: block; }
+.c-combobox__option { padding: var(--space-2) var(--space-4); font-size: var(--font-size-caption); cursor: pointer; color: var(--color-text-primary); }
+.c-combobox__option:hover { background-color: var(--color-background-secondary); }
+.c-combobox__option[data-state="active"] { background-color: var(--color-brand-50); }

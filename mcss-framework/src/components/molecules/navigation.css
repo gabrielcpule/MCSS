@@ -1,48 +1,13 @@
 /* ============================================
- * Component: Navigation
- * Taxonomy: mcs:Molecule
- * Purpose: Primary site navigation with horizontal or vertical layout
- * Variants: horizontal (default), vertical (via data-variant)
+ * Component: Navigation | Taxonomy: mcs:Molecule
+ * Purpose: Primary site navigation
+ * Variants: horizontal (default), vertical (data-variant)
  * Elements: __list, __item, __link
- * Composes: c-link
- * LLM Hint: Use aria-label="Main" or "Primary" on nav. Active link gets data-state="active".
  * ============================================ */
 
-.c-navigation__list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  gap: var(--space-1);
-}
-
-.c-navigation__link {
-  display: block;
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--font-size-caption);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  border-radius: var(--border-radius-md);
-  transition: color var(--transition-fast),
-              background-color var(--transition-fast);
-}
-
-.c-navigation__link:hover {
-  color: var(--color-text-primary);
-  background-color: var(--color-background-secondary);
-}
-
-.c-navigation__link[data-state="active"] {
-  color: var(--color-background-brand);
-  background-color: var(--color-brand-50);
-}
-
-/* --- Vertical variant --- */
-.c-navigation[data-variant="vertical"] .c-navigation__list {
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.c-navigation[data-variant="vertical"] .c-navigation__link {
-  width: 100%;
-}
+.c-navigation__list { display: flex; list-style: none; padding: 0; gap: var(--space-1); }
+.c-navigation__link { display: block; padding: var(--space-2) var(--space-3); font-size: var(--font-size-caption); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); text-decoration: none; border-radius: var(--border-radius-md); transition: color var(--transition-fast), background-color var(--transition-fast); }
+.c-navigation__link:hover { color: var(--color-text-primary); background-color: var(--color-background-secondary); }
+.c-navigation__link[data-state="active"] { color: var(--color-background-brand); background-color: var(--color-brand-50); }
+.c-navigation[data-variant="vertical"] .c-navigation__list { flex-direction: column; gap: var(--space-1); }
+.c-navigation[data-variant="vertical"] .c-navigation__link { width: 100%; }

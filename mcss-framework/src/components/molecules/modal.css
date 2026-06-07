@@ -1,0 +1,12 @@
+/* ============================================
+ * Component: Modal | Taxonomy: mcs:Molecule
+ * Purpose: Overlay dialog for focused interactions
+ * States: open, closed (data-state)
+ * Elements: __overlay, __content, __header, __body, __footer
+ * ============================================ */
+
+.c-modal__overlay { position: fixed; inset: 0; background-color: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: var(--z-index-modal); padding: var(--space-4); }
+.c-modal__content { background-color: var(--color-background-primary); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); width: 100%; max-width: 32rem; }
+.c-modal__header { padding: var(--space-5) var(--space-5) 0; font-size: var(--font-size-subtitle); font-weight: var(--font-weight-semibold); }
+.c-modal__body { padding: var(--space-5); color: var(--color-text-secondary); line-height: var(--line-height-base); }
+.c-modal__footer { padding: var(--space-4) var(--space-5); display: flex; justify-content: flex-end; gap: var(--space-3); border-top: 1px solid var(--color-border-default); }

@@ -1,0 +1,10 @@
+/* ============================================
+ * Component: Dashboard Header | Taxonomy: mcs:Organism
+ * Purpose: Application header with logo, nav, user menu, and notifications
+ * Elements: __logo, __nav, __actions, __user-menu, __notification-badge
+ * ============================================ */
+
+.c-dashboard-header { display: flex; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-6); background-color: var(--color-background-primary); border-bottom: 1px solid var(--color-border-default); }
+.c-dashboard-header__logo { font-size: var(--font-size-subtitle); font-weight: var(--font-weight-bold); color: var(--color-text-primary); }
+.c-dashboard-header__nav { display: flex; gap: var(--space-4); }
+.c-dashboard-header__actions { display: flex; align-items: center; gap: var(--space-3); }

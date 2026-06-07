@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P02] Create a card component with a title, description text, and ...</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: system-ui, sans-serif; background: #f1f5f9; margin: 0; padding: 1.5rem; }
+  h1 { font-size: 1.15rem; margin: 0.75rem 0 0.25rem; }
+  .subtitle { color: #64748b; margin-bottom: 1.25rem; font-size: 0.8rem; }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  @media (max-width: 900px) { .comparison { grid-template-columns: 1fr; } }
+  .panel { background: white; border-radius: 0.75rem; border: 1px solid #e2e8f0; overflow: hidden; }
+  .panel-header { padding: 0.5rem 0.875rem; font-weight: 600; font-size: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+  .panel-mcss .panel-header { background: #eff6ff; color: #1e40af; }
+  .panel-tw .panel-header { background: #ecfdf5; color: #065f46; }
+  .panel-body { padding: 1.25rem; }
+  .badge { font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 9999px; font-weight: 500; }
+  .badge-mcss { background: #dbeafe; color: #1e40af; }
+  .badge-tw { background: #d1fae5; color: #065f46; }
+  .nav { display: flex; gap: 0.375rem; margin-bottom: 1rem; flex-wrap: wrap; }
+  .nav a { padding: 0.3rem 0.6rem; background: white; border: 1px solid #e2e8f0; border-radius: 0.3rem; text-decoration: none; color: #475569; font-size: 0.8rem; }
+  .nav a.active { background: #2563eb; color: white; border-color: #2563eb; }
+</style>
+
+:root {
+  --color-white: #ffffff; --color-black: #000000;
+  --color-gray-50: #f8f9fa; --color-gray-100: #e9ecef; --color-gray-200: #dee2e6;
+  --color-gray-300: #ced4da; --color-gray-400: #adb5bd; --color-gray-500: #6c757d;
+  --color-gray-600: #495057; --color-gray-700: #343a40; --color-gray-800: #212529; --color-gray-900: #1a1d20;
+  --color-brand-50: #eff6ff; --color-brand-100: #dbeafe; --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb; --color-brand-700: #1d4ed8;
+  --color-green-100: #dcfce7; --color-green-500: #22c55e; --color-green-800: #166534;
+  --color-red-100: #fee2e2; --color-red-500: #ef4444; --color-red-800: #991b1b;
+  --color-yellow-100: #fef9c3; --color-yellow-500: #eab308; --color-yellow-800: #854d0e;
+  --color-text-primary: var(--color-gray-900); --color-text-secondary: var(--color-gray-600);
+  --color-text-on-brand: var(--color-white); --color-text-link: var(--color-brand-600);
+  --color-text-link-hover: var(--color-brand-700);
+  --color-text-success: var(--color-green-800); --color-text-error: var(--color-red-800);
+  --color-background-primary: var(--color-white); --color-background-secondary: var(--color-gray-50);
+  --color-background-brand: var(--color-brand-600); --color-background-brand-hover: var(--color-brand-700);
+  --color-background-success: var(--color-green-100); --color-background-error: var(--color-red-100);
+  --color-background-warning: var(--color-yellow-100);
+  --color-border-default: var(--color-gray-200); --color-border-interactive: var(--color-brand-500);
+  --color-border-error: var(--color-red-500); --color-border-success: var(--color-green-500);
+  --color-border-focus: var(--color-brand-400);
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem;
+  --font-family-sans: system-ui, -apple-system, sans-serif; --font-family-mono: ui-monospace, monospace;
+  --font-size-display: 3rem; --font-size-title: 2rem; --font-size-heading: 1.5rem;
+  --font-size-subtitle: 1.25rem; --font-size-body: 1rem;
+  --font-size-caption: 0.875rem; --font-size-overline: 0.75rem;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --line-height-tight: 1.25; --line-height-base: 1.5; --line-height-loose: 1.75;
+  --border-radius-none: 0; --border-radius-sm: 0.25rem; --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem; --border-radius-full: 9999px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05); --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --breakpoint-tablet: 641px; --breakpoint-desktop: 769px; --breakpoint-wide: 1025px;
+  --z-index-dropdown: 100; --z-index-sticky: 200; --z-index-overlay: 300; --z-index-modal: 400;
+  --transition-fast: 150ms ease; --transition-base: 250ms ease; --transition-slow: 400ms ease;
+  --container-max-desktop: 768px; --container-max-wide: 1024px;
+}
+
+<style>
+/* Component Layer */
+.c-card {
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow var(--transition-base);
+}
+
+.c-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.c-card__header {
+  padding: var(--space-4) var(--space-4) 0;
+}
+
+.c-card__title {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.c-card__body {
+  padding: var(--space-2) var(--space-4);
+  flex: 1;
+}
+
+.c-card__description {
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-base);
+  margin: 0;
+}
+
+.c-card__footer {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border-default);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Button component (atom) */
+.c-button {
+  background-color: var(--color-background-brand);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text-on-brand);
+  cursor: pointer;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-2) var(--space-4);
+  transition: background-color var(--transition-fast);
+}
+
+.c-button:hover {
+  background-color: var(--color-background-brand-hover);
+}
+
+.c-button[data-state="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c-button__label {
+  display: inline-block;
+}
+
+</style>
+</head>
+<body>
+<div class="nav"><a href="comparison_01.html" class="active">P02</a>
+<a href="comparison_02.html" class="">P03</a>
+<a href="comparison_03.html" class="">P04</a>
+<a href="comparison_04.html" class="">P07</a>
+<a href="comparison_05.html" class="">P11</a></div>
+<h1>[P02] Create a card component with a title, description text, and an action button at the bottom.</h1>
+<p class="subtitle">Left: MCSS framework. Right: Tailwind CSS.</p>
+<div class="comparison">
+  <div class="panel panel-mcss">
+    <div class="panel-header">MCSS <span class="badge badge-mcss">1075 tok</span></div>
+    <div class="panel-body"><div class="c-card" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Molecule" property="mcs:purpose" content="A reusable card with title, description, and action button">
+  <div class="c-card__header" property="mcs:hasPart" resource="#card-title">
+    <h3 class="c-card__title" id="card-title">Card Title</h3>
+  </div>
+  <div class="c-card__body">
+    <p class="c-card__description">This is a description text for the card component. It provides context and information about the card's content.</p>
+  </div>
+  <div class="c-card__footer">
+    <button class="c-button" data-state="default" typeof="mcs:Component" property="mcs:taxonomyLevel" content="mcs:Atom" property="mcs:purpose" content="Action button within card">
+      <span class="c-button__label">Learn More</span>
+    </button>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="panel panel-tw">
+    <div class="panel-header">Tailwind <span class="badge badge-tw">785 tok</span></div>
+    <div class="panel-body"><div class="bg-white rounded-xl shadow-md overflow-hidden max-w-sm">
+  <!-- Card Image (optional) -->
+  <img 
+    class="w-full h-48 object-cover" 
+    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" 
+    alt="Workspace setup"
+  >
+  
+  <!-- Card Content -->
+  <div class="p-6">
+    <!-- Title -->
+    <h3 class="text-xl font-bold text-gray-900 mb-2">
+      Getting Started with Design
+    </h3>
+    
+    <!-- Description -->
+    <p class="text-gray-600 leading-relaxed mb-6">
+      Learn the fundamentals of modern design principles and how to apply them to create beautiful, user-friendly interfaces that stand out.
+    </p>
+    
+    <!-- Action Button -->
+    <button class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200">
+      Read More
+      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,14 +1,6 @@
 /* ============================================
- * Component: Label
- * Taxonomy: mcs:Atom
- * Purpose: Labels form inputs with accessible text
- * States: default
- * LLM Hint: Always pair with an input. Use for attribute to link.
+ * Component: Label | Taxonomy: mcs:Atom
+ * Purpose: Labels form inputs
  * ============================================ */
 
-.c-label {
-  display: block;
-  font-size: var(--font-size-caption);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
-}
+.c-label { display: block; font-size: var(--font-size-caption); font-weight: var(--font-weight-medium); color: var(--color-text-primary); }

@@ -1,0 +1,12 @@
+/* ============================================
+ * Component: Registration Wizard | Taxonomy: mcs:Organism
+ * Purpose: Multi-step registration form
+ * Elements: __steps, __step, __content, __actions
+ * ============================================ */
+
+.c-registration-wizard__steps { display: flex; justify-content: center; gap: var(--space-2); margin-bottom: var(--space-8); }
+.c-registration-wizard__step { width: 2rem; height: 2rem; border-radius: var(--border-radius-full); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-caption); font-weight: var(--font-weight-semibold); background-color: var(--color-background-secondary); color: var(--color-text-secondary); }
+.c-registration-wizard__step[data-state="active"] { background-color: var(--color-background-brand); color: var(--color-text-on-brand); }
+.c-registration-wizard__step[data-state="complete"] { background-color: var(--color-green-500); color: var(--color-white); }
+.c-registration-wizard__content { max-width: 32rem; margin: 0 auto; }
+.c-registration-wizard__actions { display: flex; justify-content: space-between; margin-top: var(--space-6); }

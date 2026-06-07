@@ -1,12 +1,14 @@
 /* ============================================
- * Component: Badge
- * Taxonomy: mcs:Atom
- * Purpose: Displays status indicators or category labels
- * States: success, warning, error, info, neutral (via data-state)
- * LLM Hint: Use for inline status tags, counts, or category markers
+ * Component: Badge | Taxonomy: mcs:Atom
+ * Purpose: Status indicators and category labels
+ * States: success, warning, error, info, neutral (data-state)
  * ============================================ */
 
-.c-badge {
+.c-badge--success,
+.c-badge--warning,
+.c-badge--error,
+.c-badge--info,
+.c-badge--neutral {
   display: inline-flex;
   align-items: center;
   padding: var(--space-1) var(--space-3);
@@ -16,26 +18,10 @@
   border-radius: var(--border-radius-full);
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  background-color: var(--color-background-secondary);
-  color: var(--color-text-secondary);
 }
 
-.c-badge[data-state="success"] {
-  background-color: var(--color-background-success);
-  color: var(--color-text-success);
-}
-
-.c-badge[data-state="warning"] {
-  background-color: var(--color-background-warning);
-  color: var(--color-text-warning);
-}
-
-.c-badge[data-state="error"] {
-  background-color: var(--color-background-error);
-  color: var(--color-text-error);
-}
-
-.c-badge[data-state="info"] {
-  background-color: var(--color-brand-100);
-  color: var(--color-brand-800);
-}
+.c-badge--success { background-color: var(--color-background-success); color: var(--color-text-success); }
+.c-badge--warning { background-color: var(--color-background-warning); color: var(--color-text-warning); }
+.c-badge--error { background-color: var(--color-background-error); color: var(--color-text-error); }
+.c-badge--info { background-color: var(--color-brand-100); color: var(--color-brand-700); }
+.c-badge--neutral { background-color: var(--color-background-secondary); color: var(--color-text-secondary); }

@@ -1,0 +1,11 @@
+/* ============================================
+ * Component: Table | Taxonomy: mcs:Atom
+ * Purpose: Data table with sortable headers and striped rows
+ * States: default, loading, empty (data-state)
+ * ============================================ */
+
+.c-table { width: 100%; border-collapse: collapse; font-size: var(--font-size-caption); }
+.c-table th { text-align: left; font-weight: var(--font-weight-semibold); color: var(--color-text-secondary); padding: var(--space-3) var(--space-4); border-bottom: 2px solid var(--color-border-default); }
+.c-table td { padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--color-border-default); color: var(--color-text-primary); }
+.c-table tr:nth-child(even) td { background-color: var(--color-background-secondary); }
+.c-table[data-state="loading"] { opacity: 0.6; pointer-events: none; }

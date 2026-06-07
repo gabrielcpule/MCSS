@@ -1,56 +1,12 @@
 /* ============================================
- * Component: Pagination
- * Taxonomy: mcs:Molecule
- * Purpose: Page navigation for paginated content lists
+ * Component: Pagination | Taxonomy: mcs:Molecule
+ * Purpose: Page navigation for paginated content
  * Elements: __list, __item, __ellipsis
- * Composes: c-button
- * LLM Hint: Use aria-label="Pagination" on nav. Active page gets data-state="active".
  * ============================================ */
 
-.c-pagination__list {
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
-  list-style: none;
-  padding: 0;
-}
-
-.c-pagination__item {
-  min-width: 2.25rem;
-  height: 2.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-caption);
-  border-radius: var(--border-radius-md);
-  cursor: pointer;
-  color: var(--color-text-primary);
-  background-color: transparent;
-  border: 1px solid transparent;
-  transition: background-color var(--transition-fast);
-}
-
-.c-pagination__item:hover {
-  background-color: var(--color-background-secondary);
-}
-
-.c-pagination__item[data-state="active"] {
-  background-color: var(--color-background-brand);
-  color: var(--color-text-on-brand);
-}
-
-.c-pagination__item[data-state="disabled"] {
-  opacity: 0.4;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c-pagination__ellipsis {
-  min-width: 2.25rem;
-  height: 2.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-caption);
-}
+.c-pagination__list { display: flex; align-items: center; gap: var(--space-1); list-style: none; padding: 0; }
+.c-pagination__item { min-width: 2.25rem; height: 2.25rem; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-caption); border-radius: var(--border-radius-md); cursor: pointer; color: var(--color-text-primary); background-color: transparent; border: 1px solid transparent; transition: background-color var(--transition-fast); }
+.c-pagination__item:hover { background-color: var(--color-background-secondary); }
+.c-pagination__item[data-state="active"] { background-color: var(--color-background-brand); color: var(--color-text-on-brand); }
+.c-pagination__item[data-state="disabled"] { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+.c-pagination__ellipsis { min-width: 2.25rem; height: 2.25rem; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); font-size: var(--font-size-caption); }

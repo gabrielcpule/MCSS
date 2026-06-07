@@ -1,0 +1,12 @@
+/* ============================================
+ * Component: Toast | Taxonomy: mcs:Molecule
+ * Purpose: Transient notification
+ * States: visible, hidden (data-state)
+ * Variants: success, error, warning, info (data-variant)
+ * ============================================ */
+
+.c-toast { position: fixed; top: var(--space-4); right: var(--space-4); z-index: var(--z-index-toast); padding: var(--space-4); border-radius: var(--border-radius-md); box-shadow: var(--shadow-lg); display: flex; align-items: flex-start; gap: var(--space-3); min-width: 18rem; max-width: 24rem; animation: mcss-toast-in 0.3s ease; background-color: var(--color-background-primary); border: 1px solid var(--color-border-default); }
+.c-toast[data-variant="success"] { border-color: var(--color-border-success); }
+.c-toast[data-variant="error"] { border-color: var(--color-border-error); }
+.c-toast__close { flex-shrink: 0; background: none; border: none; cursor: pointer; color: var(--color-text-secondary); font-size: 1.25rem; line-height: 1; }
+@keyframes mcss-toast-in { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }

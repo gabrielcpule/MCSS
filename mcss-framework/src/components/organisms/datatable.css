@@ -1,0 +1,10 @@
+/* ============================================
+ * Component: DataTable | Taxonomy: mcs:Organism
+ * Purpose: Full-featured data table with search, sort, pagination
+ * Elements: __toolbar, __search, __table, __pagination
+ * ============================================ */
+
+.c-datatable__toolbar { display: flex; justify-content: space-between; align-items: center; padding: var(--space-4) 0; }
+.c-datatable__search { width: 18rem; }
+.c-datatable__table { width: 100%; }
+.c-datatable__pagination { display: flex; justify-content: center; padding: var(--space-4) 0; }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[P11] Tailwind — Build a toggle switch component for settings on/off.</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: system-ui, sans-serif; background: #fff; margin: 0; padding: 2rem; }
+  .meta { max-width: 800px; margin: 0 auto 2rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0; }
+  .meta h1 { font-size: 1rem; margin: 0 0 0.25rem; }
+  .meta p { color: #64748b; font-size: 0.8rem; margin: 0; }
+  .badge { display: inline-block; font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 9999px; background: #d1fae5; color: #065f46; font-weight: 600; margin-left: 0.5rem; }
+  .output { max-width: 800px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="meta"><h1>P11: Build a toggle switch component for settings on/of <span class="badge">Tailwind</span></h1><p>1491 tokens · Tailwind CDN</p></div>
+<div class="output"><!-- Toggle Switch Component -->
+<label class="relative inline-flex items-center cursor-pointer">
+  <!-- Hidden checkbox input -->
+  <input type="checkbox" class="sr-only peer" checked>
+  
+  <!-- Toggle track -->
+  <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 peer-focus:ring-2 peer-focus:ring-blue-300 peer-disabled:opacity-50 peer-disabled:cursor-not-allowed transition-colors duration-200 ease-in-out"></div>
+  
+  <!-- Toggle thumb -->
+  <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow peer-checked:translate-x-full transition-transform duration-200 ease-in-out"></div>
+  
+  <!-- Label text -->
+  <span class="ml-3 text-sm font-medium text-gray-900">Enable notifications</span>
+</label>
+</div>
+</body>
+</html>

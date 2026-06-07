@@ -1,0 +1,11 @@
+/* ============================================
+ * Component: Settings Panel | Taxonomy: mcs:Organism
+ * Purpose: Grouped settings with sidebar navigation
+ * Elements: __sidebar, __sections, __section, __save
+ * ============================================ */
+
+.c-settings-panel { display: flex; min-height: 100%; }
+.c-settings-panel__sidebar { width: 14rem; padding: var(--space-6) var(--space-4); border-right: 1px solid var(--color-border-default); display: flex; flex-direction: column; gap: var(--space-1); flex-shrink: 0; }
+.c-settings-panel__sections { flex: 1; padding: var(--space-6); overflow-y: auto; }
+.c-settings-panel__section { margin-bottom: var(--space-8); }
+.c-settings-panel__save { margin-top: var(--space-4); }
